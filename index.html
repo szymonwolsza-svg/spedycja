@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
           content="Jupiter Trans & Cargo - kompleksowa organizacja przewozu ładunków w Polsce i Europie.">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -38,27 +36,19 @@
             padding: 100px 7%;
         }
 
-
-        /* =========================
-           MENU
-        ========================= */
+        /* MENU */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             z-index: 1000;
-
-            background: rgba(255, 255, 255, 0.97);
-
-            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
-
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             padding: 8px 7%;
         }
 
@@ -75,14 +65,10 @@
 
         nav a {
             color: #15314b;
-
             text-decoration: none;
-
             margin-left: 25px;
-
             font-size: 15px;
             font-weight: 700;
-
             transition: 0.25s;
         }
 
@@ -90,28 +76,22 @@
             color: #078bd1;
         }
 
-
-        /* =========================
-           START
-        ========================= */
+        /* START */
 
         .hero {
             min-height: 100vh;
-
             display: flex;
             align-items: center;
-
             padding: 150px 7% 80px;
-
             color: white;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(2, 31, 59, 0.96) 0%,
-                    rgba(3, 49, 88, 0.86) 45%,
-                    rgba(3, 49, 88, 0.35) 80%,
-                    rgba(0, 0, 0, 0.15) 100%
+                    rgba(2,31,59,0.96) 0%,
+                    rgba(3,49,88,0.86) 45%,
+                    rgba(3,49,88,0.35) 80%,
+                    rgba(0,0,0,0.15) 100%
                 ),
                 url("gabriel-santos-GBVDilE8yvI-unsplash.jpg");
 
@@ -125,20 +105,16 @@
 
         .hero-label {
             color: #68c8ff;
-
             font-size: 14px;
             font-weight: bold;
-
             text-transform: uppercase;
             letter-spacing: 3px;
-
             margin-bottom: 18px;
         }
 
         .hero h1 {
             font-size: 68px;
             line-height: 1.07;
-
             margin-bottom: 25px;
         }
 
@@ -148,32 +124,23 @@
 
         .hero p {
             max-width: 700px;
-
             font-size: 20px;
-
             color: #e5f0f7;
-
             margin-bottom: 35px;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-
             gap: 15px;
         }
 
         .button {
             display: inline-block;
-
             padding: 15px 28px;
-
             border-radius: 6px;
-
             text-decoration: none;
-
             font-weight: 700;
-
             transition: 0.25s;
         }
 
@@ -189,8 +156,7 @@
 
         .button-secondary {
             color: white;
-
-            border: 1px solid rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(255,255,255,0.65);
         }
 
         .button-secondary:hover {
@@ -198,28 +164,20 @@
             color: #063b69;
         }
 
-
-        /* =========================
-           INFORMACJE
-        ========================= */
+        /* PASEK */
 
         .stats {
             background: #0784c7;
-
             color: white;
-
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(3,1fr);
             padding: 35px 7%;
-
             text-align: center;
         }
 
         .stat {
             padding: 15px;
-
-            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            border-right: 1px solid rgba(255,255,255,0.25);
         }
 
         .stat:last-child {
@@ -228,9 +186,7 @@
 
         .stat strong {
             display: block;
-
             font-size: 28px;
-
             margin-bottom: 5px;
         }
 
@@ -238,49 +194,35 @@
             color: #dff4ff;
         }
 
-
-        /* =========================
-           NAGŁÓWKI SEKCJI
-        ========================= */
+        /* NAGŁÓWKI */
 
         .section-header {
             max-width: 800px;
-
             margin: 0 auto 55px;
-
             text-align: center;
         }
 
         .section-label {
             color: #078bd1;
-
             text-transform: uppercase;
-
             letter-spacing: 2px;
-
             font-size: 13px;
             font-weight: bold;
         }
 
         .section-header h2 {
             color: #103553;
-
             font-size: 42px;
             line-height: 1.2;
-
             margin: 10px 0 18px;
         }
 
         .section-header p {
             color: #657b8e;
-
             font-size: 17px;
         }
 
-
-        /* =========================
-           O NAS
-        ========================= */
+        /* O NAS */
 
         .about {
             background: #f5f9fc;
@@ -288,76 +230,55 @@
 
         .about-grid {
             max-width: 1200px;
-
             margin: auto;
-
             display: grid;
             grid-template-columns: 1fr 1fr;
-
             gap: 65px;
-
             align-items: center;
         }
 
         .about-image {
             border-radius: 15px;
-
             overflow: hidden;
-
-            box-shadow: 0 18px 50px rgba(8, 65, 105, 0.16);
+            box-shadow: 0 18px 50px rgba(8,65,105,0.16);
         }
 
         .about-image img {
             width: 100%;
             height: 480px;
-
             object-fit: cover;
         }
 
         .about-text h2 {
             color: #103553;
-
             font-size: 40px;
             line-height: 1.2;
-
             margin: 10px 0 25px;
         }
 
         .about-text p {
             color: #597184;
-
             font-size: 17px;
-
             margin-bottom: 18px;
         }
 
         .checks {
             display: grid;
             grid-template-columns: 1fr 1fr;
-
             gap: 13px;
-
             margin-top: 28px;
         }
 
         .check {
             background: white;
-
             padding: 14px;
-
             border-radius: 8px;
-
             color: #164d73;
-
             font-weight: 700;
-
-            box-shadow: 0 5px 20px rgba(0, 70, 110, 0.05);
+            box-shadow: 0 5px 20px rgba(0,70,110,0.05);
         }
 
-
-        /* =========================
-           USŁUGI
-        ========================= */
+        /* USŁUGI */
 
         .services {
             background: white;
@@ -365,51 +286,37 @@
 
         .services-grid {
             max-width: 1200px;
-
             margin: auto;
-
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(3,1fr);
             gap: 23px;
         }
 
         .service {
             background: white;
-
             padding: 34px;
-
             border: 1px solid #e0eaf1;
             border-radius: 11px;
-
-            box-shadow: 0 8px 30px rgba(7, 57, 92, 0.06);
-
+            box-shadow: 0 8px 30px rgba(7,57,92,0.06);
             transition: 0.3s;
         }
 
         .service:hover {
             transform: translateY(-6px);
-
             border-color: #078bd1;
-
-            box-shadow: 0 15px 40px rgba(7, 57, 92, 0.13);
+            box-shadow: 0 15px 40px rgba(7,57,92,0.13);
         }
 
         .service-number {
             color: #078bd1;
-
             font-weight: bold;
-
             font-size: 14px;
-
             margin-bottom: 14px;
         }
 
         .service h3 {
             color: #123b5d;
-
             font-size: 21px;
-
             margin-bottom: 12px;
         }
 
@@ -417,25 +324,20 @@
             color: #657b8e;
         }
 
-
-        /* =========================
-           DUŻE ZDJĘCIE
-        ========================= */
+        /* DUŻE ZDJĘCIE */
 
         .visual-section {
             min-height: 520px;
-
             display: flex;
             align-items: center;
-
             color: white;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3, 42, 76, 0.95),
-                    rgba(3, 42, 76, 0.68),
-                    rgba(3, 42, 76, 0.18)
+                    rgba(3,42,76,0.95),
+                    rgba(3,42,76,0.68),
+                    rgba(3,42,76,0.18)
                 ),
                 url("nagy-szabi-RsjQl8dLnfw-unsplash.jpg");
 
@@ -450,20 +352,15 @@
         .visual-content h2 {
             font-size: 45px;
             line-height: 1.2;
-
             margin: 10px 0 20px;
         }
 
         .visual-content p {
             color: #e2edf5;
-
             font-size: 19px;
         }
 
-
-        /* =========================
-           JAK DZIAŁAMY
-        ========================= */
+        /* JAK DZIAŁAMY */
 
         .process {
             background: #f5f9fc;
@@ -471,62 +368,45 @@
 
         .process-grid {
             max-width: 1200px;
-
             margin: auto;
-
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
+            grid-template-columns: repeat(4,1fr);
             gap: 20px;
         }
 
         .process-item {
             background: white;
-
             padding: 32px 25px;
-
             text-align: center;
-
             border-radius: 10px;
-
-            box-shadow: 0 6px 25px rgba(6, 60, 98, 0.06);
+            box-shadow: 0 6px 25px rgba(6,60,98,0.06);
         }
 
         .process-number {
             width: 56px;
             height: 56px;
-
             margin: 0 auto 18px;
-
             border-radius: 50%;
-
             background: #078bd1;
             color: white;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             font-size: 20px;
             font-weight: bold;
         }
 
         .process-item h3 {
             color: #123b5d;
-
             margin-bottom: 10px;
         }
 
         .process-item p {
             color: #64798b;
-
             font-size: 15px;
         }
 
-
-        /* =========================
-           DLACZEGO MY
-        ========================= */
+        /* DLACZEGO MY */
 
         .why {
             background: white;
@@ -534,28 +414,21 @@
 
         .why-grid {
             max-width: 1200px;
-
             margin: auto;
-
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(3,1fr);
             gap: 22px;
         }
 
         .why-item {
             padding: 28px;
-
             background: #f4f9fc;
-
             border-left: 4px solid #078bd1;
-
             border-radius: 7px;
         }
 
         .why-item h3 {
             color: #0c74ae;
-
             margin-bottom: 10px;
         }
 
@@ -563,79 +436,59 @@
             color: #64798b;
         }
 
-
-        /* =========================
-           EUROPA
-        ========================= */
+        /* EUROPA */
 
         .europe {
             background: #073b67;
-
             color: white;
         }
 
         .europe-grid {
             max-width: 1200px;
-
             margin: auto;
-
             display: grid;
             grid-template-columns: 1fr 1fr;
-
             gap: 60px;
-
             align-items: center;
         }
 
         .europe-image {
             overflow: hidden;
-
             border-radius: 15px;
         }
 
         .europe-image img {
             width: 100%;
             height: 430px;
-
             object-fit: cover;
         }
 
         .europe-text h2 {
             font-size: 42px;
             line-height: 1.2;
-
             margin: 10px 0 20px;
         }
 
         .europe-text p {
             color: #d7e8f4;
-
             font-size: 18px;
-
             margin-bottom: 17px;
         }
 
         .area-tags {
             display: flex;
             flex-wrap: wrap;
-
             gap: 10px;
-
             margin-top: 25px;
         }
 
         .area-tag {
             padding: 10px 18px;
-
-            border: 1px solid rgba(255, 255, 255, 0.35);
-
+            border: 1px solid rgba(255,255,255,0.35);
             border-radius: 30px;
         }
 
-
-        /* =========================
-           ZAUFALI NAM
-        ========================= */
+        /* ZAUFALI */
 
         .trust {
             background: #f5f9fc;
@@ -643,31 +496,20 @@
 
         .trust-box {
             max-width: 1100px;
-
             min-height: 190px;
-
             margin: auto;
-
             padding: 40px;
-
             background: white;
-
             border: 1px solid #dae7ef;
             border-radius: 10px;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             text-align: center;
-
             color: #738799;
         }
 
-
-        /* =========================
-           CERTYFIKATY
-        ========================= */
+        /* CERTYFIKATY */
 
         .certificates {
             background: white;
@@ -675,28 +517,21 @@
 
         .cert-grid {
             max-width: 1100px;
-
             margin: auto;
-
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
+            grid-template-columns: repeat(3,1fr);
             gap: 22px;
         }
 
         .cert {
             background: #f5f9fc;
-
             padding: 32px;
-
             border-radius: 10px;
-
             border-top: 4px solid #078bd1;
         }
 
         .cert h3 {
             color: #123b5d;
-
             margin-bottom: 13px;
         }
 
@@ -704,70 +539,61 @@
             color: #62798c;
         }
 
-
-        /* =========================
-           KONTAKT
-        ========================= */
+        /* KONTAKT */
 
         .contact {
             background: #062e51;
-
             color: white;
         }
 
         .contact-grid {
             max-width: 1150px;
-
             margin: auto;
-
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-
             gap: 55px;
-
             align-items: center;
         }
 
         .contact-info h2 {
             font-size: 43px;
             line-height: 1.2;
-
             margin: 10px 0 17px;
         }
 
         .contact-info > p {
             color: #d5e4ee;
-
             font-size: 17px;
-
             margin-bottom: 30px;
         }
 
         .contact-box {
             padding-bottom: 17px;
-
             margin-bottom: 17px;
-
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
         }
 
         .contact-box strong {
             display: block;
-
             color: #65c7ff;
-
             margin-bottom: 4px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .contact-box a:hover {
+            color: #65c7ff;
         }
 
         .contact-logo {
             background: white;
-
             min-height: 320px;
-
             padding: 35px;
-
             border-radius: 14px;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -775,47 +601,32 @@
 
         .contact-logo img {
             width: 100%;
-
             max-width: 440px;
-
             object-fit: contain;
         }
 
-
-        /* =========================
-           STOPKA
-        ========================= */
+        /* STOPKA */
 
         footer {
             background: #041f37;
-
             color: #9bb1c2;
-
             padding: 30px 7%;
-
             text-align: center;
-
             font-size: 14px;
         }
 
-
-        /* =========================
-           TABLET
-        ========================= */
+        /* TABLET */
 
         @media (max-width: 950px) {
 
             header {
                 position: relative;
-
                 flex-direction: column;
-
                 gap: 10px;
             }
 
             nav {
                 justify-content: center;
-
                 flex-wrap: wrap;
             }
 
@@ -825,7 +636,6 @@
 
             .hero {
                 min-height: 80vh;
-
                 padding-top: 90px;
             }
 
@@ -839,8 +649,7 @@
 
             .stat {
                 border-right: none;
-
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255,255,255,0.2);
             }
 
             .about-grid,
@@ -851,11 +660,11 @@
 
             .services-grid,
             .why-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
             }
 
             .process-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
             }
 
             .cert-grid {
@@ -863,10 +672,7 @@
             }
         }
 
-
-        /* =========================
-           TELEFON
-        ========================= */
+        /* TELEFON */
 
         @media (max-width: 600px) {
 
@@ -922,17 +728,13 @@
     </style>
 </head>
 
-
 <body>
-
-
-<!-- MENU -->
 
 <header>
 
     <a href="#" class="logo">
         <img src="jupiter.png"
-             alt="Logo Jupiter Trans & Cargo">
+             alt="Jupiter Trans & Cargo">
     </a>
 
     <nav>
@@ -946,8 +748,6 @@
 
 </header>
 
-
-<!-- START -->
 
 <section class="hero">
 
@@ -988,8 +788,6 @@
 </section>
 
 
-<!-- INFORMACJE -->
-
 <div class="stats">
 
     <div class="stat">
@@ -1010,19 +808,14 @@
 </div>
 
 
-<!-- O NAS -->
-
 <section class="about" id="o-nas">
 
     <div class="about-grid">
 
         <div class="about-image">
-
             <img src="elevate-dI-aXC7DWpQ-unsplash.jpg"
                  alt="Transport i logistyka">
-
         </div>
-
 
         <div class="about-text">
 
@@ -1031,8 +824,7 @@
             </div>
 
             <h2>
-                Organizujemy transport
-                od początku do końca.
+                Organizujemy transport od początku do końca.
             </h2>
 
             <p>
@@ -1063,24 +855,12 @@
                 możemy sprawnie organizować kolejne etapy przewozu.
             </p>
 
-
             <div class="checks">
 
-                <div class="check">
-                    ✓ Wieloletnie doświadczenie
-                </div>
-
-                <div class="check">
-                    ✓ Indywidualne podejście
-                </div>
-
-                <div class="check">
-                    ✓ Nadzór nad transportem
-                </div>
-
-                <div class="check">
-                    ✓ Bezpieczne rozwiązania
-                </div>
+                <div class="check">✓ Wieloletnie doświadczenie</div>
+                <div class="check">✓ Indywidualne podejście</div>
+                <div class="check">✓ Nadzór nad transportem</div>
+                <div class="check">✓ Bezpieczne rozwiązania</div>
 
             </div>
 
@@ -1090,8 +870,6 @@
 
 </section>
 
-
-<!-- USŁUGI -->
 
 <section class="services" id="uslugi">
 
@@ -1113,99 +891,66 @@
 
     </div>
 
-
     <div class="services-grid">
 
         <div class="service">
-
             <div class="service-number">01</div>
-
             <h3>Planowanie trasy</h3>
-
             <p>
                 Analizujemy możliwe trasy oraz warunki przewozu,
                 aby odpowiednio zaplanować realizację zlecenia.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">02</div>
-
             <h3>Dobór pojazdu</h3>
-
             <p>
                 Dobieramy odpowiedni środek transportu
-                do charakteru, wymiarów oraz wymagań
-                przewożonego ładunku.
+                do charakteru, wymiarów oraz wymagań ładunku.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">03</div>
-
             <h3>Organizacja przewozu</h3>
-
             <p>
                 Organizujemy przewóz ładunku i koordynujemy
                 najważniejsze etapy od nadania aż do odbioru.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">04</div>
-
             <h3>Nadzór nad dostawą</h3>
-
             <p>
-                Nadzorujemy realizację transportu od momentu
-                załadunku aż do końcowego rozładunku.
+                Nadzorujemy realizację transportu
+                od momentu załadunku aż do rozładunku.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">05</div>
-
             <h3>Dokumentacja</h3>
-
             <p>
-                Pomagamy w przygotowaniu i koordynacji dokumentów
-                wymaganych do prawidłowej realizacji przewozu.
+                Pomagamy w przygotowaniu i koordynacji
+                dokumentów wymaganych do realizacji przewozu.
             </p>
-
         </div>
 
-
         <div class="service">
-
             <div class="service-number">06</div>
-
             <h3>Ubezpieczenie</h3>
-
             <p>
                 Pomagamy zadbać o odpowiednie zabezpieczenie
                 procesu transportowego i przewożonego ładunku.
             </p>
-
         </div>
 
     </div>
 
 </section>
 
-
-<!-- DUŻE ZDJĘCIE -->
 
 <section class="visual-section">
 
@@ -1233,8 +978,6 @@
 </section>
 
 
-<!-- JAK DZIAŁAMY -->
-
 <section class="process" id="proces">
 
     <div class="section-header">
@@ -1249,75 +992,41 @@
 
         <p>
             Każdy transport wymaga odpowiedniego przygotowania,
-            koordynacji oraz kontroli kolejnych etapów realizacji.
+            koordynacji oraz kontroli kolejnych etapów.
         </p>
 
     </div>
 
-
     <div class="process-grid">
 
         <div class="process-item">
-
             <div class="process-number">1</div>
-
             <h3>Analiza</h3>
-
-            <p>
-                Poznajemy potrzeby klienta
-                oraz charakterystykę ładunku.
-            </p>
-
+            <p>Poznajemy potrzeby klienta i charakterystykę ładunku.</p>
         </div>
 
-
         <div class="process-item">
-
             <div class="process-number">2</div>
-
             <h3>Planowanie</h3>
-
-            <p>
-                Planujemy trasę oraz dobieramy
-                odpowiednie rozwiązanie transportowe.
-            </p>
-
+            <p>Planujemy trasę i dobieramy odpowiednie rozwiązanie.</p>
         </div>
 
-
         <div class="process-item">
-
             <div class="process-number">3</div>
-
             <h3>Realizacja</h3>
-
-            <p>
-                Koordynujemy załadunek i nadzorujemy
-                przebieg organizowanego transportu.
-            </p>
-
+            <p>Koordynujemy załadunek i przebieg transportu.</p>
         </div>
 
-
         <div class="process-item">
-
             <div class="process-number">4</div>
-
             <h3>Dostawa</h3>
-
-            <p>
-                Nadzorujemy realizację aż do rozładunku
-                oraz końcowego odbioru ładunku.
-            </p>
-
+            <p>Nadzorujemy realizację aż do rozładunku i odbioru.</p>
         </div>
 
     </div>
 
 </section>
 
-
-<!-- DLACZEGO MY -->
 
 <section class="why" id="dlaczego">
 
@@ -1333,84 +1042,42 @@
 
         <p>
             W spedycji liczy się doświadczenie, odpowiedzialność,
-            znajomość rynku i umiejętność podejmowania właściwych
-            decyzji w odpowiednim momencie.
+            znajomość rynku i umiejętność podejmowania
+            właściwych decyzji.
         </p>
 
     </div>
 
-
     <div class="why-grid">
 
         <div class="why-item">
-
             <h3>Lojalność</h3>
-
-            <p>
-                Stawiamy na uczciwe i długoterminowe
-                relacje z naszymi klientami.
-            </p>
-
+            <p>Stawiamy na uczciwe i długoterminowe relacje.</p>
         </div>
 
-
         <div class="why-item">
-
             <h3>Sumienność</h3>
-
-            <p>
-                Zwracamy uwagę na szczegóły
-                i dokładnie koordynujemy kolejne etapy zlecenia.
-            </p>
-
+            <p>Dokładnie koordynujemy kolejne etapy zlecenia.</p>
         </div>
 
-
         <div class="why-item">
-
             <h3>Doradztwo</h3>
-
-            <p>
-                Pomagamy dobrać rozwiązanie
-                odpowiednie do konkretnego transportu.
-            </p>
-
+            <p>Pomagamy dobrać odpowiednie rozwiązanie transportowe.</p>
         </div>
 
-
         <div class="why-item">
-
             <h3>Doświadczenie</h3>
-
-            <p>
-                Działamy od 2015 roku i wykorzystujemy
-                zdobyte doświadczenie w kolejnych realizacjach.
-            </p>
-
+            <p>Działamy na rynku od 2015 roku.</p>
         </div>
 
-
         <div class="why-item">
-
             <h3>Trudne sytuacje</h3>
-
-            <p>
-                Potrafimy reagować na niespodziewane problemy
-                i szukać możliwie bezpiecznych rozwiązań.
-            </p>
-
+            <p>Reagujemy na problemy i szukamy bezpiecznych rozwiązań.</p>
         </div>
 
-
         <div class="why-item">
-
             <h3>Oszczędność</h3>
-
-            <p>
-                Analizujemy rynek i planujemy transport
-                z myślą o czasie oraz kosztach klienta.
-            </p>
-
+            <p>Analizujemy rynek z myślą o czasie i kosztach klienta.</p>
         </div>
 
     </div>
@@ -1418,19 +1085,14 @@
 </section>
 
 
-<!-- EUROPA -->
-
 <section class="europe">
 
     <div class="europe-grid">
 
         <div class="europe-image">
-
             <img src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
                  alt="Transport drogowy w Europie">
-
         </div>
-
 
         <div class="europe-text">
 
@@ -1456,21 +1118,10 @@
                 oraz wymagania klienta.
             </p>
 
-
             <div class="area-tags">
-
-                <div class="area-tag">
-                    🇵🇱 Polska
-                </div>
-
-                <div class="area-tag">
-                    🇪🇺 Unia Europejska
-                </div>
-
-                <div class="area-tag">
-                    🌍 Europa
-                </div>
-
+                <div class="area-tag">🇵🇱 Polska</div>
+                <div class="area-tag">🇪🇺 Unia Europejska</div>
+                <div class="area-tag">🌍 Europa</div>
             </div>
 
         </div>
@@ -1479,8 +1130,6 @@
 
 </section>
 
-
-<!-- ZAUFALI NAM -->
 
 <section class="trust">
 
@@ -1502,18 +1151,13 @@
 
     </div>
 
-
     <div class="trust-box">
-
-        Tutaj w kolejnym kroku dodamy logotypy firm,
-        które współpracują z Jupiter Trans & Cargo.
-
+        Tutaj dodamy logotypy firm współpracujących
+        z Jupiter Trans & Cargo.
     </div>
 
 </section>
 
-
-<!-- CERTYFIKATY -->
 
 <section class="certificates" id="certyfikaty">
 
@@ -1529,65 +1173,42 @@
 
         <p>
             Profesjonalna działalność w branży transportowej
-            wymaga odpowiednich kompetencji, uprawnień
-            oraz zabezpieczenia.
+            wymaga odpowiednich kompetencji,
+            uprawnień oraz zabezpieczenia.
         </p>
 
     </div>
 
-
     <div class="cert-grid">
 
         <div class="cert">
-
-            <h3>
-                Certyfikat kompetencji zawodowych
-            </h3>
-
+            <h3>Certyfikat kompetencji zawodowych</h3>
             <p>
-                Potwierdzenie posiadanych kwalifikacji
-                zawodowych związanych z działalnością
-                w branży transportowej.
+                Potwierdzenie posiadanych kwalifikacji zawodowych
+                związanych z działalnością w branży transportowej.
             </p>
-
         </div>
 
-
         <div class="cert">
-
-            <h3>
-                Licencje i uprawnienia
-            </h3>
-
+            <h3>Licencje i uprawnienia</h3>
             <p>
-                Posiadamy wymagane uprawnienia związane
-                z działalnością transportową i spedycyjną.
-                Szczegółowe informacje oraz dokumenty
-                możemy udostępnić klientom.
+                Uprawnienia związane z działalnością
+                transportową i spedycyjną.
             </p>
-
         </div>
 
-
         <div class="cert">
-
-            <h3>
-                Polisa ubezpieczeniowa
-            </h3>
-
+            <h3>Polisa ubezpieczeniowa</h3>
             <p>
-                Działalność firmy objęta jest odpowiednim
-                zabezpieczeniem ubezpieczeniowym.
+                Odpowiednie zabezpieczenie działalności
+                oraz organizowanych procesów transportowych.
             </p>
-
         </div>
 
     </div>
 
 </section>
 
-
-<!-- KONTAKT -->
 
 <section class="contact" id="kontakt">
 
@@ -1607,27 +1228,28 @@
             <p>
                 Skontaktuj się z Jupiter Trans & Cargo,
                 aby omówić organizację przewozu
-                i dobrać rozwiązanie do Twoich potrzeb.
+                i dobrać rozwiązanie do swoich potrzeb.
             </p>
-
 
             <div class="contact-box">
 
                 <strong>Telefon</strong>
 
-                DO UZUPEŁNIENIA
+                <a href="tel:734183473">
+                    734 183 473
+                </a>
 
             </div>
-
 
             <div class="contact-box">
 
                 <strong>E-mail</strong>
 
-                DO UZUPEŁNIENIA
+                <a href="mailto:maarta.jupiter@onet.pl">
+                    maarta.jupiter@onet.pl
+                </a>
 
             </div>
-
 
             <div class="contact-box">
 
@@ -1641,7 +1263,6 @@
 
         </div>
 
-
         <div class="contact-logo">
 
             <img src="jupiter.png"
@@ -1654,16 +1275,9 @@
 </section>
 
 
-<!-- STOPKA -->
-
 <footer>
-
-    © 2026 Jupiter Trans & Cargo.
-    Wszelkie prawa zastrzeżone.
-
+    © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
 </footer>
 
-
 </body>
-
 </html>
