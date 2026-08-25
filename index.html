@@ -8,21 +8,29 @@
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #17202a;
+            background: #0b0d10;
+            color: white;
         }
 
         header {
-            background: #101820;
-            color: white;
-            padding: 22px 8%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 13, 16, 0.95);
+            border-bottom: 1px solid #c9a227;
+            padding: 20px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -31,58 +39,99 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
+            color: #d4af37;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
         }
 
         .hero {
-            min-height: 520px;
-            background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-                        url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1800&q=80");
-            background-size: cover;
-            background-position: center;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 60px 8%;
-            color: white;
+            padding: 120px 7% 60px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.7),
+                    rgba(0,0,0,0.75)
+                ),
+                url("https://images.unsplash.com/photo-1586191582151-f73872dfc6f3?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+            background-position: center;
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 64px;
             margin-bottom: 20px;
+            color: white;
+        }
+
+        .gold {
+            color: #d4af37;
         }
 
         .hero p {
             font-size: 22px;
-            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 35px;
         }
 
         .button {
             display: inline-block;
-            background: #e5a900;
-            color: #101820;
-            padding: 15px 28px;
+            padding: 16px 30px;
+            background: #d4af37;
+            color: #0b0d10;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #f0cf5c;
+            transform: translateY(-2px);
         }
 
         section {
-            padding: 70px 8%;
+            padding: 100px 7%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 45px;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .about {
+            background: #111419;
+            text-align: center;
+        }
+
+        .about-text {
+            max-width: 850px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.8;
+            color: #ccc;
         }
 
         .cards {
@@ -92,63 +141,118 @@
         }
 
         .card {
-            background: white;
+            background: #15181d;
             padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            border: 1px solid #292d33;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
         }
 
         .card h3 {
+            color: #d4af37;
             margin-bottom: 15px;
-            font-size: 22px;
+            font-size: 23px;
         }
 
-        .about {
-            background: white;
+        .card p {
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .trust {
+            background: #0b0d10;
             text-align: center;
         }
 
-        .about p {
-            max-width: 850px;
+        .trust-box {
+            max-width: 900px;
             margin: auto;
+            padding: 50px;
+            border: 1px solid #292d33;
+            background: #111419;
+        }
+
+        .trust-box p {
+            color: #bbb;
             font-size: 18px;
             line-height: 1.7;
         }
 
+        .certificates {
+            background: #111419;
+        }
+
         .contact {
-            background: #101820;
-            color: white;
+            background: #0b0d10;
             text-align: center;
         }
 
-        .contact p {
-            margin: 12px 0;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
             font-size: 18px;
+            color: #ccc;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #d4af37;
+            margin-bottom: 8px;
         }
 
         footer {
-            background: #080d12;
-            color: #aaa;
+            padding: 30px;
             text-align: center;
-            padding: 25px;
+            background: #070809;
+            color: #777;
+            border-top: 1px solid #222;
         }
 
         @media (max-width: 800px) {
+
+            header {
+                position: relative;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
             .hero h1 {
-                font-size: 40px;
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 8px;
+            .section-title {
+                font-size: 32px;
             }
         }
     </style>
@@ -157,104 +261,181 @@
 <body>
 
 <header>
-    <div class="logo">Jupiter Trans & Cargo</div>
+
+    <div class="logo">
+        JUPITER TRANS & CARGO
+    </div>
 
     <nav>
         <a href="#o-nas">O nas</a>
         <a href="#uslugi">Usługi</a>
+        <a href="#zaufali">Zaufali nam</a>
+        <a href="#certyfikaty">Certyfikaty</a>
         <a href="#kontakt">Kontakt</a>
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <div class="hero-content">
-        <h1>Jupiter Trans & Cargo</h1>
+
+        <h1>
+            Transport.<br>
+            <span class="gold">Spedycja.</span><br>
+            Pewność.
+        </h1>
 
         <p>
-            Profesjonalna spedycja i transport.
-            Bezpiecznie. Terminowo. Skutecznie.
+            Jupiter Trans & Cargo — profesjonalna organizacja
+            transportu i spedycji na terenie Polski oraz Europy.
         </p>
 
-        <a href="#kontakt" class="button">Skontaktuj się z nami</a>
+        <a href="#kontakt" class="button">
+            Skontaktuj się z nami
+        </a>
+
     </div>
+
 </section>
+
 
 <section id="o-nas" class="about">
-    <h2 class="section-title">O nas</h2>
 
-    <p>
+    <h2 class="section-title">
+        O <span>nas</span>
+    </h2>
+
+    <p class="about-text">
         Jupiter Trans & Cargo to firma specjalizująca się
         w organizacji transportu i spedycji.
-        Stawiamy na terminowość, bezpieczeństwo oraz
-        profesjonalną obsługę każdego klienta.
+        Naszym priorytetem jest terminowość, bezpieczeństwo
+        oraz profesjonalna obsługa naszych klientów.
     </p>
+
 </section>
+
 
 <section id="uslugi">
-    <h2 class="section-title">Nasze usługi</h2>
+
+    <h2 class="section-title">
+        Nasze <span>usługi</span>
+    </h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>🚛 Transport</h3>
+            <h3>Transport krajowy</h3>
             <p>
-                Organizacja transportu drogowego
-                na terenie Polski i Europy.
+                Organizacja przewozów na terenie całej Polski.
             </p>
         </div>
 
         <div class="card">
-            <h3>📦 Spedycja</h3>
+            <h3>Transport międzynarodowy</h3>
             <p>
-                Kompleksowa organizacja przewozów
-                oraz obsługa logistyczna.
+                Sprawna organizacja transportów na terenie Europy.
             </p>
         </div>
 
         <div class="card">
-            <h3>🌍 Transport międzynarodowy</h3>
+            <h3>Spedycja</h3>
             <p>
-                Sprawna organizacja transportów
-                międzynarodowych.
+                Kompleksowa organizacja transportu
+                i obsługa logistyczna.
             </p>
         </div>
 
     </div>
+
 </section>
 
-<section class="about">
-    <h2 class="section-title">Dlaczego my?</h2>
+
+<section id="zaufali" class="trust">
+
+    <h2 class="section-title">
+        Zaufali <span>nam</span>
+    </h2>
+
+    <div class="trust-box">
+
+        <p>
+            Miejsce na logotypy oraz nazwy firm,
+            które współpracują z Jupiter Trans & Cargo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="certyfikaty" class="certificates">
+
+    <h2 class="section-title">
+        <span>Certyfikaty</span> i uprawnienia
+    </h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>Terminowość</h3>
-            <p>Dbamy o realizację transportów zgodnie z ustalonym terminem.</p>
+            <h3>Certyfikat</h3>
+            <p>
+                Tutaj dodamy pierwszy certyfikat firmy.
+            </p>
         </div>
 
         <div class="card">
-            <h3>Bezpieczeństwo</h3>
-            <p>Każdy transport traktujemy z najwyższą starannością.</p>
+            <h3>Licencje</h3>
+            <p>
+                Tutaj dodamy informacje o posiadanych licencjach.
+            </p>
         </div>
 
         <div class="card">
-            <h3>Doświadczenie</h3>
-            <p>Stawiamy na profesjonalną obsługę i sprawną organizację transportu.</p>
+            <h3>Ubezpieczenie</h3>
+            <p>
+                Tutaj dodamy informacje dotyczące ubezpieczenia.
+            </p>
         </div>
 
     </div>
+
 </section>
+
 
 <section id="kontakt" class="contact">
-    <h2 class="section-title">Kontakt</h2>
 
-    <p>📞 Telefon: TWÓJ TELEFON</p>
-    <p>✉️ E-mail: TWOJ EMAIL</p>
-    <p>📍 Adres: TWÓJ ADRES</p>
+    <h2 class="section-title">
+        <span>Kontakt</span>
+    </h2>
+
+    <div class="contact-info">
+
+        <div class="contact-item">
+            <strong>Telefon</strong>
+            TWÓJ TELEFON
+        </div>
+
+        <div class="contact-item">
+            <strong>E-mail</strong>
+            TWOJ EMAIL
+        </div>
+
+        <div class="contact-item">
+            <strong>Adres</strong>
+            TWÓJ ADRES
+        </div>
+
+    </div>
+
 </section>
 
+
 <footer>
-    © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
+
+    © 2026 Jupiter Trans & Cargo
+
 </footer>
 
 </body>
