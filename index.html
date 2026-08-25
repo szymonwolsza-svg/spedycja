@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Jupiter Trans & Cargo | Spedycja i transport</title>
-    <meta name="description" content="Jupiter Trans & Cargo - kompleksowa organizacja przewozu ładunków w Polsce i Europie.">
+
+    <meta name="description"
+          content="Jupiter Trans & Cargo - kompleksowa organizacja przewozu ładunków w Polsce i Europie. Transport, spedycja, import i eksport UK.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -33,17 +38,22 @@
             padding: 100px 7%;
         }
 
+        /* MENU */
+
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
+
             background: rgba(255,255,255,0.97);
             box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             padding: 8px 7%;
         }
 
@@ -62,8 +72,8 @@
         nav a {
             color: #15314b;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
+            margin-left: 18px;
+            font-size: 14px;
             font-weight: 700;
             transition: 0.25s;
         }
@@ -73,7 +83,7 @@
         }
 
         .lang-switch {
-            margin-left: 20px;
+            margin-left: 18px;
             display: flex;
             border: 1px solid #cbdce8;
             border-radius: 7px;
@@ -94,12 +104,16 @@
             color: white;
         }
 
+        /* HERO */
+
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
+
             padding: 150px 7% 80px;
             color: white;
+
             background:
                 linear-gradient(
                     90deg,
@@ -109,6 +123,7 @@
                     rgba(0,0,0,0.15) 100%
                 ),
                 url("gabriel-santos-GBVDilE8yvI-unsplash.jpg");
+
             background-size: cover;
             background-position: center;
         }
@@ -178,11 +193,15 @@
             color: #063b69;
         }
 
+        /* STATYSTYKI */
+
         .stats {
             background: #0784c7;
             color: white;
+
             display: grid;
             grid-template-columns: repeat(3,1fr);
+
             padding: 35px 7%;
             text-align: center;
         }
@@ -205,6 +224,8 @@
         .stat span {
             color: #dff4ff;
         }
+
+        /* NAGŁÓWKI */
 
         .section-header {
             max-width: 850px;
@@ -232,6 +253,8 @@
             font-size: 17px;
         }
 
+        /* O NAS */
+
         .about {
             background: #f5f9fc;
         }
@@ -239,8 +262,10 @@
         .about-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             gap: 65px;
             align-items: center;
         }
@@ -286,6 +311,8 @@
             box-shadow: 0 5px 20px rgba(0,70,110,0.05);
         }
 
+        /* USŁUGI */
+
         .services {
             background: white;
         }
@@ -293,8 +320,10 @@
         .services-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: repeat(3,1fr);
+
             gap: 23px;
         }
 
@@ -329,11 +358,14 @@
             color: #657b8e;
         }
 
+        /* DUŻE ZDJĘCIE */
+
         .visual-section {
             min-height: 520px;
             display: flex;
             align-items: center;
             color: white;
+
             background:
                 linear-gradient(
                     90deg,
@@ -342,6 +374,7 @@
                     rgba(3,42,76,0.18)
                 ),
                 url("nagy-szabi-RsjQl8dLnfw-unsplash.jpg");
+
             background-size: cover;
             background-position: center;
         }
@@ -361,6 +394,8 @@
             font-size: 19px;
         }
 
+        /* PROCES */
+
         .process {
             background: #f5f9fc;
         }
@@ -368,8 +403,10 @@
         .process-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: repeat(4,1fr);
+
             gap: 20px;
         }
 
@@ -388,9 +425,11 @@
             border-radius: 50%;
             background: #078bd1;
             color: white;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             font-size: 20px;
             font-weight: bold;
         }
@@ -405,6 +444,8 @@
             font-size: 15px;
         }
 
+        /* DLACZEGO */
+
         .why {
             background: white;
         }
@@ -412,8 +453,10 @@
         .why-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: repeat(3,1fr);
+
             gap: 22px;
         }
 
@@ -433,6 +476,8 @@
             color: #64798b;
         }
 
+        /* EUROPA */
+
         .europe {
             background: #073b67;
             color: white;
@@ -441,8 +486,10 @@
         .europe-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             gap: 60px;
             align-items: center;
         }
@@ -496,9 +543,7 @@
             margin-bottom: 10px;
         }
 
-        .uk-box p {
-            margin-bottom: 0;
-        }
+        /* PARTNERZY */
 
         .trust {
             background: #f5f9fc;
@@ -507,30 +552,30 @@
         .partners {
             max-width: 1100px;
             margin: auto;
+
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+
             gap: 35px;
         }
 
         .partner {
             width: 330px;
             height: 160px;
+
             background: white;
             border: 1px solid #dce8f0;
             border-radius: 12px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px;
-            box-shadow: 0 8px 30px rgba(7,57,92,0.06);
-            transition: 0.3s;
-        }
 
-        .partner:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(7,57,92,0.13);
+            padding: 30px;
+
+            box-shadow: 0 8px 30px rgba(7,57,92,0.06);
         }
 
         .partner img {
@@ -539,6 +584,8 @@
             object-fit: contain;
         }
 
+        /* CERTYFIKATY */
+
         .certificates {
             background: white;
         }
@@ -546,8 +593,10 @@
         .cert-image-grid {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: repeat(2,1fr);
+
             gap: 30px;
         }
 
@@ -577,8 +626,128 @@
 
         .cert-image-text p {
             color: #62798c;
-            font-size: 16px;
         }
+
+        /* FORMULARZ */
+
+        .quote {
+            background: #062e51;
+            color: white;
+        }
+
+        .quote .section-header h2 {
+            color: white;
+        }
+
+        .quote .section-header p {
+            color: #d5e4ee;
+        }
+
+        .quote-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .quote-form {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #17324a;
+            font-weight: 700;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #ccdce7;
+            border-radius: 7px;
+            padding: 14px 15px;
+            font-family: inherit;
+            font-size: 15px;
+            color: #17324a;
+            background: #ffffff;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #078bd1;
+            box-shadow: 0 0 0 3px rgba(7,139,209,0.10);
+        }
+
+        .form-group textarea {
+            min-height: 135px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #597184;
+            font-size: 13px;
+        }
+
+        .checkbox-group input {
+            margin-top: 4px;
+        }
+
+        .submit-button {
+            grid-column: 1 / -1;
+
+            border: none;
+            border-radius: 7px;
+
+            background: #078bd1;
+            color: white;
+
+            padding: 17px 30px;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .submit-button:hover {
+            background: #056da6;
+            transform: translateY(-2px);
+        }
+
+        .quote-note {
+            color: #6b8091;
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        /* MAPA */
 
         .map-section {
             background: #f5f9fc;
@@ -587,11 +756,14 @@
         .map-container {
             max-width: 1200px;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1fr 2fr;
+
             background: white;
             border-radius: 16px;
             overflow: hidden;
+
             box-shadow: 0 15px 45px rgba(7,57,92,0.12);
         }
 
@@ -599,6 +771,7 @@
             padding: 50px 40px;
             background: #073b67;
             color: white;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -624,10 +797,13 @@
         .route-button {
             display: inline-block;
             align-self: flex-start;
+
             background: #078bd1;
             color: white;
+
             padding: 14px 24px;
             border-radius: 6px;
+
             text-decoration: none;
             font-weight: bold;
         }
@@ -644,28 +820,33 @@
             display: block;
         }
 
+        /* KONTAKT */
+
         .contact {
-            background: #062e51;
-            color: white;
+            background: white;
+            color: #17324a;
         }
 
         .contact-grid {
             max-width: 1150px;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1.2fr 1fr;
+
             gap: 55px;
             align-items: center;
         }
 
         .contact-info h2 {
+            color: #103553;
             font-size: 43px;
             line-height: 1.2;
             margin: 10px 0 17px;
         }
 
         .contact-info > p {
-            color: #d5e4ee;
+            color: #657b8e;
             font-size: 17px;
             margin-bottom: 30px;
         }
@@ -673,30 +854,31 @@
         .contact-box {
             padding-bottom: 17px;
             margin-bottom: 17px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid #dce7ee;
         }
 
         .contact-box strong {
             display: block;
-            color: #65c7ff;
+            color: #078bd1;
             margin-bottom: 4px;
         }
 
         .contact-box a {
-            color: white;
+            color: #17324a;
             text-decoration: none;
             font-size: 18px;
         }
 
         .contact-box a:hover {
-            color: #65c7ff;
+            color: #078bd1;
         }
 
         .contact-logo {
-            background: white;
+            background: #f5f9fc;
             min-height: 320px;
             padding: 35px;
             border-radius: 14px;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -717,6 +899,7 @@
         }
 
         @media (max-width: 950px) {
+
             header {
                 position: relative;
                 flex-direction: column;
@@ -725,11 +908,10 @@
 
             nav {
                 justify-content: center;
-                flex-wrap: wrap;
             }
 
             nav a {
-                margin: 6px 9px;
+                margin: 6px 8px;
             }
 
             .lang-switch {
@@ -773,6 +955,7 @@
         }
 
         @media (max-width: 600px) {
+
             section {
                 padding: 70px 5%;
             }
@@ -809,8 +992,19 @@
             .services-grid,
             .why-grid,
             .process-grid,
-            .checks {
+            .checks,
+            .form-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .form-group.full,
+            .checkbox-group,
+            .submit-button {
+                grid-column: auto;
+            }
+
+            .quote-form {
+                padding: 25px 18px;
             }
 
             .about-image img,
@@ -831,287 +1025,542 @@
                 min-height: 350px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
+
 <header>
+
     <a href="#" class="logo">
         <img src="jupiter.png" alt="Jupiter Trans & Cargo">
     </a>
 
     <nav>
+
         <a href="#o-nas" data-pl="O nas" data-en="About us">O nas</a>
+
         <a href="#uslugi" data-pl="Usługi" data-en="Services">Usługi</a>
+
         <a href="#proces" data-pl="Jak działamy" data-en="How we work">Jak działamy</a>
+
         <a href="#dlaczego" data-pl="Dlaczego my" data-en="Why us">Dlaczego my</a>
-        <a href="#zaufali" data-pl="Zaufali nam" data-en="Trusted us">Zaufali nam</a>
+
+        <a href="#zaufali" data-pl="Zaufali nam" data-en="Partners">Zaufali nam</a>
+
         <a href="#certyfikaty" data-pl="Certyfikaty" data-en="Certificates">Certyfikaty</a>
-        <a href="#mapa" data-pl="Mapa" data-en="Map">Mapa</a>
+
+        <a href="#wycena" data-pl="Wycena" data-en="Quote">Wycena</a>
+
         <a href="#kontakt" data-pl="Kontakt" data-en="Contact">Kontakt</a>
 
         <div class="lang-switch">
-            <button id="plBtn" class="active" onclick="setLanguage('pl')">PL</button>
-            <button id="enBtn" onclick="setLanguage('en')">EN</button>
+
+            <button id="plBtn"
+                    class="active"
+                    onclick="setLanguage('pl')">
+                PL
+            </button>
+
+            <button id="enBtn"
+                    onclick="setLanguage('en')">
+                EN
+            </button>
+
         </div>
+
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <div class="hero-content">
+
         <div class="hero-label"
              data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA"
              data-en="FREIGHT FORWARDING • TRANSPORT • LOGISTICS">
+
             SPEDYCJA • TRANSPORT • LOGISTYKA
+
         </div>
 
         <h1>
-            <span data-pl="Twój ładunek." data-en="Your cargo.">Twój ładunek.</span><br>
-            <span data-pl="Nasza odpowiedzialność." data-en="Our responsibility.">Nasza odpowiedzialność.</span>
+
+            <span data-pl="Twój ładunek."
+                  data-en="Your cargo.">
+                Twój ładunek.
+            </span>
+
+            <br>
+
+            <span data-pl="Nasza odpowiedzialność."
+                  data-en="Our responsibility.">
+                Nasza odpowiedzialność.
+            </span>
+
         </h1>
 
         <p data-pl="Kompleksowo organizujemy przewóz ładunków od momentu ich nadania aż do odbioru. Planujemy, koordynujemy i nadzorujemy cały proces transportowy w Polsce oraz na terenie Europy."
            data-en="We provide comprehensive cargo transport organization from pickup to final delivery. We plan, coordinate and supervise the entire transport process in Poland and across Europe.">
+
             Kompleksowo organizujemy przewóz ładunków od momentu ich nadania aż do odbioru.
-            Planujemy, koordynujemy i nadzorujemy cały proces transportowy w Polsce oraz na terenie Europy.
+            Planujemy, koordynujemy i nadzorujemy cały proces transportowy
+            w Polsce oraz na terenie Europy.
+
         </p>
 
         <div class="hero-buttons">
-            <a href="#kontakt" class="button button-primary" data-pl="Skontaktuj się z nami" data-en="Contact us">Skontaktuj się z nami</a>
-            <a href="#uslugi" class="button button-secondary" data-pl="Poznaj nasze usługi" data-en="Explore our services">Poznaj nasze usługi</a>
+
+            <a href="#wycena"
+               class="button button-primary"
+               data-pl="Poproś o wycenę"
+               data-en="Request a quote">
+
+                Poproś o wycenę
+
+            </a>
+
+            <a href="#uslugi"
+               class="button button-secondary"
+               data-pl="Poznaj nasze usługi"
+               data-en="Explore our services">
+
+                Poznaj nasze usługi
+
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
+
 <div class="stats">
+
     <div class="stat">
-        <strong data-pl="Od 2015 roku" data-en="Since 2015">Od 2015 roku</strong>
-        <span data-pl="doświadczenie w branży" data-en="industry experience">doświadczenie w branży</span>
+
+        <strong data-pl="Od 2015 roku"
+                data-en="Since 2015">
+            Od 2015 roku
+        </strong>
+
+        <span data-pl="doświadczenie w branży"
+              data-en="industry experience">
+            doświadczenie w branży
+        </span>
+
     </div>
 
     <div class="stat">
-        <strong data-pl="Polska i Europa" data-en="Poland and Europe">Polska i Europa</strong>
-        <span data-pl="szeroki obszar działania" data-en="wide operating area">szeroki obszar działania</span>
+
+        <strong data-pl="Polska i Europa"
+                data-en="Poland and Europe">
+            Polska i Europa
+        </strong>
+
+        <span data-pl="szeroki obszar działania"
+              data-en="wide operating area">
+            szeroki obszar działania
+        </span>
+
     </div>
 
     <div class="stat">
-        <strong data-pl="Kompleksowa obsługa" data-en="Comprehensive service">Kompleksowa obsługa</strong>
-        <span data-pl="od nadania do odbioru" data-en="from pickup to delivery">od nadania do odbioru</span>
+
+        <strong data-pl="Kompleksowa obsługa"
+                data-en="Comprehensive service">
+            Kompleksowa obsługa
+        </strong>
+
+        <span data-pl="od nadania do odbioru"
+              data-en="from pickup to delivery">
+            od nadania do odbioru
+        </span>
+
     </div>
+
 </div>
 
+
 <section class="about" id="o-nas">
+
     <div class="about-grid">
+
         <div class="about-image">
-            <img src="elevate-dI-aXC7DWpQ-unsplash.jpg" alt="Transport i logistyka">
+
+            <img src="elevate-dI-aXC7DWpQ-unsplash.jpg"
+                 alt="Transport i logistyka">
+
         </div>
 
         <div class="about-text">
-            <div class="section-label">Jupiter Trans & Cargo</div>
+
+            <div class="section-label">
+                Jupiter Trans & Cargo
+            </div>
 
             <h2 data-pl="Organizujemy transport od początku do końca."
                 data-en="We organize transport from start to finish.">
+
                 Organizujemy transport od początku do końca.
+
             </h2>
 
             <p data-pl="Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków."
                data-en="Jupiter Trans & Cargo has been operating since 2015 and specializes in comprehensive cargo transport organization.">
-                Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków.
+
+                Jupiter Trans & Cargo działa na rynku od 2015 roku
+                i specjalizuje się w kompleksowej organizacji przewozu ładunków.
+
             </p>
 
             <p data-pl="Zajmujemy się całym procesem transportowym — od przyjęcia zlecenia i zaplanowania trasy, przez dobór odpowiedniego pojazdu, aż po nadzór nad załadunkiem, przewozem, rozładunkiem i odbiorem towaru."
                data-en="We manage the entire transport process — from accepting the order and planning the route, through selecting the appropriate vehicle, to supervising loading, transport, unloading and final delivery.">
-                Zajmujemy się całym procesem transportowym — od przyjęcia zlecenia i zaplanowania trasy,
-                przez dobór odpowiedniego pojazdu, aż po nadzór nad załadunkiem, przewozem, rozładunkiem i odbiorem towaru.
+
+                Zajmujemy się całym procesem transportowym — od przyjęcia zlecenia
+                i zaplanowania trasy, przez dobór odpowiedniego pojazdu,
+                aż po nadzór nad załadunkiem, przewozem, rozładunkiem
+                i odbiorem towaru.
+
             </p>
 
             <p data-pl="Wieloletnie doświadczenie pozwala nam skutecznie reagować również w trudnych i niespodziewanych sytuacjach. Analizujemy dostępne możliwości, doradzamy klientom i wybieramy rozwiązania łączące bezpieczeństwo, sprawność realizacji oraz rozsądne koszty."
                data-en="Our many years of experience allow us to react effectively even in difficult and unexpected situations. We analyze available options, advise our clients and select solutions combining safety, efficiency and reasonable costs.">
-                Wieloletnie doświadczenie pozwala nam skutecznie reagować również w trudnych i niespodziewanych sytuacjach.
-                Analizujemy dostępne możliwości, doradzamy klientom i wybieramy rozwiązania łączące bezpieczeństwo,
-                sprawność realizacji oraz rozsądne koszty.
+
+                Wieloletnie doświadczenie pozwala nam skutecznie reagować również
+                w trudnych i niespodziewanych sytuacjach.
+
             </p>
 
             <div class="checks">
-                <div class="check" data-pl="✓ Wieloletnie doświadczenie" data-en="✓ Many years of experience">✓ Wieloletnie doświadczenie</div>
-                <div class="check" data-pl="✓ Indywidualne podejście" data-en="✓ Individual approach">✓ Indywidualne podejście</div>
-                <div class="check" data-pl="✓ Nadzór nad transportem" data-en="✓ Transport supervision">✓ Nadzór nad transportem</div>
-                <div class="check" data-pl="✓ Bezpieczne rozwiązania" data-en="✓ Safe solutions">✓ Bezpieczne rozwiązania</div>
+
+                <div class="check"
+                     data-pl="✓ Wieloletnie doświadczenie"
+                     data-en="✓ Many years of experience">
+                    ✓ Wieloletnie doświadczenie
+                </div>
+
+                <div class="check"
+                     data-pl="✓ Indywidualne podejście"
+                     data-en="✓ Individual approach">
+                    ✓ Indywidualne podejście
+                </div>
+
+                <div class="check"
+                     data-pl="✓ Nadzór nad transportem"
+                     data-en="✓ Transport supervision">
+                    ✓ Nadzór nad transportem
+                </div>
+
+                <div class="check"
+                     data-pl="✓ Bezpieczne rozwiązania"
+                     data-en="✓ Safe solutions">
+                    ✓ Bezpieczne rozwiązania
+                </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="services" id="uslugi">
+
     <div class="section-header">
-        <div class="section-label" data-pl="Nasze usługi" data-en="Our services">Nasze usługi</div>
+
+        <div class="section-label"
+             data-pl="Nasze usługi"
+             data-en="Our services">
+
+            Nasze usługi
+
+        </div>
 
         <h2 data-pl="Kompleksowa organizacja transportu"
             data-en="Comprehensive transport organization">
+
             Kompleksowa organizacja transportu
+
         </h2>
 
-        <p data-pl="Koordynujemy najważniejsze etapy procesu transportowego i dopasowujemy rozwiązania do charakteru ładunku, kierunku przewozu oraz indywidualnych potrzeb klienta."
-           data-en="We coordinate the key stages of the transport process and tailor solutions to the cargo, route and individual customer requirements.">
-            Koordynujemy najważniejsze etapy procesu transportowego i dopasowujemy rozwiązania do charakteru ładunku,
-            kierunku przewozu oraz indywidualnych potrzeb klienta.
-        </p>
     </div>
+
 
     <div class="services-grid">
+
         <div class="service">
+
             <div class="service-number">01</div>
-            <h3 data-pl="Planowanie trasy" data-en="Route planning">Planowanie trasy</h3>
+
+            <h3 data-pl="Planowanie trasy"
+                data-en="Route planning">
+                Planowanie trasy
+            </h3>
+
             <p data-pl="Analizujemy możliwe trasy oraz warunki przewozu, aby odpowiednio zaplanować realizację zlecenia."
-               data-en="We analyze possible routes and transport conditions to properly plan the execution of each order.">
-                Analizujemy możliwe trasy oraz warunki przewozu, aby odpowiednio zaplanować realizację zlecenia.
+               data-en="We analyze possible routes and transport conditions to properly plan each order.">
+
+                Analizujemy możliwe trasy oraz warunki przewozu.
+
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-number">02</div>
-            <h3 data-pl="Dobór pojazdu" data-en="Vehicle selection">Dobór pojazdu</h3>
+
+            <h3 data-pl="Dobór pojazdu"
+                data-en="Vehicle selection">
+                Dobór pojazdu
+            </h3>
+
             <p data-pl="Dobieramy odpowiedni środek transportu do charakteru, wymiarów oraz wymagań ładunku."
-               data-en="We select the appropriate vehicle according to the type, dimensions and requirements of the cargo.">
-                Dobieramy odpowiedni środek transportu do charakteru, wymiarów oraz wymagań ładunku.
+               data-en="We select the appropriate vehicle for the cargo and its requirements.">
+
+                Dobieramy odpowiedni środek transportu do charakteru ładunku.
+
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-number">03</div>
-            <h3 data-pl="Organizacja przewozu" data-en="Transport organization">Organizacja przewozu</h3>
+
+            <h3 data-pl="Organizacja przewozu"
+                data-en="Transport organization">
+                Organizacja przewozu
+            </h3>
+
             <p data-pl="Organizujemy przewóz ładunku i koordynujemy najważniejsze etapy od nadania aż do odbioru."
-               data-en="We organize cargo transport and coordinate all key stages from pickup to final delivery.">
-                Organizujemy przewóz ładunku i koordynujemy najważniejsze etapy od nadania aż do odbioru.
+               data-en="We organize cargo transport and coordinate all key stages from pickup to delivery.">
+
+                Organizujemy przewóz od nadania aż do odbioru.
+
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-number">04</div>
-            <h3 data-pl="Nadzór nad dostawą" data-en="Delivery supervision">Nadzór nad dostawą</h3>
+
+            <h3 data-pl="Nadzór nad dostawą"
+                data-en="Delivery supervision">
+                Nadzór nad dostawą
+            </h3>
+
             <p data-pl="Nadzorujemy realizację transportu od momentu załadunku aż do rozładunku."
-               data-en="We supervise the transport process from loading through to final unloading.">
-                Nadzorujemy realizację transportu od momentu załadunku aż do rozładunku.
+               data-en="We supervise transport from loading to unloading.">
+
+                Nadzorujemy transport od załadunku do rozładunku.
+
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-number">05</div>
-            <h3 data-pl="Dokumentacja" data-en="Documentation">Dokumentacja</h3>
+
+            <h3 data-pl="Dokumentacja"
+                data-en="Documentation">
+                Dokumentacja
+            </h3>
+
             <p data-pl="Pomagamy w przygotowaniu i koordynacji dokumentów wymaganych do realizacji przewozu."
-               data-en="We assist with the preparation and coordination of documentation required for transport.">
-                Pomagamy w przygotowaniu i koordynacji dokumentów wymaganych do realizacji przewozu.
+               data-en="We assist with documents required for transport.">
+
+                Pomagamy w przygotowaniu i koordynacji dokumentów.
+
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-number">06</div>
-            <h3 data-pl="Import i eksport UK" data-en="UK import and export">Import i eksport UK</h3>
-            <p data-pl="Organizujemy importy i eksporty do Wielkiej Brytanii oraz z Wielkiej Brytanii, a także zapewniamy wsparcie przy odprawie celnej."
+
+            <h3 data-pl="Import i eksport UK"
+                data-en="UK import and export">
+                Import i eksport UK
+            </h3>
+
+            <p data-pl="Organizujemy importy i eksporty do Wielkiej Brytanii oraz z Wielkiej Brytanii. Zapewniamy również wsparcie przy odprawie celnej."
                data-en="We organize imports to and exports from the United Kingdom and provide support with customs clearance.">
-                Organizujemy importy i eksporty do Wielkiej Brytanii oraz z Wielkiej Brytanii,
-                a także zapewniamy wsparcie przy odprawie celnej.
+
+                Organizujemy importy i eksporty do oraz z Wielkiej Brytanii
+                oraz zapewniamy wsparcie przy odprawie celnej.
+
             </p>
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="visual-section">
+
     <div class="visual-content">
+
         <div class="section-label"
              style="color:#62c6ff;"
              data-pl="Odpowiedzialna spedycja"
              data-en="Responsible freight forwarding">
+
             Odpowiedzialna spedycja
+
         </div>
 
         <h2 data-pl="Dobra organizacja transportu zaczyna się jeszcze przed wyruszeniem pojazdu w trasę."
             data-en="Good transport organization begins before the vehicle even starts its journey.">
-            Dobra organizacja transportu zaczyna się jeszcze przed wyruszeniem pojazdu w trasę.
+
+            Dobra organizacja transportu zaczyna się jeszcze
+            przed wyruszeniem pojazdu w trasę.
+
         </h2>
 
         <p data-pl="Analizujemy rynek, możliwości przewozu oraz wymagania konkretnego zlecenia. Dzięki temu możemy wybierać rozwiązania pozwalające ograniczyć ryzyko, niepotrzebne koszty oraz opóźnienia."
-           data-en="We analyze the market, transport options and the requirements of each order. This allows us to select solutions that help reduce risk, unnecessary costs and delays.">
-            Analizujemy rynek, możliwości przewozu oraz wymagania konkretnego zlecenia.
-            Dzięki temu możemy wybierać rozwiązania pozwalające ograniczyć ryzyko,
-            niepotrzebne koszty oraz opóźnienia.
+           data-en="We analyze the market, transport options and the requirements of each order to reduce risk, unnecessary costs and delays.">
+
+            Analizujemy rynek, możliwości przewozu oraz wymagania
+            konkretnego zlecenia.
+
         </p>
+
     </div>
+
 </section>
 
+
 <section class="process" id="proces">
+
     <div class="section-header">
-        <div class="section-label" data-pl="Jak działamy" data-en="How we work">Jak działamy</div>
+
+        <div class="section-label"
+             data-pl="Jak działamy"
+             data-en="How we work">
+            Jak działamy
+        </div>
 
         <h2 data-pl="Od zlecenia do dostawy"
             data-en="From order to delivery">
+
             Od zlecenia do dostawy
+
         </h2>
 
-        <p data-pl="Każdy transport wymaga odpowiedniego przygotowania, koordynacji oraz kontroli kolejnych etapów realizacji."
-           data-en="Every transport requires proper preparation, coordination and supervision of each stage of execution.">
-            Każdy transport wymaga odpowiedniego przygotowania,
-            koordynacji oraz kontroli kolejnych etapów realizacji.
-        </p>
     </div>
 
     <div class="process-grid">
+
         <div class="process-item">
             <div class="process-number">1</div>
-            <h3 data-pl="Analiza" data-en="Analysis">Analiza</h3>
+
+            <h3 data-pl="Analiza"
+                data-en="Analysis">
+                Analiza
+            </h3>
+
             <p data-pl="Poznajemy potrzeby klienta oraz charakterystykę ładunku."
                data-en="We identify the customer's needs and cargo characteristics.">
                 Poznajemy potrzeby klienta oraz charakterystykę ładunku.
             </p>
+
         </div>
 
         <div class="process-item">
+
             <div class="process-number">2</div>
-            <h3 data-pl="Planowanie" data-en="Planning">Planowanie</h3>
+
+            <h3 data-pl="Planowanie"
+                data-en="Planning">
+                Planowanie
+            </h3>
+
             <p data-pl="Planujemy trasę i dobieramy odpowiednie rozwiązanie."
-               data-en="We plan the route and select the appropriate transport solution.">
+               data-en="We plan the route and select the appropriate solution.">
                 Planujemy trasę i dobieramy odpowiednie rozwiązanie.
             </p>
+
         </div>
 
         <div class="process-item">
+
             <div class="process-number">3</div>
-            <h3 data-pl="Realizacja" data-en="Execution">Realizacja</h3>
+
+            <h3 data-pl="Realizacja"
+                data-en="Execution">
+                Realizacja
+            </h3>
+
             <p data-pl="Koordynujemy załadunek i przebieg transportu."
-               data-en="We coordinate loading and supervise the transport process.">
+               data-en="We coordinate loading and transport.">
                 Koordynujemy załadunek i przebieg transportu.
             </p>
+
         </div>
 
         <div class="process-item">
+
             <div class="process-number">4</div>
-            <h3 data-pl="Dostawa" data-en="Delivery">Dostawa</h3>
+
+            <h3 data-pl="Dostawa"
+                data-en="Delivery">
+                Dostawa
+            </h3>
+
             <p data-pl="Nadzorujemy realizację aż do rozładunku i odbioru."
-               data-en="We supervise the process through unloading and final delivery.">
+               data-en="We supervise the process through final delivery.">
                 Nadzorujemy realizację aż do rozładunku i odbioru.
             </p>
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="why" id="dlaczego">
+
     <div class="section-header">
-        <div class="section-label" data-pl="Dlaczego Jupiter Trans & Cargo" data-en="Why Jupiter Trans & Cargo">Dlaczego Jupiter Trans & Cargo</div>
+
+        <div class="section-label"
+             data-pl="Dlaczego Jupiter Trans & Cargo"
+             data-en="Why Jupiter Trans & Cargo">
+
+            Dlaczego Jupiter Trans & Cargo
+
+        </div>
 
         <h2 data-pl="Współpraca oparta na zaufaniu"
             data-en="Cooperation built on trust">
+
             Współpraca oparta na zaufaniu
+
         </h2>
 
-        <p data-pl="W spedycji liczy się doświadczenie, odpowiedzialność, znajomość rynku i umiejętność podejmowania właściwych decyzji."
-           data-en="In freight forwarding, experience, responsibility, market knowledge and the ability to make the right decisions all matter.">
-            W spedycji liczy się doświadczenie, odpowiedzialność,
-            znajomość rynku i umiejętność podejmowania właściwych decyzji.
-        </p>
     </div>
 
     <div class="why-grid">
+
         <div class="why-item">
             <h3 data-pl="Lojalność" data-en="Loyalty">Lojalność</h3>
             <p data-pl="Stawiamy na uczciwe i długoterminowe relacje."
@@ -1131,7 +1580,7 @@
         <div class="why-item">
             <h3 data-pl="Doradztwo" data-en="Advisory">Doradztwo</h3>
             <p data-pl="Pomagamy dobrać odpowiednie rozwiązanie transportowe."
-               data-en="We help choose the appropriate transport solution.">
+               data-en="We help choose the right transport solution.">
                 Pomagamy dobrać odpowiednie rozwiązanie transportowe.
             </p>
         </div>
@@ -1145,7 +1594,7 @@
         </div>
 
         <div class="why-item">
-            <h3 data-pl="Trudne sytuacje" data-en="Difficult situations">Trudne sytuacje</h3>
+            <h3 data-pl="Trudne sytuacje" data-en="Problem solving">Trudne sytuacje</h3>
             <p data-pl="Reagujemy na problemy i szukamy bezpiecznych rozwiązań."
                data-en="We respond to problems and seek safe solutions.">
                 Reagujemy na problemy i szukamy bezpiecznych rozwiązań.
@@ -1155,173 +1604,574 @@
         <div class="why-item">
             <h3 data-pl="Oszczędność" data-en="Efficiency">Oszczędność</h3>
             <p data-pl="Analizujemy rynek z myślą o czasie oraz kosztach klienta."
-               data-en="We analyze the market with the customer's time and costs in mind.">
+               data-en="We consider both customer time and costs.">
                 Analizujemy rynek z myślą o czasie oraz kosztach klienta.
             </p>
         </div>
+
     </div>
+
 </section>
 
+
 <section class="europe">
+
     <div class="europe-grid">
+
         <div class="europe-image">
-            <img src="christian-lue-8Yw6tsB8tnc-unsplash.jpg" alt="Transport drogowy w Europie">
+
+            <img src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
+                 alt="Transport drogowy w Europie">
+
         </div>
 
         <div class="europe-text">
+
             <div class="section-label"
                  style="color:#62c6ff;"
                  data-pl="Obszar działania"
                  data-en="Operating area">
+
                 Obszar działania
+
             </div>
 
-            <h2 data-pl="Polska, Unia Europejska i pozostałe kierunki europejskie"
-                data-en="Poland, the European Union and other European destinations">
-                Polska, Unia Europejska i pozostałe kierunki europejskie
+            <h2 data-pl="Polska, Europa i Wielka Brytania"
+                data-en="Poland, Europe and the United Kingdom">
+
+                Polska, Europa i Wielka Brytania
+
             </h2>
 
-            <p data-pl="Organizujemy przewozy na terenie całej Polski, krajów Unii Europejskiej oraz pozostałych państw znajdujących się na kontynencie europejskim."
-               data-en="We organize transport throughout Poland, across the European Union and to other countries on the European continent.">
+            <p data-pl="Organizujemy przewozy na terenie całej Polski, krajów Unii Europejskiej oraz pozostałych kierunków europejskich."
+               data-en="We organize transport throughout Poland, the European Union and other European destinations.">
+
                 Organizujemy przewozy na terenie całej Polski,
-                krajów Unii Europejskiej oraz pozostałych państw znajdujących się
-                na kontynencie europejskim.
+                krajów Unii Europejskiej oraz pozostałych kierunków europejskich.
+
             </p>
 
             <div class="area-tags">
-                <div class="area-tag" data-pl="🇵🇱 Polska" data-en="🇵🇱 Poland">🇵🇱 Polska</div>
-                <div class="area-tag" data-pl="🇪🇺 Unia Europejska" data-en="🇪🇺 European Union">🇪🇺 Unia Europejska</div>
-                <div class="area-tag" data-pl="🇬🇧 Wielka Brytania" data-en="🇬🇧 United Kingdom">🇬🇧 Wielka Brytania</div>
-                <div class="area-tag" data-pl="🌍 Europa" data-en="🌍 Europe">🌍 Europa</div>
+
+                <div class="area-tag"
+                     data-pl="🇵🇱 Polska"
+                     data-en="🇵🇱 Poland">
+                    🇵🇱 Polska
+                </div>
+
+                <div class="area-tag"
+                     data-pl="🇪🇺 Unia Europejska"
+                     data-en="🇪🇺 European Union">
+                    🇪🇺 Unia Europejska
+                </div>
+
+                <div class="area-tag"
+                     data-pl="🇬🇧 Wielka Brytania"
+                     data-en="🇬🇧 United Kingdom">
+                    🇬🇧 Wielka Brytania
+                </div>
+
             </div>
 
             <div class="uk-box">
+
                 <h3 data-pl="Import i eksport Wielka Brytania"
                     data-en="UK import and export">
+
                     Import i eksport Wielka Brytania
+
                 </h3>
 
-                <p data-pl="Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii. Wspieramy również klientów w kwestiach związanych z odprawą celną i koordynacją wymaganej dokumentacji."
-                   data-en="We organize import and export transport to and from the United Kingdom. We also support customers with customs clearance and the coordination of required documentation.">
-                    Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii.
-                    Wspieramy również klientów w kwestiach związanych z odprawą celną i koordynacją wymaganej dokumentacji.
+                <p data-pl="Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii. Wspieramy klientów przy odprawie celnej oraz koordynacji wymaganej dokumentacji."
+                   data-en="We organize import and export transport to and from the United Kingdom. We support customers with customs clearance and required documentation.">
+
+                    Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii
+                    oraz z Wielkiej Brytanii. Wspieramy klientów przy odprawie celnej
+                    oraz koordynacji wymaganej dokumentacji.
+
                 </p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="trust" id="zaufali">
+
     <div class="section-header">
-        <div class="section-label" data-pl="Partnerzy" data-en="Partners">Partnerzy</div>
 
-        <h2 data-pl="Zaufali nam" data-en="They trust us">Zaufali nam</h2>
+        <div class="section-label"
+             data-pl="Partnerzy"
+             data-en="Partners">
 
-        <p data-pl="Zaufanie oraz długoterminowa współpraca są dla nas jednym z najważniejszych potwierdzeń jakości świadczonych usług."
-           data-en="Trust and long-term cooperation are among the strongest confirmations of the quality of our services.">
-            Zaufanie oraz długoterminowa współpraca są dla nas jednym
-            z najważniejszych potwierdzeń jakości świadczonych usług.
-        </p>
+            Partnerzy
+
+        </div>
+
+        <h2 data-pl="Zaufali nam"
+            data-en="They trust us">
+
+            Zaufali nam
+
+        </h2>
+
     </div>
 
     <div class="partners">
+
         <div class="partner">
-            <img src="eurogate-logistics.png.png" alt="Eurogate Logistics">
+
+            <img src="eurogate-logistics.png.png"
+                 alt="Eurogate Logistics">
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="certificates" id="certyfikaty">
+
     <div class="section-header">
+
         <div class="section-label"
              data-pl="Kompetencje i uprawnienia"
              data-en="Competence and authorizations">
+
             Kompetencje i uprawnienia
+
         </div>
 
         <h2 data-pl="Certyfikaty i licencje"
             data-en="Certificates and licences">
+
             Certyfikaty i licencje
+
         </h2>
 
-        <p data-pl="Poniżej prezentujemy najważniejsze dokumenty potwierdzające nasze kompetencje i uprawnienia do prowadzenia działalności spedycyjnej i transportowej."
-           data-en="Below we present the most important documents confirming our professional competence and authorizations for freight forwarding and transport activity.">
-            Poniżej prezentujemy najważniejsze dokumenty potwierdzające nasze kompetencje
-            i uprawnienia do prowadzenia działalności spedycyjnej i transportowej.
-        </p>
     </div>
 
     <div class="cert-image-grid">
+
         <div class="cert-image-card">
-            <img src="certyfikat-kompetencji.png" alt="Certyfikat kompetencji zawodowych">
+
+            <img src="certyfikat-kompetencji.png"
+                 alt="Certyfikat kompetencji zawodowych">
+
             <div class="cert-image-text">
+
                 <h3 data-pl="Certyfikat kompetencji zawodowych"
                     data-en="Certificate of professional competence">
+
                     Certyfikat kompetencji zawodowych
+
                 </h3>
 
-                <p data-pl="Dokument potwierdzający kwalifikacje zawodowe niezbędne do wykonywania działalności w zakresie transportu drogowego."
-                   data-en="A document confirming the professional qualifications required to carry out road transport activity.">
-                    Dokument potwierdzający kwalifikacje zawodowe niezbędne do wykonywania działalności
+                <p data-pl="Dokument potwierdzający kwalifikacje zawodowe w zakresie transportu drogowego."
+                   data-en="A document confirming professional qualifications in road transport.">
+
+                    Dokument potwierdzający kwalifikacje zawodowe
                     w zakresie transportu drogowego.
+
                 </p>
+
             </div>
+
         </div>
+
 
         <div class="cert-image-card">
-            <img src="licencja-transportowa.png" alt="Licencja na wykonywanie transportu drogowego">
+
+            <img src="licencja-transportowa.png"
+                 alt="Licencja transportowa">
+
             <div class="cert-image-text">
+
                 <h3 data-pl="Licencja na wykonywanie transportu drogowego"
                     data-en="Road transport licence">
+
                     Licencja na wykonywanie transportu drogowego
+
                 </h3>
 
-                <p data-pl="Dokument potwierdzający uprawnienia do wykonywania transportu drogowego w zakresie pośrednictwa przy przewozie rzeczy."
-                   data-en="A document confirming the authorization to perform road transport activity in the field of goods transport intermediation.">
-                    Dokument potwierdzający uprawnienia do wykonywania transportu drogowego
+                <p data-pl="Dokument potwierdzający uprawnienia w zakresie pośrednictwa przy przewozie rzeczy."
+                   data-en="A document confirming authorization for goods transport intermediation.">
+
+                    Dokument potwierdzający uprawnienia
                     w zakresie pośrednictwa przy przewozie rzeczy.
+
                 </p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<section class="map-section" id="mapa">
+
+<!-- FORMULARZ WYCENY -->
+
+<section class="quote" id="wycena">
+
     <div class="section-header">
-        <div class="section-label" data-pl="Nasza lokalizacja" data-en="Our location">Nasza lokalizacja</div>
+
+        <div class="section-label"
+             style="color:#62c6ff;"
+             data-pl="Szybka wycena"
+             data-en="Quick quote">
+
+            Szybka wycena
+
+        </div>
+
+        <h2 data-pl="Potrzebujesz transportu? Wyślij zapytanie."
+            data-en="Need transport? Send us an enquiry.">
+
+            Potrzebujesz transportu? Wyślij zapytanie.
+
+        </h2>
+
+        <p data-pl="Podaj podstawowe informacje o ładunku i trasie. Skontaktujemy się z Tobą, aby omówić szczegóły transportu."
+           data-en="Provide the basic details of your cargo and route. We will contact you to discuss the transport.">
+
+            Podaj podstawowe informacje o ładunku i trasie.
+            Skontaktujemy się z Tobą, aby omówić szczegóły transportu.
+
+        </p>
+
+    </div>
+
+
+    <div class="quote-container">
+
+        <form class="quote-form"
+              action="https://formsubmit.co/marta.jupiter@onet.eu"
+              method="POST">
+
+            <input type="hidden"
+                   name="_subject"
+                   value="Nowe zapytanie transportowe - Jupiter Trans & Cargo">
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+
+            <input type="text"
+                   name="_honey"
+                   style="display:none">
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label data-pl="Imię i nazwisko / Firma *"
+                           data-en="Name / Company *">
+
+                        Imię i nazwisko / Firma *
+
+                    </label>
+
+                    <input type="text"
+                           name="Klient"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="E-mail *"
+                           data-en="E-mail *">
+
+                        E-mail *
+
+                    </label>
+
+                    <input type="email"
+                           name="Email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Telefon"
+                           data-en="Phone">
+
+                        Telefon
+
+                    </label>
+
+                    <input type="tel"
+                           name="Telefon">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Termin transportu"
+                           data-en="Transport date">
+
+                        Termin transportu
+
+                    </label>
+
+                    <input type="date"
+                           name="Termin">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Miejsce załadunku *"
+                           data-en="Loading location *">
+
+                        Miejsce załadunku *
+
+                    </label>
+
+                    <input type="text"
+                           name="Miejsce zaladunku"
+                           placeholder="np. Kraków, Polska"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Miejsce rozładunku *"
+                           data-en="Delivery location *">
+
+                        Miejsce rozładunku *
+
+                    </label>
+
+                    <input type="text"
+                           name="Miejsce rozladunku"
+                           placeholder="np. London, UK"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Rodzaj towaru"
+                           data-en="Type of cargo">
+
+                        Rodzaj towaru
+
+                    </label>
+
+                    <input type="text"
+                           name="Rodzaj towaru"
+                           placeholder="np. palety, maszyny, materiały">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Waga ładunku"
+                           data-en="Cargo weight">
+
+                        Waga ładunku
+
+                    </label>
+
+                    <input type="text"
+                           name="Waga"
+                           placeholder="np. 12 000 kg">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Kierunek / typ transportu"
+                           data-en="Transport type">
+
+                        Kierunek / typ transportu
+
+                    </label>
+
+                    <select name="Typ transportu">
+
+                        <option value="Transport krajowy">
+                            Transport krajowy
+                        </option>
+
+                        <option value="Transport międzynarodowy">
+                            Transport międzynarodowy
+                        </option>
+
+                        <option value="Eksport do UK">
+                            Eksport do UK
+                        </option>
+
+                        <option value="Import z UK">
+                            Import z UK
+                        </option>
+
+                        <option value="Inny">
+                            Inny
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-pl="Wsparcie przy odprawie celnej"
+                           data-en="Customs clearance support">
+
+                        Wsparcie przy odprawie celnej
+
+                    </label>
+
+                    <select name="Odprawa celna">
+
+                        <option value="Nie wiem / do ustalenia">
+                            Nie wiem / do ustalenia
+                        </option>
+
+                        <option value="Tak">
+                            Tak
+                        </option>
+
+                        <option value="Nie">
+                            Nie
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label data-pl="Dodatkowe informacje"
+                           data-en="Additional information">
+
+                        Dodatkowe informacje
+
+                    </label>
+
+                    <textarea name="Dodatkowe informacje"
+                              placeholder="Wymiary ładunku, liczba palet, wymagania dotyczące pojazdu, godziny załadunku itp."></textarea>
+
+                </div>
+
+
+                <label class="checkbox-group">
+
+                    <input type="checkbox"
+                           required>
+
+                    <span data-pl="Wyrażam zgodę na wykorzystanie podanych danych w celu odpowiedzi na moje zapytanie transportowe."
+                          data-en="I agree to the use of the provided data for the purpose of responding to my transport enquiry.">
+
+                        Wyrażam zgodę na wykorzystanie podanych danych
+                        w celu odpowiedzi na moje zapytanie transportowe.
+
+                    </span>
+
+                </label>
+
+
+                <button type="submit"
+                        class="submit-button"
+                        data-pl="Wyślij zapytanie o wycenę →"
+                        data-en="Send quote request →">
+
+                    Wyślij zapytanie o wycenę →
+
+                </button>
+
+            </div>
+
+            <div class="quote-note"
+                 data-pl="Wysłanie formularza nie oznacza zawarcia umowy ani przyjęcia zlecenia do realizacji."
+                 data-en="Submitting the form does not constitute a contract or acceptance of the transport order.">
+
+                Wysłanie formularza nie oznacza zawarcia umowy
+                ani przyjęcia zlecenia do realizacji.
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<section class="map-section" id="mapa">
+
+    <div class="section-header">
+
+        <div class="section-label"
+             data-pl="Nasza lokalizacja"
+             data-en="Our location">
+
+            Nasza lokalizacja
+
+        </div>
 
         <h2 data-pl="Znajdź nas w Brzesku"
             data-en="Find us in Brzesko">
+
             Znajdź nas w Brzesku
+
         </h2>
 
-        <p data-pl="Siedziba Jupiter Trans & Cargo znajduje się przy ul. Jacka Malczewskiego 4 w Brzesku."
-           data-en="Jupiter Trans & Cargo is located at 4 Jacka Malczewskiego Street in Brzesko, Poland.">
-            Siedziba Jupiter Trans & Cargo znajduje się przy ul. Jacka Malczewskiego 4 w Brzesku.
-        </p>
     </div>
 
     <div class="map-container">
+
         <div class="map-info">
+
             <div class="section-label"
                  style="color:#62c6ff;"
                  data-pl="Siedziba firmy"
                  data-en="Company headquarters">
+
                 Siedziba firmy
+
             </div>
 
-            <h3>Jupiter Trans & Cargo</h3>
+            <h3>
+                Jupiter Trans & Cargo
+            </h3>
 
             <div class="map-address">
+
                 ul. Jacka Malczewskiego 4<br>
                 32-800 Brzesko<br>
-                <span data-pl="Małopolska, Polska" data-en="Lesser Poland, Poland">Małopolska, Polska</span>
-            </div>
 
-            <p data-pl="Kliknij poniżej, aby otworzyć lokalizację w Google Maps i wyznaczyć trasę."
-               data-en="Click below to open the location in Google Maps and get directions.">
-                Kliknij poniżej, aby otworzyć lokalizację w Google Maps i wyznaczyć trasę.
-            </p>
+                <span data-pl="Małopolska, Polska"
+                      data-en="Lesser Poland, Poland">
+
+                    Małopolska, Polska
+
+                </span>
+
+            </div>
 
             <a class="route-button"
                href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
@@ -1329,105 +2179,186 @@
                rel="noopener noreferrer"
                data-pl="Wyznacz trasę →"
                data-en="Get directions →">
+
                 Wyznacz trasę →
+
             </a>
+
         </div>
 
         <div class="map-wrapper">
+
             <iframe
                 src="https://www.google.com/maps?q=Jacka+Malczewskiego+4,+32-800+Brzesko,+Polska&output=embed"
                 loading="lazy"
                 allowfullscreen=""
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa Jupiter Trans & Cargo - Brzesko">
+                title="Mapa Jupiter Trans & Cargo">
             </iframe>
+
         </div>
+
     </div>
+
 </section>
 
+
 <section class="contact" id="kontakt">
+
     <div class="contact-grid">
+
         <div class="contact-info">
+
             <div class="section-label"
-                 style="color:#62c6ff;"
                  data-pl="Kontakt"
                  data-en="Contact">
+
                 Kontakt
+
             </div>
 
             <h2 data-pl="Porozmawiajmy o Twoim transporcie."
                 data-en="Let's talk about your transport.">
+
                 Porozmawiajmy o Twoim transporcie.
+
             </h2>
 
-            <p data-pl="Skontaktuj się z Jupiter Trans & Cargo, aby omówić organizację przewozu i dobrać rozwiązanie do swoich potrzeb."
-               data-en="Contact Jupiter Trans & Cargo to discuss your transport requirements and choose the right solution.">
+            <p data-pl="Skontaktuj się z Jupiter Trans & Cargo, aby omówić organizację przewozu."
+               data-en="Contact Jupiter Trans & Cargo to discuss your transport requirements.">
+
                 Skontaktuj się z Jupiter Trans & Cargo,
-                aby omówić organizację przewozu
-                i dobrać rozwiązanie do swoich potrzeb.
+                aby omówić organizację przewozu.
+
             </p>
 
-            <div class="contact-box">
-                <strong data-pl="Telefon" data-en="Phone">Telefon</strong>
-                <a href="tel:+48734183473">0048 734 183 473</a>
-            </div>
 
             <div class="contact-box">
-                <strong data-pl="E-mail" data-en="E-mail">E-mail</strong>
-                <a href="mailto:marta.jupiter@onet.eu">marta.jupiter@onet.eu</a>
+
+                <strong data-pl="Telefon"
+                        data-en="Phone">
+
+                    Telefon
+
+                </strong>
+
+                <a href="tel:+48734183473">
+
+                    0048 734 183 473
+
+                </a>
+
             </div>
 
+
             <div class="contact-box">
-                <strong data-pl="Siedziba" data-en="Headquarters">Siedziba</strong>
+
+                <strong>
+                    E-mail
+                </strong>
+
+                <a href="mailto:marta.jupiter@onet.eu">
+
+                    marta.jupiter@onet.eu
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <strong data-pl="Siedziba"
+                        data-en="Headquarters">
+
+                    Siedziba
+
+                </strong>
+
                 ul. Jacka Malczewskiego 4<br>
                 32-800 Brzesko<br>
-                <span data-pl="Małopolska, Polska" data-en="Lesser Poland, Poland">Małopolska, Polska</span>
+
+                <span data-pl="Małopolska, Polska"
+                      data-en="Lesser Poland, Poland">
+
+                    Małopolska, Polska
+
+                </span>
+
             </div>
+
         </div>
+
 
         <div class="contact-logo">
-            <img src="jupiter.png" alt="Jupiter Trans & Cargo">
+
+            <img src="jupiter.png"
+                 alt="Jupiter Trans & Cargo">
+
         </div>
+
     </div>
+
 </section>
 
-<footer data-pl="© 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone."
-        data-en="© 2026 Jupiter Trans & Cargo. All rights reserved.">
+
+<footer
+    data-pl="© 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone."
+    data-en="© 2026 Jupiter Trans & Cargo. All rights reserved.">
+
     © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
+
 </footer>
 
+
 <script>
+
     function setLanguage(lang) {
+
         const elements = document.querySelectorAll("[data-pl][data-en]");
 
         elements.forEach(function(element) {
+
             if (lang === "en") {
                 element.textContent = element.getAttribute("data-en");
             } else {
                 element.textContent = element.getAttribute("data-pl");
             }
+
         });
 
         document.documentElement.lang = lang;
 
-        document.getElementById("plBtn").classList.toggle("active", lang === "pl");
-        document.getElementById("enBtn").classList.toggle("active", lang === "en");
+        document.getElementById("plBtn")
+            .classList.toggle("active", lang === "pl");
+
+        document.getElementById("enBtn")
+            .classList.toggle("active", lang === "en");
 
         if (lang === "en") {
-            document.title = "Jupiter Trans & Cargo | Freight Forwarding & Transport";
+
+            document.title =
+                "Jupiter Trans & Cargo | Freight Forwarding & Transport";
+
         } else {
-            document.title = "Jupiter Trans & Cargo | Spedycja i transport";
+
+            document.title =
+                "Jupiter Trans & Cargo | Spedycja i transport";
+
         }
 
         localStorage.setItem("language", lang);
     }
+
 
     const savedLanguage = localStorage.getItem("language");
 
     if (savedLanguage === "en") {
         setLanguage("en");
     }
+
 </script>
+
 
 </body>
 </html>
