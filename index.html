@@ -3,12 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasza Spedycja</title>
+
+    <title>Jupiter Trans & Cargo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #17202a;
+        }
+
+        header {
+            background: #101820;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            min-height: 520px;
+            background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+                        url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1800&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e5a900;
+            color: #101820;
+            padding: 15px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 45px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .contact {
+            background: #101820;
+            color: white;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #080d12;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Nasza Spedycja</h1>
-    <p>Transport i spedycja</p>
+<header>
+    <div class="logo">Jupiter Trans & Cargo</div>
+
+    <nav>
+        <a href="#o-nas">O nas</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Jupiter Trans & Cargo</h1>
+
+        <p>
+            Profesjonalna spedycja i transport.
+            Bezpiecznie. Terminowo. Skutecznie.
+        </p>
+
+        <a href="#kontakt" class="button">Skontaktuj się z nami</a>
+    </div>
+</section>
+
+<section id="o-nas" class="about">
+    <h2 class="section-title">O nas</h2>
+
+    <p>
+        Jupiter Trans & Cargo to firma specjalizująca się
+        w organizacji transportu i spedycji.
+        Stawiamy na terminowość, bezpieczeństwo oraz
+        profesjonalną obsługę każdego klienta.
+    </p>
+</section>
+
+<section id="uslugi">
+    <h2 class="section-title">Nasze usługi</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🚛 Transport</h3>
+            <p>
+                Organizacja transportu drogowego
+                na terenie Polski i Europy.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📦 Spedycja</h3>
+            <p>
+                Kompleksowa organizacja przewozów
+                oraz obsługa logistyczna.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Transport międzynarodowy</h3>
+            <p>
+                Sprawna organizacja transportów
+                międzynarodowych.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about">
+    <h2 class="section-title">Dlaczego my?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Terminowość</h3>
+            <p>Dbamy o realizację transportów zgodnie z ustalonym terminem.</p>
+        </div>
+
+        <div class="card">
+            <h3>Bezpieczeństwo</h3>
+            <p>Każdy transport traktujemy z najwyższą starannością.</p>
+        </div>
+
+        <div class="card">
+            <h3>Doświadczenie</h3>
+            <p>Stawiamy na profesjonalną obsługę i sprawną organizację transportu.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="kontakt" class="contact">
+    <h2 class="section-title">Kontakt</h2>
+
+    <p>📞 Telefon: TWÓJ TELEFON</p>
+    <p>✉️ E-mail: TWOJ EMAIL</p>
+    <p>📍 Adres: TWÓJ ADRES</p>
+</section>
+
+<footer>
+    © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
+</footer>
 
 </body>
 </html>
