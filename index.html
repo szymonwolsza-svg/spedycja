@@ -71,7 +71,7 @@
         nav a {
             color: #15314b;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 23px;
             font-size: 15px;
             font-weight: 700;
             transition: 0.25s;
@@ -172,7 +172,7 @@
             color: #063b69;
         }
 
-        /* PASEK INFO */
+        /* INFO */
 
         .stats {
             background: #0784c7;
@@ -403,6 +403,7 @@
             width: 56px;
             height: 56px;
             margin: 0 auto 18px;
+
             border-radius: 50%;
             background: #078bd1;
             color: white;
@@ -425,7 +426,7 @@
             font-size: 15px;
         }
 
-        /* DLACZEGO MY */
+        /* DLACZEGO */
 
         .why {
             background: white;
@@ -534,7 +535,6 @@
             height: 160px;
 
             background: white;
-
             border: 1px solid #dce8f0;
             border-radius: 12px;
 
@@ -556,8 +556,6 @@
         .partner img {
             max-width: 260px;
             max-height: 100px;
-            width: auto;
-            height: auto;
             object-fit: contain;
         }
 
@@ -591,6 +589,92 @@
 
         .cert p {
             color: #62798c;
+        }
+
+        /* MAPA */
+
+        .map-section {
+            background: #f5f9fc;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            background: white;
+
+            border-radius: 16px;
+            overflow: hidden;
+
+            box-shadow: 0 15px 45px rgba(7,57,92,0.12);
+        }
+
+        .map-info {
+            padding: 50px 40px;
+
+            background: #073b67;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .map-info h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .map-info p {
+            color: #d8eaf5;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .map-address {
+            margin-bottom: 28px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .route-button {
+            display: inline-block;
+            align-self: flex-start;
+
+            background: #078bd1;
+            color: white;
+
+            padding: 14px 24px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .route-button:hover {
+            background: #079eea;
+            transform: translateY(-2px);
+        }
+
+        .map-wrapper {
+            min-height: 470px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 470px;
+
+            border: 0;
+
+            display: block;
         }
 
         /* KONTAKT */
@@ -711,7 +795,8 @@
 
             .about-grid,
             .europe-grid,
-            .contact-grid {
+            .contact-grid,
+            .map-container {
                 grid-template-columns: 1fr;
             }
 
@@ -784,12 +869,19 @@
             .partner {
                 width: 100%;
             }
+
+            .map-info {
+                padding: 35px 25px;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 350px;
+            }
         }
 
     </style>
-
 </head>
-
 
 <body>
 
@@ -797,22 +889,19 @@
 <header>
 
     <a href="#" class="logo">
-
         <img src="jupiter.png"
              alt="Jupiter Trans & Cargo">
-
     </a>
 
     <nav>
-
         <a href="#o-nas">O nas</a>
         <a href="#uslugi">Usługi</a>
         <a href="#proces">Jak działamy</a>
         <a href="#dlaczego">Dlaczego my</a>
         <a href="#zaufali">Zaufali nam</a>
         <a href="#certyfikaty">Certyfikaty</a>
+        <a href="#mapa">Mapa</a>
         <a href="#kontakt">Kontakt</a>
-
     </nav>
 
 </header>
@@ -962,6 +1051,7 @@
         </p>
 
     </div>
+
 
     <div class="services-grid">
 
@@ -1192,11 +1282,9 @@
             </p>
 
             <div class="area-tags">
-
                 <div class="area-tag">🇵🇱 Polska</div>
                 <div class="area-tag">🇪🇺 Unia Europejska</div>
                 <div class="area-tag">🌍 Europa</div>
-
             </div>
 
         </div>
@@ -1263,41 +1351,101 @@
     <div class="cert-grid">
 
         <div class="cert">
-
-            <h3>
-                Certyfikat kompetencji zawodowych
-            </h3>
-
+            <h3>Certyfikat kompetencji zawodowych</h3>
             <p>
                 Potwierdzenie posiadanych kwalifikacji zawodowych
                 związanych z działalnością w branży transportowej.
             </p>
-
         </div>
 
         <div class="cert">
-
-            <h3>
-                Licencja
-            </h3>
-
+            <h3>Licencja</h3>
             <p>
                 Uprawnienia związane z międzynarodowym
                 transportem drogowym rzeczy.
             </p>
-
         </div>
 
         <div class="cert">
-
-            <h3>
-                Polisa ubezpieczeniowa
-            </h3>
-
+            <h3>Polisa ubezpieczeniowa</h3>
             <p>
                 Odpowiednie zabezpieczenie działalności
                 oraz organizowanych procesów transportowych.
             </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAPA -->
+
+<section class="map-section" id="mapa">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            Nasza lokalizacja
+        </div>
+
+        <h2>
+            Znajdź nas w Brzesku
+        </h2>
+
+        <p>
+            Siedziba Jupiter Trans & Cargo znajduje się
+            przy ul. Jacka Malczewskiego 4 w Brzesku.
+        </p>
+
+    </div>
+
+
+    <div class="map-container">
+
+        <div class="map-info">
+
+            <div class="section-label"
+                 style="color:#62c6ff;">
+                Siedziba firmy
+            </div>
+
+            <h3>
+                Jupiter Trans & Cargo
+            </h3>
+
+            <div class="map-address">
+                ul. Jacka Malczewskiego 4<br>
+                32-800 Brzesko<br>
+                Małopolska, Polska
+            </div>
+
+            <p>
+                Kliknij poniżej, aby otworzyć lokalizację
+                w Google Maps i wyznaczyć trasę.
+            </p>
+
+            <a class="route-button"
+               href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Wyznacz trasę →
+
+            </a>
+
+        </div>
+
+
+        <div class="map-wrapper">
+
+            <iframe
+                src="https://www.google.com/maps?q=Jacka+Malczewskiego+4,+32-800+Brzesko,+Polska&output=embed"
+                loading="lazy"
+                allowfullscreen=""
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa Jupiter Trans & Cargo - Brzesko">
+            </iframe>
 
         </div>
 
@@ -1358,6 +1506,7 @@
             </div>
 
         </div>
+
 
         <div class="contact-logo">
 
