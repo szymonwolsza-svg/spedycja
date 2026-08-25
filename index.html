@@ -8,29 +8,31 @@
     <title>Jupiter Trans & Cargo | Spedycja, transport Polska Europa UK</title>
 
     <meta name="description"
-          content="Jupiter Trans & Cargo – profesjonalna spedycja i organizacja transportu w Polsce i Europie. Import i eksport UK, wsparcie przy odprawie celnej, transport krajowy i międzynarodowy.">
-
-    <meta name="keywords"
-          content="spedycja Brzesko, transport Brzesko, spedycja Małopolska, transport Polska UK, transport UK Polska, import UK, eksport UK, transport Europa, spedycja międzynarodowa, odprawa celna UK">
+          content="Jupiter Trans & Cargo – kompleksowa organizacja transportu i spedycji w Polsce, Europie i Wielkiej Brytanii. Import i eksport UK oraz wsparcie przy odprawie celnej.">
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Jupiter Trans & Cargo">
-    <meta name="theme-color" content="#073b67">
+    <meta name="theme-color" content="#071f36">
 
     <meta property="og:title"
           content="Jupiter Trans & Cargo | Spedycja i transport">
 
     <meta property="og:description"
-          content="Organizacja transportu w Polsce i Europie. Import i eksport UK oraz wsparcie przy odprawie celnej.">
+          content="Transport krajowy i międzynarodowy. Polska, Europa, Wielka Brytania oraz wsparcie przy odprawie celnej.">
 
     <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Jupiter Trans & Cargo",
-      "description": "Kompleksowa organizacja transportu i spedycji w Polsce i Europie, w tym import i eksport do oraz z Wielkiej Brytanii.",
       "telephone": "+48734183473",
       "email": "marta.jupiter@onet.eu",
       "address": {
@@ -40,11 +42,41 @@
         "addressLocality": "Brzesko",
         "addressRegion": "Małopolskie",
         "addressCountry": "PL"
-      }
+      },
+      "areaServed": [
+        "Polska",
+        "Europa",
+        "Wielka Brytania"
+      ]
     }
     </script>
 
     <style>
+
+        :root {
+            --navy: #071f36;
+            --navy2: #0a2b49;
+            --navy3: #103b5f;
+
+            --blue: #078bd1;
+            --blue2: #18aaf4;
+            --blue-light: #68c8ff;
+
+            --text: #17324a;
+            --muted: #697f91;
+
+            --white: #ffffff;
+            --bg: #f4f8fb;
+            --line: #dde8ef;
+
+            --shadow:
+                0 20px 60px rgba(9, 47, 76, 0.10);
+
+            --shadow-strong:
+                0 25px 70px rgba(4, 37, 63, 0.18);
+
+            --radius: 18px;
+        }
 
         * {
             margin: 0;
@@ -57,10 +89,11 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #17324a;
-            line-height: 1.6;
+            font-family: "Inter", Arial, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
         }
 
         img {
@@ -68,89 +101,211 @@
             display: block;
         }
 
-        section {
-            padding: 100px 7%;
+        a {
+            text-decoration: none;
         }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        section {
+            padding: 110px 7%;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
 
-            background: rgba(255,255,255,0.97);
-            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+            z-index: 2000;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            padding: 8px 7%;
+            padding: 10px 7%;
+
+            background: rgba(255,255,255,0.92);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(210,225,235,0.7);
+
+            transition: 0.3s;
+        }
+
+        header.scrolled {
+            box-shadow: 0 12px 35px rgba(6,48,78,0.09);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
         }
 
         .logo img {
-            width: 190px;
-            height: 75px;
+            width: 175px;
+            height: 66px;
             object-fit: contain;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
         }
 
         nav {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
         }
 
         nav a {
-            color: #15314b;
-            text-decoration: none;
-            margin-left: 16px;
+            position: relative;
+
+            color: #17364f;
+
+            margin-left: 22px;
+
             font-size: 14px;
             font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+        nav a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--blue);
+
             transition: 0.25s;
         }
 
         nav a:hover {
-            color: #078bd1;
+            color: var(--blue);
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         .lang-switch {
-            margin-left: 16px;
             display: flex;
-            border: 1px solid #cbdce8;
-            border-radius: 7px;
-            overflow: hidden;
+
+            margin-left: 22px;
+
+            padding: 4px;
+
+            background: #edf5fa;
+
+            border-radius: 10px;
         }
 
         .lang-switch button {
             border: none;
-            background: white;
-            color: #17405f;
-            padding: 9px 12px;
+
+            background: transparent;
+
+            padding: 8px 11px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            color: #436279;
+
             cursor: pointer;
-            font-weight: 700;
         }
 
         .lang-switch button.active {
-            background: #078bd1;
+            background: var(--blue);
             color: white;
+            box-shadow: 0 5px 14px rgba(7,139,209,0.25);
         }
 
+        .menu-button {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #edf5fa;
+
+            cursor: pointer;
+
+            position: relative;
+        }
+
+        .menu-button span {
+            position: absolute;
+            left: 11px;
+
+            width: 22px;
+            height: 2px;
+
+            background: var(--navy);
+
+            transition: 0.25s;
+        }
+
+        .menu-button span:nth-child(1) {
+            top: 14px;
+        }
+
+        .menu-button span:nth-child(2) {
+            top: 21px;
+        }
+
+        .menu-button span:nth-child(3) {
+            top: 28px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
+            position: relative;
+
             min-height: 100vh;
+
             display: flex;
             align-items: center;
 
-            padding: 150px 7% 80px;
+            padding: 170px 7% 100px;
+
             color: white;
+
+            overflow: hidden;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(2,31,59,0.96) 0%,
-                    rgba(3,49,88,0.86) 45%,
-                    rgba(3,49,88,0.35) 80%,
-                    rgba(0,0,0,0.15) 100%
+                    rgba(4,26,46,0.98) 0%,
+                    rgba(7,48,79,0.93) 43%,
+                    rgba(7,48,79,0.62) 68%,
+                    rgba(7,48,79,0.20) 100%
                 ),
                 url("gabriel-santos-GBVDilE8yvI-unsplash.jpg");
 
@@ -158,182 +313,430 @@
             background-position: center;
         }
 
-        .hero-content {
-            max-width: 800px;
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            background: rgba(0,157,231,0.16);
+
+            filter: blur(100px);
+
+            left: -200px;
+            bottom: -300px;
         }
 
-        .hero-label {
-            color: #68c8ff;
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 18px;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 860px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 9px 14px;
+
+            margin-bottom: 24px;
+
+            background: rgba(255,255,255,0.10);
+
+            border: 1px solid rgba(255,255,255,0.18);
+
+            border-radius: 50px;
+
+            backdrop-filter: blur(8px);
+
+            color: #93d9ff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #32c4ff;
+
+            box-shadow: 0 0 15px #32c4ff;
         }
 
         .hero h1 {
-            font-size: 68px;
-            line-height: 1.07;
-            margin-bottom: 25px;
+            max-width: 850px;
+
+            font-size: clamp(52px, 6vw, 82px);
+
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 28px;
         }
 
         .hero h1 span {
-            color: #58c2ff;
+            color: var(--blue-light);
         }
 
         .hero p {
             max-width: 700px;
-            font-size: 20px;
-            color: #e5f0f7;
-            margin-bottom: 35px;
+
+            color: #d9e8f2;
+
+            font-size: 19px;
+
+            margin-bottom: 38px;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 14px;
         }
 
         .button {
-            display: inline-block;
-            padding: 15px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 54px;
+
+            padding: 0 27px;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
             transition: 0.25s;
         }
 
         .button-primary {
-            background: #078bd1;
+            background:
+                linear-gradient(135deg, #078bd1, #16a9f4);
+
             color: white;
+
+            box-shadow:
+                0 12px 30px rgba(7,139,209,0.32);
         }
 
         .button-primary:hover {
-            background: #056da6;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 40px rgba(7,139,209,0.38);
         }
 
         .button-secondary {
             color: white;
-            border: 1px solid rgba(255,255,255,0.65);
+
+            border: 1px solid rgba(255,255,255,0.38);
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(10px);
         }
 
         .button-secondary:hover {
             background: white;
-            color: #063b69;
+            color: var(--navy);
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            margin-top: 48px;
+
+            color: #c8dbe8;
+
+            font-size: 13px;
+        }
+
+        .hero-trust div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-check {
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(104,200,255,0.16);
+
+            color: #68c8ff;
+
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats-wrapper {
+            position: relative;
+            z-index: 5;
+
+            padding: 0 7%;
+
+            margin-top: -45px;
         }
 
         .stats {
-            background: #0784c7;
-            color: white;
+            max-width: 1200px;
+
+            margin: auto;
 
             display: grid;
             grid-template-columns: repeat(3,1fr);
 
-            padding: 35px 7%;
-            text-align: center;
+            background: white;
+
+            border-radius: 18px;
+
+            box-shadow: var(--shadow-strong);
+
+            overflow: hidden;
         }
 
         .stat {
-            padding: 15px;
-            border-right: 1px solid rgba(255,255,255,0.25);
+            padding: 34px 28px;
+
+            text-align: center;
+
+            position: relative;
         }
 
-        .stat:last-child {
-            border-right: none;
+        .stat:not(:last-child)::after {
+            content: "";
+
+            position: absolute;
+
+            top: 25%;
+            right: 0;
+
+            width: 1px;
+            height: 50%;
+
+            background: #dfebf2;
         }
 
         .stat strong {
             display: block;
-            font-size: 28px;
-            margin-bottom: 5px;
+
+            color: var(--navy);
+
+            font-size: 22px;
+            font-weight: 800;
+
+            margin-bottom: 6px;
         }
 
         .stat span {
-            color: #dff4ff;
+            color: var(--muted);
+
+            font-size: 14px;
         }
 
+        /* =========================
+           COMMON
+        ========================= */
+
         .section-header {
-            max-width: 850px;
-            margin: 0 auto 55px;
+            max-width: 820px;
+
+            margin: 0 auto 60px;
+
             text-align: center;
         }
 
         .section-label {
-            color: #078bd1;
-            text-transform: uppercase;
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: var(--blue);
+
+            font-size: 12px;
+            font-weight: 800;
+
             letter-spacing: 2px;
-            font-size: 13px;
-            font-weight: bold;
+
+            text-transform: uppercase;
         }
 
         .section-header h2 {
-            color: #103553;
-            font-size: 42px;
-            line-height: 1.2;
-            margin: 10px 0 18px;
+            color: var(--navy);
+
+            font-size: clamp(34px,4vw,48px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 18px;
         }
 
         .section-header p {
-            color: #657b8e;
+            color: var(--muted);
+
             font-size: 17px;
         }
 
+        /* =========================
+           ABOUT
+        ========================= */
+
         .about {
-            background: #f5f9fc;
+            background: var(--bg);
         }
 
         .about-grid {
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
-            grid-template-columns: 1fr 1fr;
 
-            gap: 65px;
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(0,1fr);
+
+            gap: 75px;
+
             align-items: center;
         }
 
         .about-image {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 18px 50px rgba(8,65,105,0.16);
+            position: relative;
         }
 
-        .about-image img {
+        .about-image-main {
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-image-main img {
             width: 100%;
-            height: 480px;
+            height: 530px;
+
             object-fit: cover;
         }
 
+        .experience-card {
+            position: absolute;
+
+            right: -25px;
+            bottom: 35px;
+
+            width: 190px;
+
+            padding: 24px;
+
+            border-radius: 16px;
+
+            background: var(--navy);
+
+            color: white;
+
+            box-shadow: var(--shadow-strong);
+        }
+
+        .experience-card strong {
+            display: block;
+
+            font-size: 37px;
+            color: #62c9ff;
+
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .experience-card span {
+            font-size: 13px;
+            color: #c9dce8;
+        }
+
         .about-text h2 {
-            color: #103553;
-            font-size: 40px;
-            line-height: 1.2;
-            margin: 10px 0 25px;
+            color: var(--navy);
+
+            font-size: clamp(35px,4vw,47px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 26px;
         }
 
         .about-text p {
-            color: #597184;
-            font-size: 17px;
+            color: #60798c;
+
+            font-size: 16px;
+
             margin-bottom: 18px;
         }
 
         .checks {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
-            gap: 13px;
-            margin-top: 28px;
+
+            gap: 12px;
+
+            margin-top: 30px;
         }
 
         .check {
+            display: flex;
+            align-items: center;
+
+            min-height: 58px;
+
+            padding: 14px 16px;
+
             background: white;
-            padding: 14px;
-            border-radius: 8px;
-            color: #164d73;
+
+            border: 1px solid #dfebf2;
+
+            border-radius: 11px;
+
+            color: #1b4a69;
+
+            font-size: 14px;
             font-weight: 700;
-            box-shadow: 0 5px 20px rgba(0,70,110,0.05);
+
+            box-shadow:
+                0 6px 20px rgba(8,52,80,0.04);
         }
+
+        /* =========================
+           SERVICES
+        ========================= */
 
         .services {
             background: white;
@@ -341,57 +744,121 @@
 
         .services-grid {
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(3,1fr);
 
-            gap: 23px;
+            gap: 22px;
         }
 
         .service {
-            background: white;
+            min-height: 260px;
+
+            position: relative;
+
+            overflow: hidden;
+
             padding: 34px;
+
+            background:
+                linear-gradient(145deg,#fff,#f8fbfd);
+
             border: 1px solid #e0eaf1;
-            border-radius: 11px;
-            box-shadow: 0 8px 30px rgba(7,57,92,0.06);
-            transition: 0.3s;
+
+            border-radius: 17px;
+
+            box-shadow:
+                0 10px 35px rgba(6,56,90,0.05);
+
+            transition: 0.35s;
+        }
+
+        .service::after {
+            content: "";
+
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            background: rgba(7,139,209,0.07);
+
+            right: -45px;
+            top: -45px;
+
+            transition: 0.35s;
         }
 
         .service:hover {
-            transform: translateY(-6px);
-            border-color: #078bd1;
-            box-shadow: 0 15px 40px rgba(7,57,92,0.13);
+            transform: translateY(-8px);
+
+            border-color: rgba(7,139,209,0.4);
+
+            box-shadow:
+                0 22px 45px rgba(6,56,90,0.11);
+        }
+
+        .service:hover::after {
+            transform: scale(1.4);
         }
 
         .service-number {
-            color: #078bd1;
-            font-weight: bold;
-            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 43px;
+            height: 43px;
+
+            margin-bottom: 25px;
+
+            border-radius: 10px;
+
+            background: #e8f6fd;
+
+            color: var(--blue);
+
+            font-size: 13px;
+            font-weight: 800;
         }
 
         .service h3 {
-            color: #123b5d;
-            font-size: 21px;
+            color: var(--navy);
+
+            font-size: 20px;
+
             margin-bottom: 12px;
         }
 
         .service p {
-            color: #657b8e;
+            color: var(--muted);
+
+            font-size: 15px;
         }
 
+        /* =========================
+           BIG VISUAL
+        ========================= */
+
         .visual-section {
-            min-height: 520px;
+            min-height: 590px;
+
             display: flex;
             align-items: center;
+
             color: white;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3,42,76,0.95),
-                    rgba(3,42,76,0.68),
-                    rgba(3,42,76,0.18)
+                    rgba(4,29,50,0.97) 0%,
+                    rgba(4,42,70,0.84) 52%,
+                    rgba(4,42,70,0.25) 100%
                 ),
                 url("nagy-szabi-RsjQl8dLnfw-unsplash.jpg");
 
@@ -404,64 +871,96 @@
         }
 
         .visual-content h2 {
-            font-size: 45px;
-            line-height: 1.2;
-            margin: 10px 0 20px;
+            font-size: clamp(38px,4vw,52px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1.7px;
+
+            margin: 10px 0 24px;
         }
 
         .visual-content p {
-            color: #e2edf5;
-            font-size: 19px;
+            color: #d7e7f0;
+
+            font-size: 18px;
         }
 
+        /* =========================
+           PROCESS
+        ========================= */
+
         .process {
-            background: #f5f9fc;
+            background: var(--bg);
         }
 
         .process-grid {
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(4,1fr);
 
-            gap: 20px;
+            gap: 18px;
         }
 
         .process-item {
+            position: relative;
+
+            padding: 34px 26px;
+
             background: white;
-            padding: 32px 25px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 6px 25px rgba(6,60,98,0.06);
+
+            border-radius: 16px;
+
+            border: 1px solid #e1ebf1;
+
+            box-shadow:
+                0 8px 25px rgba(7,57,92,0.05);
         }
 
         .process-number {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            border-radius: 50%;
-            background: #078bd1;
+            width: 50px;
+            height: 50px;
+
+            margin-bottom: 24px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(135deg,#078bd1,#25b0f4);
+
             color: white;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-weight: 800;
 
-            font-size: 20px;
-            font-weight: bold;
+            box-shadow:
+                0 10px 20px rgba(7,139,209,0.25);
         }
 
         .process-item h3 {
-            color: #123b5d;
+            color: var(--navy);
+
+            font-size: 19px;
+
             margin-bottom: 10px;
         }
 
         .process-item p {
-            color: #64798b;
-            font-size: 15px;
+            color: var(--muted);
+
+            font-size: 14px;
         }
+
+        /* =========================
+           WHY
+        ========================= */
 
         .why {
             background: white;
@@ -469,177 +968,351 @@
 
         .why-grid {
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(3,1fr);
 
-            gap: 22px;
+            gap: 20px;
         }
 
         .why-item {
             padding: 28px;
-            background: #f4f9fc;
-            border-left: 4px solid #078bd1;
-            border-radius: 7px;
+
+            border-radius: 15px;
+
+            background: #f6fafc;
+
+            border: 1px solid #e3edf3;
+
+            transition: 0.3s;
+        }
+
+        .why-item:hover {
+            transform: translateY(-5px);
+
+            background: white;
+
+            box-shadow: var(--shadow);
+        }
+
+        .why-icon {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #e7f5fd;
+
+            color: var(--blue);
+
+            margin-bottom: 18px;
+
+            font-size: 18px;
+            font-weight: 800;
         }
 
         .why-item h3 {
-            color: #0c74ae;
-            margin-bottom: 10px;
+            color: var(--navy);
+
+            margin-bottom: 8px;
         }
 
         .why-item p {
-            color: #64798b;
+            color: var(--muted);
+
+            font-size: 14px;
         }
 
+        /* =========================
+           UK / EUROPE
+        ========================= */
+
         .europe {
-            background: #073b67;
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    140deg,
+                    #061f37 0%,
+                    #073b67 58%,
+                    #07588b 100%
+                );
+
             color: white;
         }
 
+        .europe::after {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            right: -250px;
+            top: -250px;
+
+            background:
+                rgba(55,181,246,0.10);
+        }
+
         .europe-grid {
+            position: relative;
+            z-index: 2;
+
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 0.9fr 1.1fr;
 
-            gap: 60px;
+            gap: 70px;
+
             align-items: center;
         }
 
         .europe-image {
+            border-radius: 22px;
             overflow: hidden;
-            border-radius: 15px;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.28);
         }
 
         .europe-image img {
             width: 100%;
-            height: 430px;
+            height: 500px;
+
             object-fit: cover;
         }
 
         .europe-text h2 {
-            font-size: 42px;
-            line-height: 1.2;
-            margin: 10px 0 20px;
+            font-size: clamp(38px,4vw,52px);
+
+            line-height: 1.1;
+
+            letter-spacing: -1.5px;
+
+            margin: 10px 0 22px;
         }
 
-        .europe-text p {
-            color: #d7e8f4;
-            font-size: 18px;
-            margin-bottom: 17px;
+        .europe-text > p {
+            color: #d8e8f3;
+
+            font-size: 17px;
         }
 
         .area-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
+
+            gap: 9px;
+
+            margin-top: 24px;
         }
 
         .area-tag {
-            padding: 10px 18px;
-            border: 1px solid rgba(255,255,255,0.35);
-            border-radius: 30px;
+            padding: 9px 15px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,0.08);
+
+            font-size: 14px;
         }
 
         .uk-box {
             margin-top: 30px;
+
+            padding: 27px;
+
+            border-radius: 16px;
+
             background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.18);
-            border-radius: 12px;
-            padding: 24px;
+
+            border: 1px solid rgba(255,255,255,0.14);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .uk-box-header {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 12px;
+        }
+
+        .uk-flag {
+            font-size: 28px;
         }
 
         .uk-box h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 22px;
         }
 
+        .uk-box p {
+            color: #d8e8f3;
+
+            font-size: 15px;
+        }
+
+        /* =========================
+           PARTNER
+        ========================= */
+
         .trust {
-            background: #f5f9fc;
+            background: var(--bg);
         }
 
         .partners {
-            max-width: 1100px;
+            max-width: 1000px;
+
             margin: auto;
 
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-
-            gap: 35px;
         }
 
         .partner {
-            width: 330px;
-            height: 160px;
+            width: min(430px,100%);
 
-            background: white;
-            border: 1px solid #dce8f0;
-            border-radius: 12px;
+            min-height: 190px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            padding: 30px;
+            padding: 40px;
 
-            box-shadow: 0 8px 30px rgba(7,57,92,0.06);
+            background: white;
+
+            border-radius: 18px;
+
+            border: 1px solid #dfeaf1;
+
+            box-shadow: var(--shadow);
+
+            transition: 0.3s;
+        }
+
+        .partner:hover {
+            transform: translateY(-6px);
         }
 
         .partner img {
-            max-width: 260px;
-            max-height: 100px;
+            width: 100%;
+            max-width: 300px;
+            max-height: 110px;
+
             object-fit: contain;
         }
+
+        /* =========================
+           CERTIFICATES
+        ========================= */
 
         .certificates {
             background: white;
         }
 
         .cert-image-grid {
-            max-width: 1200px;
+            max-width: 1150px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(2,1fr);
 
             gap: 30px;
         }
 
         .cert-image-card {
-            background: #f5f9fc;
-            border-radius: 14px;
+            background: #f7fafc;
+
+            border: 1px solid #dde8ef;
+
+            border-radius: 18px;
+
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(7,57,92,0.08);
-            border: 1px solid #e1ebf2;
+
+            box-shadow:
+                0 10px 35px rgba(7,57,92,0.07);
+
+            transition: 0.35s;
         }
 
-        .cert-image-card img {
-            width: 100%;
-            height: auto;
+        .cert-image-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 25px 55px rgba(7,57,92,0.13);
+        }
+
+        .cert-image {
+            position: relative;
+
             background: white;
+
+            padding: 18px;
+        }
+
+        .cert-image img {
+            width: 100%;
+
+            border-radius: 8px;
+
+            cursor: zoom-in;
         }
 
         .cert-image-text {
-            padding: 25px;
+            padding: 27px 30px 30px;
         }
 
         .cert-image-text h3 {
-            color: #123b5d;
-            font-size: 22px;
+            color: var(--navy);
+
+            font-size: 21px;
+
             margin-bottom: 10px;
         }
 
         .cert-image-text p {
-            color: #62798c;
+            color: var(--muted);
+
+            font-size: 14px;
         }
 
+        /* =========================
+           QUOTE
+        ========================= */
+
         .quote {
-            background: #062e51;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #061e35,
+                    #083b65
+                );
+
             color: white;
         }
 
@@ -648,25 +1321,32 @@
         }
 
         .quote .section-header p {
-            color: #d5e4ee;
+            color: #d4e5ef;
         }
 
         .quote-container {
-            max-width: 1100px;
+            max-width: 1050px;
+
             margin: auto;
         }
 
         .quote-form {
+            padding: 42px;
+
+            border-radius: 20px;
+
             background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.22);
         }
 
         .form-grid {
             display: grid;
+
             grid-template-columns: repeat(2,1fr);
-            gap: 22px;
+
+            gap: 20px;
         }
 
         .form-group {
@@ -679,120 +1359,234 @@
         }
 
         .form-group label {
-            color: #17324a;
+            color: #27465d;
+
+            font-size: 13px;
             font-weight: 700;
+
             margin-bottom: 7px;
-            font-size: 14px;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            border: 1px solid #ccdce7;
-            border-radius: 7px;
+
             padding: 14px 15px;
-            font-family: inherit;
-            font-size: 15px;
-            color: #17324a;
+
+            border: 1px solid #d4e2eb;
+
+            border-radius: 9px;
+
+            background: #fbfdfe;
+
+            color: var(--text);
+
+            transition: 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+
             background: white;
+
+            border-color: #078bd1;
+
+            box-shadow:
+                0 0 0 4px rgba(7,139,209,0.09);
         }
 
         .form-group textarea {
-            min-height: 135px;
+            min-height: 140px;
+
             resize: vertical;
         }
 
         .checkbox-group {
             grid-column: 1 / -1;
+
             display: flex;
             align-items: flex-start;
+
             gap: 10px;
-            color: #597184;
-            font-size: 13px;
+
+            color: #687f91;
+
+            font-size: 12px;
         }
 
         .checkbox-group input {
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .submit-button {
             grid-column: 1 / -1;
+
+            min-height: 57px;
+
             border: none;
-            border-radius: 7px;
-            background: #078bd1;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #078bd1,
+                    #20acf3
+                );
+
             color: white;
-            padding: 17px 30px;
-            font-size: 16px;
-            font-weight: 700;
+
+            font-size: 15px;
+            font-weight: 800;
+
             cursor: pointer;
+
+            box-shadow:
+                0 12px 25px rgba(7,139,209,0.28);
+
+            transition: 0.25s;
         }
 
+        .submit-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 35px rgba(7,139,209,0.36);
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
         .faq {
-            background: #ffffff;
+            background: var(--bg);
         }
 
         .faq-container {
-            max-width: 950px;
+            max-width: 900px;
+
             margin: auto;
         }
 
         .faq-item {
-            background: #f5f9fc;
-            border: 1px solid #dce8f0;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+
             overflow: hidden;
+
+            background: white;
+
+            border: 1px solid #dde8ef;
+
+            border-radius: 13px;
+
+            box-shadow:
+                0 6px 18px rgba(7,57,92,0.035);
         }
 
         .faq-question {
             width: 100%;
+
             border: none;
+
             background: transparent;
-            cursor: pointer;
-            padding: 22px 25px;
 
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 21px 24px;
+
+            cursor: pointer;
 
             text-align: left;
-            color: #123b5d;
-            font-size: 17px;
+
+            color: var(--navy);
+
+            font-size: 15px;
             font-weight: 700;
         }
 
+        .faq-plus {
+            min-width: 34px;
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background: #eaf6fc;
+
+            color: var(--blue);
+
+            font-size: 23px;
+
+            transition: 0.25s;
+        }
+
         .faq-answer {
-            display: none;
-            padding: 0 25px 22px;
-            color: #63798b;
+            max-height: 0;
+
+            overflow: hidden;
+
+            color: var(--muted);
+
+            transition: max-height 0.35s ease;
+        }
+
+        .faq-answer p {
+            padding:
+                0 24px 24px;
         }
 
         .faq-item.open .faq-answer {
-            display: block;
+            max-height: 250px;
         }
 
+        .faq-item.open .faq-plus {
+            transform: rotate(45deg);
+        }
+
+        /* =========================
+           MAP
+        ========================= */
+
         .map-section {
-            background: #f5f9fc;
+            background: white;
         }
 
         .map-container {
             max-width: 1200px;
+
             margin: auto;
 
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 0.8fr 1.4fr;
 
-            background: white;
-            border-radius: 16px;
             overflow: hidden;
 
-            box-shadow: 0 15px 45px rgba(7,57,92,0.12);
+            border-radius: 20px;
+
+            box-shadow: var(--shadow-strong);
         }
 
         .map-info {
-            padding: 50px 40px;
-            background: #073b67;
+            padding: 52px 40px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #061f37,
+                    #074775
+                );
+
             color: white;
 
             display: flex;
@@ -801,177 +1595,375 @@
         }
 
         .map-info h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
+            font-size: 29px;
+
+            margin: 8px 0 20px;
         }
 
         .map-address {
             margin-bottom: 28px;
-            font-size: 18px;
-            line-height: 1.8;
+
+            color: #d5e6f0;
+
+            font-size: 16px;
         }
 
         .route-button {
-            display: inline-block;
             align-self: flex-start;
-            background: #078bd1;
+
+            padding: 13px 21px;
+
+            border-radius: 9px;
+
+            background: var(--blue);
+
             color: white;
-            padding: 14px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
+
+            font-size: 14px;
+            font-weight: 800;
         }
 
         .map-wrapper {
-            min-height: 470px;
+            min-height: 480px;
         }
 
         .map-wrapper iframe {
             width: 100%;
             height: 100%;
-            min-height: 470px;
-            border: 0;
+            min-height: 480px;
+
             display: block;
+
+            border: none;
         }
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
-            background: white;
+            background: #f4f8fb;
         }
 
-        .contact-grid {
+        .contact-card {
             max-width: 1150px;
+
             margin: auto;
 
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            overflow: hidden;
 
-            gap: 55px;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+
+            border-radius: 22px;
+
+            background: white;
+
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info {
+            padding: 60px;
         }
 
         .contact-info h2 {
-            color: #103553;
-            font-size: 43px;
-            line-height: 1.2;
-            margin: 10px 0 17px;
+            color: var(--navy);
+
+            font-size: clamp(35px,4vw,47px);
+
+            line-height: 1.1;
+
+            letter-spacing: -1.4px;
+
+            margin: 10px 0 18px;
         }
 
         .contact-info > p {
-            color: #657b8e;
-            font-size: 17px;
-            margin-bottom: 30px;
+            color: var(--muted);
+
+            margin-bottom: 35px;
         }
 
         .contact-box {
-            padding-bottom: 17px;
-            margin-bottom: 17px;
-            border-bottom: 1px solid #dce7ee;
+            display: grid;
+            grid-template-columns: 110px 1fr;
+
+            padding: 17px 0;
+
+            border-bottom: 1px solid #e2ebf1;
         }
 
         .contact-box strong {
-            display: block;
-            color: #078bd1;
-            margin-bottom: 4px;
+            color: var(--blue);
+
+            font-size: 13px;
         }
 
-        .contact-box a {
-            color: #17324a;
-            text-decoration: none;
-            font-size: 18px;
+        .contact-box a,
+        .contact-box div {
+            color: var(--text);
+
+            font-weight: 600;
         }
 
         .contact-logo {
-            background: #f5f9fc;
-            min-height: 320px;
-            padding: 35px;
-            border-radius: 14px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #eef7fc,
+                    #dff2fc
+                );
 
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+
+            padding: 50px;
         }
 
         .contact-logo img {
             width: 100%;
-            max-width: 440px;
-            object-fit: contain;
+            max-width: 390px;
         }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 7%;
+
+            background: #031729;
+
+            color: #8fa7b8;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .whatsapp-button {
             position: fixed;
-            right: 25px;
-            bottom: 25px;
-            z-index: 2000;
 
-            width: 64px;
-            height: 64px;
+            right: 24px;
+            bottom: 24px;
 
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
+            z-index: 3000;
+
+            width: 61px;
+            height: 61px;
 
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
 
-            text-decoration: none;
-            font-size: 30px;
+            border-radius: 50%;
 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
+            background: #25d366;
 
-        footer {
-            background: #041f37;
-            color: #9bb1c2;
-            padding: 30px 7%;
-            text-align: center;
+            color: white;
+
             font-size: 14px;
+            font-weight: 900;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.23);
+
+            transition: 0.25s;
         }
 
-        @media (max-width: 950px) {
+        .whatsapp-button:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
 
-            header {
-                position: relative;
-                flex-direction: column;
-                gap: 10px;
-            }
+        /* =========================
+           CERT MODAL
+        ========================= */
 
-            nav {
-                justify-content: center;
-            }
+        .image-modal {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 5000;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: rgba(1,15,27,0.90);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .image-modal.open {
+            display: flex;
+        }
+
+        .image-modal img {
+            max-width: min(1000px,95vw);
+            max-height: 90vh;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,0.55);
+        }
+
+        .modal-close {
+            position: fixed;
+
+            top: 25px;
+            right: 30px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.1);
+
+            color: white;
+
+            font-size: 27px;
+
+            cursor: pointer;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+
+            transition:
+                opacity 0.75s ease,
+                transform 0.75s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1050px) {
 
             nav a {
-                margin: 6px 8px;
-            }
-
-            .lang-switch {
-                margin: 8px 0 0;
-            }
-
-            .hero {
-                min-height: 80vh;
-                padding-top: 90px;
+                margin-left: 14px;
+                font-size: 13px;
             }
 
             .hero h1 {
-                font-size: 48px;
+                letter-spacing: -2px;
+            }
+
+        }
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 8px 5%;
+            }
+
+            .logo img {
+                width: 155px;
+                height: 60px;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .nav-wrapper {
+                position: absolute;
+
+                top: 77px;
+                left: 5%;
+                right: 5%;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+
+                padding: 18px;
+
+                background: rgba(255,255,255,0.98);
+
+                border: 1px solid #dce8ef;
+
+                border-radius: 15px;
+
+                box-shadow:
+                    0 20px 60px rgba(5,40,65,0.16);
+            }
+
+            .nav-wrapper.open {
+                display: flex;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav a {
+                margin: 0;
+
+                padding: 11px 8px;
+
+                border-bottom: 1px solid #edf2f5;
+            }
+
+            nav a::after {
+                display: none;
+            }
+
+            .lang-switch {
+                margin: 16px 0 0;
+                align-self: flex-start;
             }
 
             .stats {
                 grid-template-columns: 1fr;
             }
 
-            .stat {
-                border-right: none;
-                border-bottom: 1px solid rgba(255,255,255,0.2);
+            .stat:not(:last-child)::after {
+                top: auto;
+                right: 10%;
+                left: 10%;
+                bottom: 0;
+
+                width: 80%;
+                height: 1px;
             }
 
             .about-grid,
             .europe-grid,
-            .contact-grid,
-            .map-container,
-            .cert-image-grid {
+            .contact-card,
+            .map-container {
                 grid-template-columns: 1fr;
+            }
+
+            .experience-card {
+                right: 20px;
             }
 
             .services-grid,
@@ -982,49 +1974,95 @@
             .process-grid {
                 grid-template-columns: repeat(2,1fr);
             }
+
+            .cert-image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-logo {
+                min-height: 350px;
+            }
+
         }
+
+        /* =========================
+           PHONE
+        ========================= */
 
         @media (max-width: 600px) {
 
             section {
-                padding: 70px 5%;
-            }
-
-            .logo img {
-                width: 155px;
-                height: 60px;
-            }
-
-            nav a {
-                font-size: 13px;
+                padding: 78px 5%;
             }
 
             .hero {
-                padding: 80px 5%;
+                min-height: 88vh;
+
+                padding:
+                    125px 5% 95px;
             }
 
             .hero h1 {
-                font-size: 39px;
+                font-size: 45px;
+
+                letter-spacing: -1.6px;
             }
 
             .hero p {
-                font-size: 17px;
+                font-size: 16px;
             }
 
-            .section-header h2,
-            .about-text h2,
-            .visual-content h2,
-            .europe-text h2,
-            .contact-info h2 {
-                font-size: 32px;
+            .hero-trust {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+
+                margin-top: 35px;
             }
 
+            .stats-wrapper {
+                padding: 0 5%;
+
+                margin-top: -35px;
+            }
+
+            .stat {
+                padding: 25px 18px;
+            }
+
+            .stat strong {
+                font-size: 20px;
+            }
+
+            .about-grid {
+                gap: 45px;
+            }
+
+            .about-image-main img {
+                height: 360px;
+            }
+
+            .experience-card {
+                width: 165px;
+
+                right: 12px;
+                bottom: 15px;
+
+                padding: 18px;
+            }
+
+            .checks,
             .services-grid,
             .why-grid,
             .process-grid,
-            .checks,
             .form-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .service {
+                min-height: auto;
             }
 
             .form-group.full,
@@ -1037,22 +2075,41 @@
                 padding: 25px 18px;
             }
 
-            .about-image img,
             .europe-image img {
-                height: 320px;
+                height: 340px;
             }
 
-            .partner {
-                width: 100%;
-            }
-
-            .map-info {
+            .contact-info {
                 padding: 35px 25px;
+            }
+
+            .contact-box {
+                grid-template-columns: 1fr;
+
+                gap: 5px;
+            }
+
+            .contact-logo {
+                min-height: 250px;
+
+                padding: 30px;
             }
 
             .map-wrapper,
             .map-wrapper iframe {
-                min-height: 350px;
+                min-height: 360px;
+            }
+
+            .map-info {
+                padding: 38px 26px;
+            }
+
+            .whatsapp-button {
+                right: 16px;
+                bottom: 16px;
+
+                width: 55px;
+                height: 55px;
             }
 
         }
@@ -1061,340 +2118,655 @@
 
 </head>
 
+
 <body>
 
 
-<header>
+<!-- ================= HEADER ================= -->
+
+<header id="header">
 
     <a href="#" class="logo">
-        <img src="jupiter.png" alt="Jupiter Trans & Cargo">
+
+        <img src="jupiter.png"
+             alt="Jupiter Trans & Cargo">
+
     </a>
 
-    <nav>
 
-        <a href="#o-nas"
-           data-pl="O nas"
-           data-en="About us">O nas</a>
+    <button class="menu-button"
+            id="menuButton"
+            aria-label="Menu">
 
-        <a href="#uslugi"
-           data-pl="Usługi"
-           data-en="Services">Usługi</a>
+        <span></span>
+        <span></span>
+        <span></span>
 
-        <a href="#proces"
-           data-pl="Jak działamy"
-           data-en="How we work">Jak działamy</a>
+    </button>
 
-        <a href="#certyfikaty"
-           data-pl="Certyfikaty"
-           data-en="Certificates">Certyfikaty</a>
 
-        <a href="#wycena"
-           data-pl="Wycena"
-           data-en="Quote">Wycena</a>
+    <div class="nav-wrapper"
+         id="navWrapper">
 
-        <a href="#faq">FAQ</a>
+        <nav>
 
-        <a href="#kontakt"
-           data-pl="Kontakt"
-           data-en="Contact">Kontakt</a>
+            <a href="#o-nas"
+               data-pl="O nas"
+               data-en="About us">
+                O nas
+            </a>
+
+            <a href="#uslugi"
+               data-pl="Usługi"
+               data-en="Services">
+                Usługi
+            </a>
+
+            <a href="#proces"
+               data-pl="Jak działamy"
+               data-en="How we work">
+                Jak działamy
+            </a>
+
+            <a href="#certyfikaty"
+               data-pl="Certyfikaty"
+               data-en="Certificates">
+                Certyfikaty
+            </a>
+
+            <a href="#wycena"
+               data-pl="Wycena"
+               data-en="Quote">
+                Wycena
+            </a>
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+            <a href="#kontakt"
+               data-pl="Kontakt"
+               data-en="Contact">
+                Kontakt
+            </a>
+
+        </nav>
+
 
         <div class="lang-switch">
 
             <button id="plBtn"
                     class="active"
-                    onclick="setLanguage('pl')">PL</button>
+                    onclick="setLanguage('pl')">
+
+                PL
+
+            </button>
 
             <button id="enBtn"
-                    onclick="setLanguage('en')">EN</button>
+                    onclick="setLanguage('en')">
+
+                EN
+
+            </button>
 
         </div>
 
-    </nav>
+    </div>
 
 </header>
 
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-        <div class="hero-label"
-             data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA"
-             data-en="FREIGHT FORWARDING • TRANSPORT • LOGISTICS">
 
-            SPEDYCJA • TRANSPORT • LOGISTYKA
+        <div class="hero-badge">
+
+            <span class="hero-badge-dot"></span>
+
+            <span
+                data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA"
+                data-en="FREIGHT FORWARDING • TRANSPORT • LOGISTICS">
+
+                SPEDYCJA • TRANSPORT • LOGISTYKA
+
+            </span>
 
         </div>
+
 
         <h1>
 
             <span data-pl="Twój ładunek."
                   data-en="Your cargo.">
+
                 Twój ładunek.
+
             </span>
 
             <br>
 
             <span data-pl="Nasza odpowiedzialność."
                   data-en="Our responsibility.">
+
                 Nasza odpowiedzialność.
+
             </span>
 
         </h1>
 
-        <p data-pl="Kompleksowo organizujemy przewóz ładunków od momentu ich nadania aż do odbioru. Transport krajowy i międzynarodowy, Polska, Europa oraz Wielka Brytania."
-           data-en="We provide comprehensive cargo transport organization from pickup to delivery. Domestic and international transport across Poland, Europe and the United Kingdom.">
 
-            Kompleksowo organizujemy przewóz ładunków od momentu ich nadania
-            aż do odbioru. Transport krajowy i międzynarodowy,
-            Polska, Europa oraz Wielka Brytania.
+        <p
+            data-pl="Kompleksowo organizujemy transport od momentu nadania aż do odbioru. Polska, Europa i Wielka Brytania – planowanie, koordynacja i nadzór nad całym procesem."
+            data-en="We organize transport comprehensively from pickup to final delivery. Poland, Europe and the United Kingdom – planning, coordination and supervision of the entire process.">
+
+            Kompleksowo organizujemy transport od momentu nadania aż do odbioru.
+            Polska, Europa i Wielka Brytania – planowanie,
+            koordynacja i nadzór nad całym procesem.
 
         </p>
+
 
         <div class="hero-buttons">
 
             <a href="#wycena"
                class="button button-primary"
-               data-pl="Poproś o wycenę"
-               data-en="Request a quote">
-                Poproś o wycenę
+               data-pl="Poproś o wycenę →"
+               data-en="Request a quote →">
+
+                Poproś o wycenę →
+
             </a>
+
 
             <a href="#uslugi"
                class="button button-secondary"
                data-pl="Poznaj nasze usługi"
                data-en="Explore our services">
+
                 Poznaj nasze usługi
+
             </a>
 
         </div>
+
+
+        <div class="hero-trust">
+
+            <div>
+
+                <span class="trust-check">✓</span>
+
+                <span
+                    data-pl="Doświadczenie od 2015"
+                    data-en="Experience since 2015">
+
+                    Doświadczenie od 2015
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <span class="trust-check">✓</span>
+
+                <span
+                    data-pl="Transport krajowy i międzynarodowy"
+                    data-en="Domestic and international transport">
+
+                    Transport krajowy i międzynarodowy
+
+                </span>
+
+            </div>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<div class="stats">
+<!-- ================= STATS ================= -->
 
-    <div class="stat">
+<div class="stats-wrapper">
 
-        <strong data-pl="Od 2015 roku"
+    <div class="stats">
+
+
+        <div class="stat">
+
+            <strong
+                data-pl="Od 2015 roku"
                 data-en="Since 2015">
-            Od 2015 roku
-        </strong>
 
-        <span data-pl="doświadczenie w branży"
-              data-en="industry experience">
-            doświadczenie w branży
-        </span>
+                Od 2015 roku
 
-    </div>
+            </strong>
+
+            <span
+                data-pl="doświadczenie w branży"
+                data-en="industry experience">
+
+                doświadczenie w branży
+
+            </span>
+
+        </div>
 
 
-    <div class="stat">
+        <div class="stat">
 
-        <strong data-pl="Polska, Europa i Wielka Brytania"
+            <strong
+                data-pl="Polska, Europa i Wielka Brytania"
                 data-en="Poland, Europe and the United Kingdom">
-            Polska, Europa i Wielka Brytania
-        </strong>
 
-        <span data-pl="szeroki obszar działania"
-              data-en="wide operating area">
-            szeroki obszar działania
-        </span>
+                Polska, Europa i Wielka Brytania
 
-    </div>
+            </strong>
+
+            <span
+                data-pl="szeroki obszar działania"
+                data-en="wide operating area">
+
+                szeroki obszar działania
+
+            </span>
+
+        </div>
 
 
-    <div class="stat">
+        <div class="stat">
 
-        <strong data-pl="Kompleksowa obsługa"
+            <strong
+                data-pl="Kompleksowa obsługa"
                 data-en="Comprehensive service">
-            Kompleksowa obsługa
-        </strong>
 
-        <span data-pl="od nadania do odbioru"
-              data-en="from pickup to delivery">
-            od nadania do odbioru
-        </span>
+                Kompleksowa obsługa
+
+            </strong>
+
+            <span
+                data-pl="od nadania do odbioru"
+                data-en="from pickup to delivery">
+
+                od nadania do odbioru
+
+            </span>
+
+        </div>
+
 
     </div>
 
 </div>
 
 
-<section class="about" id="o-nas">
+<!-- ================= ABOUT ================= -->
+
+<section class="about"
+         id="o-nas">
+
 
     <div class="about-grid">
 
-        <div class="about-image">
 
-            <img src="elevate-dI-aXC7DWpQ-unsplash.jpg"
-                 alt="Spedycja i transport Jupiter Trans & Cargo">
+        <div class="about-image reveal">
+
+
+            <div class="about-image-main">
+
+                <img
+                    src="elevate-dI-aXC7DWpQ-unsplash.jpg"
+                    alt="Jupiter Trans & Cargo transport">
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <strong>2015</strong>
+
+                <span
+                    data-pl="Od tego roku działamy w branży transportowej i spedycyjnej."
+                    data-en="Operating in transport and freight forwarding since this year.">
+
+                    Od tego roku działamy w branży transportowej i spedycyjnej.
+
+                </span>
+
+            </div>
+
 
         </div>
 
-        <div class="about-text">
+
+        <div class="about-text reveal">
+
 
             <div class="section-label">
                 Jupiter Trans & Cargo
             </div>
 
-            <h2 data-pl="Organizujemy transport od początku do końca."
-                data-en="We organize transport from start to finish.">
-                Organizujemy transport od początku do końca.
+
+            <h2
+                data-pl="Transport zorganizowany od początku do końca."
+                data-en="Transport organized from start to finish.">
+
+                Transport zorganizowany od początku do końca.
+
             </h2>
 
-            <p data-pl="Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków."
-               data-en="Jupiter Trans & Cargo has been operating since 2015 and specializes in comprehensive cargo transport organization.">
+
+            <p
+                data-pl="Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków."
+                data-en="Jupiter Trans & Cargo has been operating since 2015 and specializes in comprehensive cargo transport organization.">
+
                 Jupiter Trans & Cargo działa na rynku od 2015 roku
                 i specjalizuje się w kompleksowej organizacji przewozu ładunków.
+
             </p>
 
-            <p data-pl="Zajmujemy się całym procesem transportowym — od przyjęcia zlecenia i zaplanowania trasy, przez dobór odpowiedniego pojazdu, aż po nadzór nad załadunkiem, przewozem, rozładunkiem i odbiorem towaru."
-               data-en="We manage the entire transport process — from accepting the order and planning the route, through selecting the appropriate vehicle, to supervising loading, transport, unloading and delivery.">
-                Zajmujemy się całym procesem transportowym — od przyjęcia zlecenia
-                i zaplanowania trasy, przez dobór odpowiedniego pojazdu,
-                aż po nadzór nad załadunkiem, przewozem, rozładunkiem
-                i odbiorem towaru.
+
+            <p
+                data-pl="Zajmujemy się całym procesem – od przyjęcia zlecenia i zaplanowania trasy, przez dobór pojazdu, aż po nadzór nad załadunkiem, transportem, rozładunkiem i odbiorem."
+                data-en="We manage the entire process – from accepting the order and planning the route to selecting the vehicle and supervising loading, transport, unloading and delivery.">
+
+                Zajmujemy się całym procesem – od przyjęcia zlecenia
+                i zaplanowania trasy, przez dobór pojazdu,
+                aż po nadzór nad załadunkiem, transportem,
+                rozładunkiem i odbiorem.
+
             </p>
+
+
+            <p
+                data-pl="Doświadczenie pomaga nam reagować także w trudnych i nieprzewidzianych sytuacjach oraz szukać rozwiązań uwzględniających bezpieczeństwo, czas i koszty klienta."
+                data-en="Our experience helps us respond to difficult and unexpected situations while seeking solutions that consider safety, time and customer costs.">
+
+                Doświadczenie pomaga nam reagować także w trudnych
+                i nieprzewidzianych sytuacjach oraz szukać rozwiązań
+                uwzględniających bezpieczeństwo, czas i koszty klienta.
+
+            </p>
+
 
             <div class="checks">
 
                 <div class="check"
                      data-pl="✓ Wieloletnie doświadczenie"
                      data-en="✓ Many years of experience">
+
                     ✓ Wieloletnie doświadczenie
+
                 </div>
 
                 <div class="check"
                      data-pl="✓ Indywidualne podejście"
                      data-en="✓ Individual approach">
+
                     ✓ Indywidualne podejście
+
                 </div>
 
                 <div class="check"
                      data-pl="✓ Nadzór nad transportem"
                      data-en="✓ Transport supervision">
+
                     ✓ Nadzór nad transportem
+
                 </div>
 
                 <div class="check"
                      data-pl="✓ Bezpieczne rozwiązania"
                      data-en="✓ Safe solutions">
+
                     ✓ Bezpieczne rozwiązania
+
                 </div>
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="services" id="uslugi">
+<!-- ================= SERVICES ================= -->
 
-    <div class="section-header">
+<section class="services"
+         id="uslugi">
+
+
+    <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Nasze usługi"
              data-en="Our services">
+
             Nasze usługi
+
         </div>
 
-        <h2 data-pl="Kompleksowa organizacja transportu"
+
+        <h2
+            data-pl="Kompleksowa organizacja transportu"
             data-en="Comprehensive transport organization">
+
             Kompleksowa organizacja transportu
+
         </h2>
+
+
+        <p
+            data-pl="Koordynujemy najważniejsze elementy procesu transportowego i dopasowujemy rozwiązania do konkretnego zlecenia."
+            data-en="We coordinate the key elements of the transport process and tailor solutions to each individual order.">
+
+            Koordynujemy najważniejsze elementy procesu transportowego
+            i dopasowujemy rozwiązania do konkretnego zlecenia.
+
+        </p>
 
     </div>
 
 
     <div class="services-grid">
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">01</div>
-            <h3 data-pl="Planowanie trasy" data-en="Route planning">Planowanie trasy</h3>
-            <p data-pl="Analizujemy trasę oraz warunki przewozu."
-               data-en="We analyze the route and transport conditions.">
-                Analizujemy trasę oraz warunki przewozu.
+
+            <h3
+                data-pl="Planowanie trasy"
+                data-en="Route planning">
+
+                Planowanie trasy
+
+            </h3>
+
+            <p
+                data-pl="Analizujemy trasę, kierunek przewozu oraz warunki realizacji transportu."
+                data-en="We analyze the route, transport direction and conditions of each shipment.">
+
+                Analizujemy trasę, kierunek przewozu
+                oraz warunki realizacji transportu.
+
             </p>
+
         </div>
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">02</div>
-            <h3 data-pl="Dobór pojazdu" data-en="Vehicle selection">Dobór pojazdu</h3>
-            <p data-pl="Dobieramy środek transportu do charakteru oraz wymagań ładunku."
-               data-en="We select the appropriate vehicle for the cargo.">
-                Dobieramy środek transportu do charakteru oraz wymagań ładunku.
+
+            <h3
+                data-pl="Dobór pojazdu"
+                data-en="Vehicle selection">
+
+                Dobór pojazdu
+
+            </h3>
+
+            <p
+                data-pl="Dobieramy odpowiednie rozwiązanie do charakteru, wymiarów i wymagań ładunku."
+                data-en="We select the appropriate solution according to the cargo type, dimensions and requirements.">
+
+                Dobieramy odpowiednie rozwiązanie
+                do charakteru, wymiarów i wymagań ładunku.
+
             </p>
+
         </div>
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">03</div>
-            <h3 data-pl="Organizacja przewozu" data-en="Transport organization">Organizacja przewozu</h3>
-            <p data-pl="Koordynujemy przewóz od nadania aż do odbioru."
-               data-en="We coordinate transport from pickup to delivery.">
-                Koordynujemy przewóz od nadania aż do odbioru.
+
+            <h3
+                data-pl="Organizacja przewozu"
+                data-en="Transport organization">
+
+                Organizacja przewozu
+
+            </h3>
+
+            <p
+                data-pl="Koordynujemy przewóz od momentu nadania aż do finalnego odbioru."
+                data-en="We coordinate transport from pickup through to final delivery.">
+
+                Koordynujemy przewóz od momentu nadania
+                aż do finalnego odbioru.
+
             </p>
+
         </div>
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">04</div>
-            <h3 data-pl="Nadzór nad dostawą" data-en="Delivery supervision">Nadzór nad dostawą</h3>
-            <p data-pl="Nadzorujemy przebieg transportu od załadunku do rozładunku."
-               data-en="We supervise transport from loading to unloading.">
-                Nadzorujemy przebieg transportu od załadunku do rozładunku.
+
+            <h3
+                data-pl="Nadzór nad dostawą"
+                data-en="Delivery supervision">
+
+                Nadzór nad dostawą
+
+            </h3>
+
+            <p
+                data-pl="Nadzorujemy transport od załadunku aż do rozładunku i odbioru towaru."
+                data-en="We supervise transport from loading to unloading and final delivery.">
+
+                Nadzorujemy transport od załadunku
+                aż do rozładunku i odbioru towaru.
+
             </p>
+
         </div>
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">05</div>
-            <h3 data-pl="Dokumentacja" data-en="Documentation">Dokumentacja</h3>
-            <p data-pl="Pomagamy w przygotowaniu i koordynacji wymaganych dokumentów."
-               data-en="We assist with required transport documentation.">
-                Pomagamy w przygotowaniu i koordynacji wymaganych dokumentów.
+
+            <h3
+                data-pl="Dokumentacja"
+                data-en="Documentation">
+
+                Dokumentacja
+
+            </h3>
+
+            <p
+                data-pl="Pomagamy w przygotowaniu i koordynacji dokumentacji wymaganej do realizacji przewozu."
+                data-en="We assist with the preparation and coordination of documentation required for transport.">
+
+                Pomagamy w przygotowaniu i koordynacji
+                dokumentacji wymaganej do realizacji przewozu.
+
             </p>
+
         </div>
 
-        <div class="service">
+
+        <div class="service reveal">
+
             <div class="service-number">06</div>
-            <h3 data-pl="Import i eksport UK" data-en="UK import and export">Import i eksport UK</h3>
-            <p data-pl="Organizujemy transport do i z Wielkiej Brytanii oraz zapewniamy wsparcie przy odprawie celnej."
-               data-en="We organize transport to and from the United Kingdom and provide customs clearance support.">
+
+            <h3
+                data-pl="Import i eksport UK"
+                data-en="UK import and export">
+
+                Import i eksport UK
+
+            </h3>
+
+            <p
+                data-pl="Organizujemy transport do i z Wielkiej Brytanii oraz zapewniamy wsparcie przy odprawie celnej."
+                data-en="We organize transport to and from the United Kingdom and provide customs clearance support.">
+
                 Organizujemy transport do i z Wielkiej Brytanii
                 oraz zapewniamy wsparcie przy odprawie celnej.
+
             </p>
+
         </div>
+
 
     </div>
 
 </section>
 
 
+<!-- ================= VISUAL ================= -->
+
 <section class="visual-section">
 
-    <div class="visual-content">
+    <div class="visual-content reveal">
 
         <div class="section-label"
-             style="color:#62c6ff;"
+             style="color:#68c8ff;"
              data-pl="Odpowiedzialna spedycja"
              data-en="Responsible freight forwarding">
+
             Odpowiedzialna spedycja
+
         </div>
 
-        <h2 data-pl="Dobra organizacja transportu zaczyna się przed wyruszeniem pojazdu w trasę."
-            data-en="Good transport organization begins before the vehicle starts its journey.">
-            Dobra organizacja transportu zaczyna się
+
+        <h2
+            data-pl="Dobra organizacja zaczyna się jeszcze przed wyruszeniem pojazdu w trasę."
+            data-en="Good organization begins before the vehicle even starts its journey.">
+
+            Dobra organizacja zaczyna się jeszcze
             przed wyruszeniem pojazdu w trasę.
+
         </h2>
 
-        <p data-pl="Analizujemy dostępne możliwości i wybieramy rozwiązania pozwalające ograniczyć ryzyko, koszty i opóźnienia."
-           data-en="We analyze available options and choose solutions that help reduce risk, costs and delays.">
-            Analizujemy dostępne możliwości i wybieramy rozwiązania
-            pozwalające ograniczyć ryzyko, koszty i opóźnienia.
+
+        <p
+            data-pl="Analizujemy dostępne możliwości, wymagania zlecenia oraz sytuację na rynku, aby ograniczać ryzyko, niepotrzebne koszty i opóźnienia."
+            data-en="We analyze available options, order requirements and market conditions to reduce risk, unnecessary costs and delays.">
+
+            Analizujemy dostępne możliwości, wymagania zlecenia
+            oraz sytuację na rynku, aby ograniczać ryzyko,
+            niepotrzebne koszty i opóźnienia.
+
         </p>
 
     </div>
@@ -1402,356 +2774,948 @@
 </section>
 
 
-<section class="process" id="proces">
+<!-- ================= PROCESS ================= -->
 
-    <div class="section-header">
+<section class="process"
+         id="proces">
+
+
+    <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Jak działamy"
              data-en="How we work">
+
             Jak działamy
+
         </div>
 
-        <h2 data-pl="Od zlecenia do dostawy"
+
+        <h2
+            data-pl="Od zlecenia do dostawy"
             data-en="From order to delivery">
+
             Od zlecenia do dostawy
+
         </h2>
+
+
+        <p
+            data-pl="Każdy etap transportu wymaga odpowiedniego przygotowania i kontroli."
+            data-en="Every stage of transport requires proper preparation and supervision.">
+
+            Każdy etap transportu wymaga
+            odpowiedniego przygotowania i kontroli.
+
+        </p>
 
     </div>
 
+
     <div class="process-grid">
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
+
             <div class="process-number">1</div>
-            <h3 data-pl="Analiza" data-en="Analysis">Analiza</h3>
-            <p data-pl="Poznajemy potrzeby klienta i charakterystykę ładunku."
-               data-en="We identify the customer's needs and cargo characteristics.">
-                Poznajemy potrzeby klienta i charakterystykę ładunku.
+
+            <h3 data-pl="Analiza"
+                data-en="Analysis">
+
+                Analiza
+
+            </h3>
+
+            <p
+                data-pl="Poznajemy potrzeby klienta i charakterystykę ładunku."
+                data-en="We identify the customer's needs and cargo characteristics.">
+
+                Poznajemy potrzeby klienta
+                i charakterystykę ładunku.
+
             </p>
+
         </div>
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
+
             <div class="process-number">2</div>
-            <h3 data-pl="Planowanie" data-en="Planning">Planowanie</h3>
-            <p data-pl="Planujemy trasę i dobieramy odpowiednie rozwiązanie."
-               data-en="We plan the route and select the appropriate solution.">
-                Planujemy trasę i dobieramy odpowiednie rozwiązanie.
+
+            <h3 data-pl="Planowanie"
+                data-en="Planning">
+
+                Planowanie
+
+            </h3>
+
+            <p
+                data-pl="Planujemy trasę i dobieramy odpowiednie rozwiązanie."
+                data-en="We plan the route and select the appropriate solution.">
+
+                Planujemy trasę i dobieramy
+                odpowiednie rozwiązanie.
+
             </p>
+
         </div>
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
+
             <div class="process-number">3</div>
-            <h3 data-pl="Realizacja" data-en="Execution">Realizacja</h3>
-            <p data-pl="Koordynujemy załadunek i przebieg transportu."
-               data-en="We coordinate loading and the transport process.">
-                Koordynujemy załadunek i przebieg transportu.
+
+            <h3 data-pl="Realizacja"
+                data-en="Execution">
+
+                Realizacja
+
+            </h3>
+
+            <p
+                data-pl="Koordynujemy załadunek i przebieg transportu."
+                data-en="We coordinate loading and the transport process.">
+
+                Koordynujemy załadunek
+                i przebieg transportu.
+
             </p>
+
         </div>
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
+
             <div class="process-number">4</div>
-            <h3 data-pl="Dostawa" data-en="Delivery">Dostawa</h3>
-            <p data-pl="Nadzorujemy transport aż do rozładunku i odbioru."
-               data-en="We supervise transport through unloading and delivery.">
-                Nadzorujemy transport aż do rozładunku i odbioru.
+
+            <h3 data-pl="Dostawa"
+                data-en="Delivery">
+
+                Dostawa
+
+            </h3>
+
+            <p
+                data-pl="Nadzorujemy realizację aż do rozładunku i odbioru."
+                data-en="We supervise the process through unloading and final delivery.">
+
+                Nadzorujemy realizację
+                aż do rozładunku i odbioru.
+
             </p>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="europe">
+<!-- ================= WHY ================= -->
 
-    <div class="europe-grid">
+<section class="why">
 
-        <div class="europe-image">
 
-            <img src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
-                 alt="Transport Polska Europa Wielka Brytania">
+    <div class="section-header reveal">
+
+        <div class="section-label"
+             data-pl="Dlaczego my"
+             data-en="Why us">
+
+            Dlaczego my
 
         </div>
 
-        <div class="europe-text">
+
+        <h2
+            data-pl="Współpraca oparta na zaufaniu"
+            data-en="Cooperation built on trust">
+
+            Współpraca oparta na zaufaniu
+
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3 data-pl="Lojalność"
+                data-en="Loyalty">
+
+                Lojalność
+
+            </h3>
+
+            <p
+                data-pl="Stawiamy na uczciwe i długoterminowe relacje."
+                data-en="We focus on honest and long-term relationships.">
+
+                Stawiamy na uczciwe i długoterminowe relacje.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3 data-pl="Sumienność"
+                data-en="Reliability">
+
+                Sumienność
+
+            </h3>
+
+            <p
+                data-pl="Dokładnie koordynujemy kolejne etapy realizacji."
+                data-en="We carefully coordinate every stage of execution.">
+
+                Dokładnie koordynujemy kolejne etapy realizacji.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3 data-pl="Doradztwo"
+                data-en="Advisory">
+
+                Doradztwo
+
+            </h3>
+
+            <p
+                data-pl="Pomagamy dobrać rozwiązanie odpowiadające konkretnemu transportowi."
+                data-en="We help select the right solution for each transport requirement.">
+
+                Pomagamy dobrać rozwiązanie
+                odpowiadające konkretnemu transportowi.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3 data-pl="Doświadczenie"
+                data-en="Experience">
+
+                Doświadczenie
+
+            </h3>
+
+            <p
+                data-pl="Działamy na rynku od 2015 roku."
+                data-en="We have been operating since 2015.">
+
+                Działamy na rynku od 2015 roku.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3
+                data-pl="Rozwiązywanie problemów"
+                data-en="Problem solving">
+
+                Rozwiązywanie problemów
+
+            </h3>
+
+            <p
+                data-pl="Reagujemy na nieprzewidziane sytuacje i szukamy bezpiecznych rozwiązań."
+                data-en="We respond to unexpected situations and seek safe solutions.">
+
+                Reagujemy na nieprzewidziane sytuacje
+                i szukamy bezpiecznych rozwiązań.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-item reveal">
+
+            <div class="why-icon">✓</div>
+
+            <h3 data-pl="Oszczędność"
+                data-en="Efficiency">
+
+                Oszczędność
+
+            </h3>
+
+            <p
+                data-pl="Analizujemy rozwiązania z uwzględnieniem czasu i kosztów klienta."
+                data-en="We analyze solutions with customer time and costs in mind.">
+
+                Analizujemy rozwiązania z uwzględnieniem
+                czasu i kosztów klienta.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= EUROPE / UK ================= -->
+
+<section class="europe">
+
+
+    <div class="europe-grid">
+
+
+        <div class="europe-image reveal">
+
+            <img
+                src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
+                alt="Transport Polska Europa Wielka Brytania">
+
+        </div>
+
+
+        <div class="europe-text reveal">
+
 
             <div class="section-label"
-                 style="color:#62c6ff;"
+                 style="color:#68c8ff;"
                  data-pl="Obszar działania"
                  data-en="Operating area">
+
                 Obszar działania
+
             </div>
 
-            <h2 data-pl="Polska, Europa i Wielka Brytania"
+
+            <h2
+                data-pl="Polska, Europa i Wielka Brytania"
                 data-en="Poland, Europe and the United Kingdom">
+
                 Polska, Europa i Wielka Brytania
+
             </h2>
 
-            <p data-pl="Organizujemy przewozy na terenie całej Polski, krajów Unii Europejskiej oraz pozostałych kierunków europejskich."
-               data-en="We organize transport throughout Poland, the European Union and other European destinations.">
+
+            <p
+                data-pl="Organizujemy przewozy na terenie całej Polski, krajów Unii Europejskiej oraz innych państw znajdujących się na kontynencie europejskim."
+                data-en="We organize transport throughout Poland, the European Union and other countries on the European continent.">
+
                 Organizujemy przewozy na terenie całej Polski,
-                krajów Unii Europejskiej oraz pozostałych kierunków europejskich.
+                krajów Unii Europejskiej oraz innych państw
+                znajdujących się na kontynencie europejskim.
+
             </p>
+
 
             <div class="area-tags">
 
                 <div class="area-tag"
                      data-pl="🇵🇱 Polska"
                      data-en="🇵🇱 Poland">
+
                     🇵🇱 Polska
+
                 </div>
 
                 <div class="area-tag"
                      data-pl="🇪🇺 Unia Europejska"
                      data-en="🇪🇺 European Union">
+
                     🇪🇺 Unia Europejska
+
                 </div>
 
                 <div class="area-tag"
                      data-pl="🇬🇧 Wielka Brytania"
                      data-en="🇬🇧 United Kingdom">
+
                     🇬🇧 Wielka Brytania
+
                 </div>
 
             </div>
 
+
             <div class="uk-box">
 
-                <h3 data-pl="Import i eksport Wielka Brytania"
-                    data-en="UK import and export">
-                    Import i eksport Wielka Brytania
-                </h3>
+                <div class="uk-box-header">
 
-                <p data-pl="Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii. Zapewniamy również wsparcie przy odprawie celnej i koordynacji wymaganej dokumentacji."
-                   data-en="We organize import and export transport to and from the United Kingdom. We also provide customs clearance support and coordination of required documentation.">
-                    Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii
-                    oraz z Wielkiej Brytanii. Zapewniamy również wsparcie przy odprawie
-                    celnej i koordynacji wymaganej dokumentacji.
+                    <span class="uk-flag">🇬🇧</span>
+
+                    <h3
+                        data-pl="Import i eksport Wielka Brytania"
+                        data-en="UK import and export">
+
+                        Import i eksport Wielka Brytania
+
+                    </h3>
+
+                </div>
+
+
+                <p
+                    data-pl="Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii. Zapewniamy również wsparcie przy odprawie celnej i koordynacji wymaganej dokumentacji."
+                    data-en="We organize import and export transport to and from the United Kingdom. We also provide customs clearance support and coordination of required documentation.">
+
+                    Organizujemy transporty importowe i eksportowe
+                    do Wielkiej Brytanii oraz z Wielkiej Brytanii.
+                    Zapewniamy również wsparcie przy odprawie celnej
+                    i koordynacji wymaganej dokumentacji.
+
                 </p>
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
+
+<!-- ================= PARTNERS ================= -->
 
 <section class="trust">
 
-    <div class="section-header">
-        <div class="section-label" data-pl="Partnerzy" data-en="Partners">Partnerzy</div>
-        <h2 data-pl="Zaufali nam" data-en="They trust us">Zaufali nam</h2>
+
+    <div class="section-header reveal">
+
+        <div class="section-label"
+             data-pl="Partnerzy"
+             data-en="Partners">
+
+            Partnerzy
+
+        </div>
+
+
+        <h2
+            data-pl="Zaufali nam"
+            data-en="They trust us">
+
+            Zaufali nam
+
+        </h2>
+
+
+        <p
+            data-pl="Długoterminowa współpraca i zaufanie są dla nas jednym z najważniejszych potwierdzeń jakości świadczonych usług."
+            data-en="Long-term cooperation and trust are among the strongest confirmations of the quality of our services.">
+
+            Długoterminowa współpraca i zaufanie są dla nas
+            jednym z najważniejszych potwierdzeń jakości świadczonych usług.
+
+        </p>
+
     </div>
 
-    <div class="partners">
+
+    <div class="partners reveal">
+
         <div class="partner">
-            <img src="eurogate-logistics.png.png"
-                 alt="Eurogate Logistics">
+
+            <img
+                src="eurogate-logistics.png.png"
+                alt="Eurogate Logistics">
+
         </div>
+
     </div>
+
 
 </section>
 
 
-<section class="certificates" id="certyfikaty">
+<!-- ================= CERTIFICATES ================= -->
 
-    <div class="section-header">
+<section class="certificates"
+         id="certyfikaty">
+
+
+    <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Kompetencje i uprawnienia"
              data-en="Competence and authorizations">
+
             Kompetencje i uprawnienia
+
         </div>
 
-        <h2 data-pl="Certyfikaty i licencje"
+
+        <h2
+            data-pl="Certyfikaty i licencje"
             data-en="Certificates and licences">
+
             Certyfikaty i licencje
+
         </h2>
+
+
+        <p
+            data-pl="Dokumenty potwierdzające kompetencje zawodowe oraz uprawnienia związane z prowadzoną działalnością."
+            data-en="Documents confirming professional competence and authorizations related to our business activity.">
+
+            Dokumenty potwierdzające kompetencje zawodowe
+            oraz uprawnienia związane z prowadzoną działalnością.
+
+        </p>
 
     </div>
 
+
     <div class="cert-image-grid">
 
-        <div class="cert-image-card">
 
-            <img src="certyfikat-kompetencji.png"
-                 alt="Certyfikat kompetencji zawodowych">
+        <div class="cert-image-card reveal">
+
+
+            <div class="cert-image">
+
+                <img
+                    src="certyfikat-kompetencji.png"
+                    alt="Certyfikat kompetencji zawodowych"
+                    onclick="openCertificate(this.src)">
+
+            </div>
+
 
             <div class="cert-image-text">
 
-                <h3 data-pl="Certyfikat kompetencji zawodowych"
+                <h3
+                    data-pl="Certyfikat kompetencji zawodowych"
                     data-en="Certificate of professional competence">
+
                     Certyfikat kompetencji zawodowych
+
                 </h3>
 
-                <p data-pl="Dokument potwierdzający kwalifikacje zawodowe w zakresie transportu drogowego."
-                   data-en="A document confirming professional qualifications in road transport.">
+                <p
+                    data-pl="Dokument potwierdzający kwalifikacje zawodowe w zakresie transportu drogowego."
+                    data-en="A document confirming professional qualifications in road transport.">
+
                     Dokument potwierdzający kwalifikacje zawodowe
                     w zakresie transportu drogowego.
+
                 </p>
 
             </div>
 
+
         </div>
 
 
-        <div class="cert-image-card">
+        <div class="cert-image-card reveal">
 
-            <img src="licencja-transportowa.png"
-                 alt="Licencja transportowa">
+
+            <div class="cert-image">
+
+                <img
+                    src="licencja-transportowa.png"
+                    alt="Licencja transportowa"
+                    onclick="openCertificate(this.src)">
+
+            </div>
+
 
             <div class="cert-image-text">
 
-                <h3 data-pl="Licencja na wykonywanie transportu drogowego"
+                <h3
+                    data-pl="Licencja na wykonywanie transportu drogowego"
                     data-en="Road transport licence">
+
                     Licencja na wykonywanie transportu drogowego
+
                 </h3>
 
-                <p data-pl="Dokument potwierdzający uprawnienia w zakresie pośrednictwa przy przewozie rzeczy."
-                   data-en="A document confirming authorization for goods transport intermediation.">
+                <p
+                    data-pl="Dokument potwierdzający uprawnienia w zakresie pośrednictwa przy przewozie rzeczy."
+                    data-en="A document confirming authorization in the field of goods transport intermediation.">
+
                     Dokument potwierdzający uprawnienia
                     w zakresie pośrednictwa przy przewozie rzeczy.
+
                 </p>
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="quote" id="wycena">
+<!-- ================= QUOTE ================= -->
 
-    <div class="section-header">
+<section class="quote"
+         id="wycena">
+
+
+    <div class="section-header reveal">
 
         <div class="section-label"
-             style="color:#62c6ff;"
+             style="color:#68c8ff;"
              data-pl="Szybka wycena"
              data-en="Quick quote">
+
             Szybka wycena
+
         </div>
 
-        <h2 data-pl="Potrzebujesz transportu? Wyślij zapytanie."
+
+        <h2
+            data-pl="Potrzebujesz transportu? Wyślij zapytanie."
             data-en="Need transport? Send us an enquiry.">
+
             Potrzebujesz transportu? Wyślij zapytanie.
+
         </h2>
+
+
+        <p
+            data-pl="Podaj podstawowe informacje dotyczące trasy i ładunku. Skontaktujemy się w sprawie szczegółów."
+            data-en="Provide the basic details of the route and cargo. We will contact you to discuss the details.">
+
+            Podaj podstawowe informacje dotyczące trasy i ładunku.
+            Skontaktujemy się w sprawie szczegółów.
+
+        </p>
 
     </div>
 
-    <div class="quote-container">
 
-        <form class="quote-form"
-              action="https://formsubmit.co/marta.jupiter@onet.eu"
-              method="POST">
+    <div class="quote-container reveal">
 
-            <input type="hidden"
-                   name="_subject"
-                   value="Nowe zapytanie transportowe - Jupiter Trans & Cargo">
 
-            <input type="hidden"
-                   name="_captcha"
-                   value="false">
+        <form
+            class="quote-form"
+            action="https://formsubmit.co/marta.jupiter@onet.eu"
+            method="POST">
 
-            <input type="text"
-                   name="_honey"
-                   style="display:none">
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nowe zapytanie transportowe - Jupiter Trans & Cargo">
+
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false">
+
+
+            <input
+                type="text"
+                name="_honey"
+                style="display:none">
+
 
             <div class="form-grid">
 
+
                 <div class="form-group">
-                    <label data-pl="Imię i nazwisko / Firma *"
-                           data-en="Name / Company *">
+
+                    <label
+                        data-pl="Imię i nazwisko / Firma *"
+                        data-en="Name / Company *">
+
                         Imię i nazwisko / Firma *
+
                     </label>
-                    <input type="text"
-                           name="Klient"
-                           required>
+
+                    <input
+                        type="text"
+                        name="Klient"
+                        required>
+
                 </div>
 
-                <div class="form-group">
-                    <label>E-mail *</label>
-                    <input type="email"
-                           name="Email"
-                           required>
-                </div>
 
                 <div class="form-group">
-                    <label data-pl="Telefon"
-                           data-en="Phone">
+
+                    <label>
+                        E-mail *
+                    </label>
+
+                    <input
+                        type="email"
+                        name="Email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        data-pl="Telefon"
+                        data-en="Phone">
+
                         Telefon
+
                     </label>
-                    <input type="tel"
-                           name="Telefon">
+
+                    <input
+                        type="tel"
+                        name="Telefon">
+
                 </div>
 
+
                 <div class="form-group">
-                    <label data-pl="Termin transportu"
-                           data-en="Transport date">
+
+                    <label
+                        data-pl="Termin transportu"
+                        data-en="Transport date">
+
                         Termin transportu
+
                     </label>
-                    <input type="date"
-                           name="Termin">
+
+                    <input
+                        type="date"
+                        name="Termin">
+
                 </div>
 
+
                 <div class="form-group">
-                    <label data-pl="Miejsce załadunku *"
-                           data-en="Loading location *">
+
+                    <label
+                        data-pl="Miejsce załadunku *"
+                        data-en="Loading location *">
+
                         Miejsce załadunku *
+
                     </label>
-                    <input type="text"
-                           name="Miejsce zaladunku"
-                           required>
+
+                    <input
+                        type="text"
+                        name="Miejsce zaladunku"
+                        data-pl-placeholder="np. Kraków, Polska"
+                        data-en-placeholder="e.g. Krakow, Poland"
+                        placeholder="np. Kraków, Polska"
+                        required>
+
                 </div>
 
+
                 <div class="form-group">
-                    <label data-pl="Miejsce rozładunku *"
-                           data-en="Delivery location *">
+
+                    <label
+                        data-pl="Miejsce rozładunku *"
+                        data-en="Delivery location *">
+
                         Miejsce rozładunku *
+
                     </label>
-                    <input type="text"
-                           name="Miejsce rozladunku"
-                           required>
+
+                    <input
+                        type="text"
+                        name="Miejsce rozladunku"
+                        data-pl-placeholder="np. Londyn, Wielka Brytania"
+                        data-en-placeholder="e.g. London, United Kingdom"
+                        placeholder="np. Londyn, Wielka Brytania"
+                        required>
+
                 </div>
 
+
                 <div class="form-group">
-                    <label data-pl="Rodzaj towaru"
-                           data-en="Type of cargo">
+
+                    <label
+                        data-pl="Rodzaj towaru"
+                        data-en="Type of cargo">
+
                         Rodzaj towaru
+
                     </label>
-                    <input type="text"
-                           name="Rodzaj towaru">
+
+                    <input
+                        type="text"
+                        name="Rodzaj towaru"
+                        data-pl-placeholder="np. palety, maszyny"
+                        data-en-placeholder="e.g. pallets, machinery"
+                        placeholder="np. palety, maszyny">
+
                 </div>
 
+
                 <div class="form-group">
-                    <label data-pl="Waga ładunku"
-                           data-en="Cargo weight">
+
+                    <label
+                        data-pl="Waga ładunku"
+                        data-en="Cargo weight">
+
                         Waga ładunku
+
                     </label>
-                    <input type="text"
-                           name="Waga">
+
+                    <input
+                        type="text"
+                        name="Waga"
+                        placeholder="np. 12 000 kg">
+
                 </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        data-pl="Typ transportu"
+                        data-en="Transport type">
+
+                        Typ transportu
+
+                    </label>
+
+                    <select name="Typ transportu">
+
+                        <option
+                            value="Transport krajowy"
+                            data-pl="Transport krajowy"
+                            data-en="Domestic transport">
+
+                            Transport krajowy
+
+                        </option>
+
+                        <option
+                            value="Transport międzynarodowy"
+                            data-pl="Transport międzynarodowy"
+                            data-en="International transport">
+
+                            Transport międzynarodowy
+
+                        </option>
+
+                        <option
+                            value="Eksport do UK"
+                            data-pl="Eksport do UK"
+                            data-en="Export to the UK">
+
+                            Eksport do UK
+
+                        </option>
+
+                        <option
+                            value="Import z UK"
+                            data-pl="Import z UK"
+                            data-en="Import from the UK">
+
+                            Import z UK
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        data-pl="Wsparcie przy odprawie celnej"
+                        data-en="Customs clearance support">
+
+                        Wsparcie przy odprawie celnej
+
+                    </label>
+
+                    <select name="Odprawa celna">
+
+                        <option
+                            value="Do ustalenia"
+                            data-pl="Do ustalenia"
+                            data-en="To be discussed">
+
+                            Do ustalenia
+
+                        </option>
+
+                        <option
+                            value="Tak"
+                            data-pl="Tak"
+                            data-en="Yes">
+
+                            Tak
+
+                        </option>
+
+                        <option
+                            value="Nie"
+                            data-pl="Nie"
+                            data-en="No">
+
+                            Nie
+
+                        </option>
+
+                    </select>
+
+                </div>
+
 
                 <div class="form-group full">
 
-                    <label data-pl="Dodatkowe informacje"
-                           data-en="Additional information">
+                    <label
+                        data-pl="Dodatkowe informacje"
+                        data-en="Additional information">
+
                         Dodatkowe informacje
+
                     </label>
 
-                    <textarea name="Dodatkowe informacje"></textarea>
+                    <textarea
+                        name="Dodatkowe informacje"
+                        data-pl-placeholder="Wymiary, liczba palet, wymagania dotyczące pojazdu, godziny załadunku itp."
+                        data-en-placeholder="Dimensions, number of pallets, vehicle requirements, loading hours etc."
+                        placeholder="Wymiary, liczba palet, wymagania dotyczące pojazdu, godziny załadunku itp."></textarea>
 
                 </div>
 
+
                 <label class="checkbox-group">
 
-                    <input type="checkbox" required>
+                    <input
+                        type="checkbox"
+                        required>
 
-                    <span data-pl="Wyrażam zgodę na wykorzystanie podanych danych w celu odpowiedzi na moje zapytanie."
-                          data-en="I agree to the use of the provided data for the purpose of responding to my enquiry.">
+                    <span
+                        data-pl="Wyrażam zgodę na wykorzystanie podanych danych w celu odpowiedzi na moje zapytanie."
+                        data-en="I agree to the use of the provided data for the purpose of responding to my enquiry.">
 
                         Wyrażam zgodę na wykorzystanie podanych danych
                         w celu odpowiedzi na moje zapytanie.
@@ -1760,57 +3724,86 @@
 
                 </label>
 
-                <button type="submit"
-                        class="submit-button"
-                        data-pl="Wyślij zapytanie o wycenę →"
-                        data-en="Send quote request →">
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                    data-pl="Wyślij zapytanie o wycenę →"
+                    data-en="Send quote request →">
 
                     Wyślij zapytanie o wycenę →
 
                 </button>
 
+
             </div>
 
+
         </form>
+
 
     </div>
 
 </section>
 
 
-<section class="faq" id="faq">
+<!-- ================= FAQ ================= -->
 
-    <div class="section-header">
+<section class="faq"
+         id="faq">
+
+
+    <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Najczęstsze pytania"
              data-en="Frequently asked questions">
+
             Najczęstsze pytania
+
         </div>
+
 
         <h2>FAQ</h2>
 
+
+        <p
+            data-pl="Najważniejsze informacje dotyczące organizowanych przez nas transportów."
+            data-en="Key information about the transport services we organize.">
+
+            Najważniejsze informacje dotyczące
+            organizowanych przez nas transportów.
+
+        </p>
+
     </div>
 
-    <div class="faq-container">
+
+    <div class="faq-container reveal">
+
 
         <div class="faq-item">
 
             <button class="faq-question">
 
-                <span data-pl="Na jakim obszarze działacie?"
-                      data-en="Where do you operate?">
+                <span
+                    data-pl="Na jakim obszarze działacie?"
+                    data-en="Where do you operate?">
+
                     Na jakim obszarze działacie?
+
                 </span>
 
-                <span>+</span>
+                <span class="faq-plus">+</span>
 
             </button>
 
+
             <div class="faq-answer">
 
-                <p data-pl="Organizujemy transporty na terenie całej Polski, Unii Europejskiej, pozostałych państw europejskich oraz Wielkiej Brytanii."
-                   data-en="We organize transport throughout Poland, the European Union, other European countries and the United Kingdom.">
+                <p
+                    data-pl="Organizujemy transporty na terenie całej Polski, Unii Europejskiej, pozostałych państw europejskich oraz Wielkiej Brytanii."
+                    data-en="We organize transport throughout Poland, the European Union, other European countries and the United Kingdom.">
 
                     Organizujemy transporty na terenie całej Polski,
                     Unii Europejskiej, pozostałych państw europejskich
@@ -1822,26 +3815,32 @@
 
         </div>
 
+
         <div class="faq-item">
 
             <button class="faq-question">
 
-                <span data-pl="Czy organizujecie transport do i z Wielkiej Brytanii?"
-                      data-en="Do you organize transport to and from the United Kingdom?">
+                <span
+                    data-pl="Czy organizujecie transport do i z Wielkiej Brytanii?"
+                    data-en="Do you organize transport to and from the United Kingdom?">
+
                     Czy organizujecie transport do i z Wielkiej Brytanii?
+
                 </span>
 
-                <span>+</span>
+                <span class="faq-plus">+</span>
 
             </button>
 
+
             <div class="faq-answer">
 
-                <p data-pl="Tak. Organizujemy importy i eksporty do Wielkiej Brytanii oraz z Wielkiej Brytanii."
-                   data-en="Yes. We organize imports to and exports from the United Kingdom.">
+                <p
+                    data-pl="Tak. Organizujemy importy i eksporty do Wielkiej Brytanii oraz z Wielkiej Brytanii."
+                    data-en="Yes. We organize imports to and exports from the United Kingdom.">
 
-                    Tak. Organizujemy importy i eksporty do Wielkiej Brytanii
-                    oraz z Wielkiej Brytanii.
+                    Tak. Organizujemy importy i eksporty
+                    do Wielkiej Brytanii oraz z Wielkiej Brytanii.
 
                 </p>
 
@@ -1849,23 +3848,29 @@
 
         </div>
 
+
         <div class="faq-item">
 
             <button class="faq-question">
 
-                <span data-pl="Czy zapewniacie wsparcie przy odprawie celnej?"
-                      data-en="Do you provide customs clearance support?">
+                <span
+                    data-pl="Czy zapewniacie wsparcie przy odprawie celnej?"
+                    data-en="Do you provide customs clearance support?">
+
                     Czy zapewniacie wsparcie przy odprawie celnej?
+
                 </span>
 
-                <span>+</span>
+                <span class="faq-plus">+</span>
 
             </button>
 
+
             <div class="faq-answer">
 
-                <p data-pl="Tak. Zapewniamy wsparcie przy odprawie celnej oraz koordynacji wymaganej dokumentacji."
-                   data-en="Yes. We provide customs clearance support and coordinate the required documentation.">
+                <p
+                    data-pl="Tak. Zapewniamy wsparcie przy odprawie celnej oraz koordynacji wymaganej dokumentacji."
+                    data-en="Yes. We provide customs clearance support and coordinate the required documentation.">
 
                     Tak. Zapewniamy wsparcie przy odprawie celnej
                     oraz koordynacji wymaganej dokumentacji.
@@ -1876,62 +3881,121 @@
 
         </div>
 
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span
+                    data-pl="Jak otrzymać wycenę transportu?"
+                    data-en="How can I get a transport quote?">
+
+                    Jak otrzymać wycenę transportu?
+
+                </span>
+
+                <span class="faq-plus">+</span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p
+                    data-pl="Możesz skorzystać z formularza szybkiej wyceny albo skontaktować się z nami telefonicznie, mailowo lub przez WhatsApp."
+                    data-en="You can use the quick quote form or contact us by phone, email or WhatsApp.">
+
+                    Możesz skorzystać z formularza szybkiej wyceny
+                    albo skontaktować się z nami telefonicznie,
+                    mailowo lub przez WhatsApp.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
     </div>
 
 </section>
 
 
+<!-- ================= MAP ================= -->
+
 <section class="map-section">
 
-    <div class="section-header">
+
+    <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Nasza lokalizacja"
              data-en="Our location">
+
             Nasza lokalizacja
+
         </div>
 
-        <h2 data-pl="Znajdź nas w Brzesku"
+
+        <h2
+            data-pl="Znajdź nas w Brzesku"
             data-en="Find us in Brzesko">
+
             Znajdź nas w Brzesku
+
         </h2>
 
     </div>
 
 
-    <div class="map-container">
+    <div class="map-container reveal">
+
 
         <div class="map-info">
 
             <div class="section-label"
-                 style="color:#62c6ff;"
+                 style="color:#68c8ff;"
                  data-pl="Siedziba firmy"
                  data-en="Company headquarters">
+
                 Siedziba firmy
+
             </div>
 
-            <h3>Jupiter Trans & Cargo</h3>
+
+            <h3>
+                Jupiter Trans & Cargo
+            </h3>
+
 
             <div class="map-address">
 
                 ul. Jacka Malczewskiego 4<br>
                 32-800 Brzesko<br>
 
-                <span data-pl="Małopolska, Polska"
-                      data-en="Lesser Poland, Poland">
+                <span
+                    data-pl="Małopolska, Polska"
+                    data-en="Lesser Poland, Poland">
+
                     Małopolska, Polska
+
                 </span>
 
             </div>
 
-            <a class="route-button"
-               href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
-               target="_blank"
-               rel="noopener noreferrer"
-               data-pl="Wyznacz trasę →"
-               data-en="Get directions →">
+
+            <a
+                class="route-button"
+                href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-pl="Wyznacz trasę →"
+                data-en="Get directions →">
+
                 Wyznacz trasę →
+
             </a>
+
 
         </div>
 
@@ -1943,87 +4007,129 @@
                 loading="lazy"
                 allowfullscreen=""
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Jupiter Trans & Cargo Brzesko mapa">
+                title="Jupiter Trans & Cargo Brzesko">
             </iframe>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<section class="contact" id="kontakt">
+<!-- ================= CONTACT ================= -->
 
-    <div class="contact-grid">
+<section class="contact"
+         id="kontakt">
+
+
+    <div class="contact-card reveal">
+
 
         <div class="contact-info">
+
 
             <div class="section-label"
                  data-pl="Kontakt"
                  data-en="Contact">
+
                 Kontakt
+
             </div>
 
-            <h2 data-pl="Porozmawiajmy o Twoim transporcie."
+
+            <h2
+                data-pl="Porozmawiajmy o Twoim transporcie."
                 data-en="Let's talk about your transport.">
+
                 Porozmawiajmy o Twoim transporcie.
+
             </h2>
 
-            <p data-pl="Skontaktuj się z Jupiter Trans & Cargo, aby omówić organizację przewozu."
-               data-en="Contact Jupiter Trans & Cargo to discuss your transport requirements.">
+
+            <p
+                data-pl="Skontaktuj się z Jupiter Trans & Cargo, aby omówić organizację przewozu i dobrać odpowiednie rozwiązanie."
+                data-en="Contact Jupiter Trans & Cargo to discuss your transport requirements and choose the right solution.">
+
                 Skontaktuj się z Jupiter Trans & Cargo,
-                aby omówić organizację przewozu.
+                aby omówić organizację przewozu
+                i dobrać odpowiednie rozwiązanie.
+
             </p>
+
 
             <div class="contact-box">
 
-                <strong data-pl="Telefon"
-                        data-en="Phone">
+                <strong
+                    data-pl="Telefon"
+                    data-en="Phone">
+
                     Telefon
+
                 </strong>
 
                 <a href="tel:+48734183473">
+
                     0048 734 183 473
+
                 </a>
 
             </div>
+
 
             <div class="contact-box">
 
                 <strong>E-mail</strong>
 
                 <a href="mailto:marta.jupiter@onet.eu">
+
                     marta.jupiter@onet.eu
+
                 </a>
 
             </div>
 
+
             <div class="contact-box">
 
-                <strong data-pl="Siedziba"
-                        data-en="Headquarters">
+                <strong
+                    data-pl="Siedziba"
+                    data-en="Headquarters">
+
                     Siedziba
+
                 </strong>
 
-                ul. Jacka Malczewskiego 4<br>
-                32-800 Brzesko<br>
+                <div>
 
-                <span data-pl="Małopolska, Polska"
-                      data-en="Lesser Poland, Poland">
-                    Małopolska, Polska
-                </span>
+                    ul. Jacka Malczewskiego 4<br>
+                    32-800 Brzesko<br>
+
+                    <span
+                        data-pl="Małopolska, Polska"
+                        data-en="Lesser Poland, Poland">
+
+                        Małopolska, Polska
+
+                    </span>
+
+                </div>
 
             </div>
 
+
         </div>
+
 
         <div class="contact-logo">
 
-            <img src="jupiter.png"
-                 alt="Jupiter Trans & Cargo logo">
+            <img
+                src="jupiter.png"
+                alt="Jupiter Trans & Cargo">
 
         </div>
+
 
     </div>
 
@@ -2039,18 +4145,46 @@
 </footer>
 
 
-<a href="https://wa.me/48734183473?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%20zapyta%C4%87%20o%20wycen%C4%99%20transportu."
-   class="whatsapp-button"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="WhatsApp Jupiter Trans & Cargo">
+<!-- ================= WHATSAPP ================= -->
 
-    ☎
+<a
+    href="https://wa.me/48734183473?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%20zapyta%C4%87%20o%20wycen%C4%99%20transportu."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+    aria-label="WhatsApp Jupiter Trans & Cargo">
+
+    WA
 
 </a>
 
 
+<!-- ================= CERT MODAL ================= -->
+
+<div class="image-modal"
+     id="imageModal"
+     onclick="closeCertificate(event)">
+
+    <button
+        class="modal-close"
+        onclick="closeCertificate()">
+
+        ×
+
+    </button>
+
+    <img id="modalImage"
+         src=""
+         alt="Dokument Jupiter Trans & Cargo">
+
+</div>
+
+
 <script>
+
+    /* =============================
+       LANGUAGE
+    ============================= */
 
     function setLanguage(lang) {
 
@@ -2073,13 +4207,47 @@
 
         });
 
+
+        const placeholders =
+            document.querySelectorAll(
+                "[data-pl-placeholder][data-en-placeholder]"
+            );
+
+        placeholders.forEach(function(element) {
+
+            if (lang === "en") {
+
+                element.placeholder =
+                    element.getAttribute("data-en-placeholder");
+
+            } else {
+
+                element.placeholder =
+                    element.getAttribute("data-pl-placeholder");
+
+            }
+
+        });
+
+
         document.documentElement.lang = lang;
 
-        document.getElementById("plBtn")
-            .classList.toggle("active", lang === "pl");
 
-        document.getElementById("enBtn")
-            .classList.toggle("active", lang === "en");
+        document
+            .getElementById("plBtn")
+            .classList.toggle(
+                "active",
+                lang === "pl"
+            );
+
+
+        document
+            .getElementById("enBtn")
+            .classList.toggle(
+                "active",
+                lang === "en"
+            );
+
 
         if (lang === "en") {
 
@@ -2093,7 +4261,11 @@
 
         }
 
-        localStorage.setItem("language", lang);
+
+        localStorage.setItem(
+            "language",
+            lang
+        );
 
     }
 
@@ -2101,25 +4273,196 @@
     const savedLanguage =
         localStorage.getItem("language");
 
+
     if (savedLanguage === "en") {
+
         setLanguage("en");
+
     }
 
 
-    const faqQuestions =
-        document.querySelectorAll(".faq-question");
+    /* =============================
+       FAQ
+    ============================= */
 
-    faqQuestions.forEach(function(question) {
+    document
+        .querySelectorAll(".faq-question")
+        .forEach(function(question) {
 
-        question.addEventListener("click", function() {
+            question.addEventListener(
+                "click",
+                function() {
 
-            const item = question.parentElement;
+                    const item =
+                        question.parentElement;
 
-            item.classList.toggle("open");
+                    item.classList.toggle("open");
+
+                }
+            );
 
         });
 
-    });
+
+    /* =============================
+       MOBILE MENU
+    ============================= */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const navWrapper =
+        document.getElementById("navWrapper");
+
+
+    menuButton.addEventListener(
+        "click",
+        function() {
+
+            navWrapper.classList.toggle("open");
+
+        }
+    );
+
+
+    document
+        .querySelectorAll("nav a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    navWrapper.classList.remove("open");
+
+                }
+            );
+
+        });
+
+
+    /* =============================
+       HEADER SCROLL
+    ============================= */
+
+    window.addEventListener(
+        "scroll",
+        function() {
+
+            const header =
+                document.getElementById("header");
+
+            if (window.scrollY > 20) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        }
+    );
+
+
+    /* =============================
+       SCROLL ANIMATION
+    ============================= */
+
+    const observer =
+        new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(
+                    function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target
+                                .classList
+                                .add("visible");
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(
+            function(element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+    /* =============================
+       CERTIFICATE MODAL
+    ============================= */
+
+    function openCertificate(src) {
+
+        const modal =
+            document.getElementById("imageModal");
+
+        const image =
+            document.getElementById("modalImage");
+
+        image.src = src;
+
+        modal.classList.add("open");
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    function closeCertificate(event) {
+
+        if (
+            event &&
+            event.target.id === "modalImage"
+        ) {
+
+            return;
+
+        }
+
+
+        const modal =
+            document.getElementById("imageModal");
+
+        modal.classList.remove("open");
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Escape") {
+
+                closeCertificate();
+
+            }
+
+        }
+    );
 
 </script>
 
