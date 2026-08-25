@@ -8,19 +8,11 @@
     <title>Jupiter Trans & Cargo | Spedycja, transport Polska Europa UK</title>
 
     <meta name="description"
-          content="Jupiter Trans & Cargo – kompleksowa organizacja transportu i spedycji w Polsce, Europie i Wielkiej Brytanii. Import i eksport UK oraz wsparcie przy odprawie celnej.">
+          content="Jupiter Trans & Cargo – kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. Import i eksport UK oraz wsparcie przy odprawie celnej.">
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Jupiter Trans & Cargo">
-    <meta name="theme-color" content="#071f36">
-
-    <meta property="og:title"
-          content="Jupiter Trans & Cargo | Spedycja i transport">
-
-    <meta property="og:description"
-          content="Transport krajowy i międzynarodowy. Polska, Europa, Wielka Brytania oraz wsparcie przy odprawie celnej.">
-
-    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#061d32">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,54 +20,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Jupiter Trans & Cargo",
-      "telephone": "+48734183473",
-      "email": "marta.jupiter@onet.eu",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ul. Jacka Malczewskiego 4",
-        "postalCode": "32-800",
-        "addressLocality": "Brzesko",
-        "addressRegion": "Małopolskie",
-        "addressCountry": "PL"
-      },
-      "areaServed": [
-        "Polska",
-        "Europa",
-        "Wielka Brytania"
-      ]
-    }
-    </script>
-
     <style>
 
         :root {
-            --navy: #071f36;
-            --navy2: #0a2b49;
-            --navy3: #103b5f;
+            --navy: #061d32;
+            --navy2: #092f50;
+            --navy3: #0a4c7c;
 
             --blue: #078bd1;
-            --blue2: #18aaf4;
-            --blue-light: #68c8ff;
-
-            --text: #17324a;
-            --muted: #697f91;
+            --blue2: #23aff5;
+            --lightblue: #e4f5fd;
 
             --white: #ffffff;
-            --bg: #f4f8fb;
-            --line: #dde8ef;
+            --grey: #f2f6f9;
+            --grey2: #e7eef3;
+
+            --text: #17364e;
+            --muted: #667e90;
+
+            --border: #d9e5ed;
 
             --shadow:
-                0 20px 60px rgba(9, 47, 76, 0.10);
+                0 18px 50px rgba(6,47,75,0.10);
 
-            --shadow-strong:
-                0 25px 70px rgba(4, 37, 63, 0.18);
-
-            --radius: 18px;
+            --strong-shadow:
+                0 25px 70px rgba(5,34,55,0.18);
         }
 
         * {
@@ -90,15 +59,15 @@
 
         body {
             font-family: "Inter", Arial, sans-serif;
-            background: var(--white);
             color: var(--text);
+            background: white;
             line-height: 1.65;
             overflow-x: hidden;
         }
 
         img {
-            max-width: 100%;
             display: block;
+            max-width: 100%;
         }
 
         a {
@@ -116,41 +85,35 @@
             padding: 110px 7%;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
 
-            z-index: 2000;
+            width: 100%;
+            z-index: 3000;
 
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
 
-            padding: 10px 7%;
+            padding: 9px 7%;
 
-            background: rgba(255,255,255,0.92);
+            background: rgba(255,255,255,0.95);
 
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
 
-            border-bottom: 1px solid rgba(210,225,235,0.7);
+            border-bottom: 1px solid rgba(215,228,237,0.9);
 
             transition: 0.3s;
         }
 
         header.scrolled {
-            box-shadow: 0 12px 35px rgba(6,48,78,0.09);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
+            box-shadow:
+                0 10px 35px rgba(6,40,65,0.10);
         }
 
         .logo img {
@@ -170,39 +133,18 @@
         }
 
         nav a {
-            position: relative;
+            color: #17394f;
 
-            color: #17364f;
+            margin-left: 20px;
 
-            margin-left: 22px;
-
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
 
-            transition: 0.25s;
-        }
-
-        nav a::after {
-            content: "";
-
-            position: absolute;
-            left: 0;
-            bottom: -7px;
-
-            width: 0;
-            height: 2px;
-
-            background: var(--blue);
-
-            transition: 0.25s;
+            transition: 0.2s;
         }
 
         nav a:hover {
             color: var(--blue);
-        }
-
-        nav a:hover::after {
-            width: 100%;
         }
 
         .lang-switch {
@@ -212,7 +154,7 @@
 
             padding: 4px;
 
-            background: #edf5fa;
+            background: #eaf3f8;
 
             border-radius: 10px;
         }
@@ -220,16 +162,16 @@
         .lang-switch button {
             border: none;
 
-            background: transparent;
-
             padding: 8px 11px;
 
             border-radius: 7px;
 
-            font-size: 13px;
-            font-weight: 800;
+            background: transparent;
 
-            color: #436279;
+            color: #456277;
+
+            font-size: 12px;
+            font-weight: 800;
 
             cursor: pointer;
         }
@@ -237,24 +179,22 @@
         .lang-switch button.active {
             background: var(--blue);
             color: white;
-            box-shadow: 0 5px 14px rgba(7,139,209,0.25);
         }
 
         .menu-button {
             display: none;
 
+            position: relative;
+
             width: 44px;
             height: 44px;
 
             border: none;
-
             border-radius: 10px;
 
-            background: #edf5fa;
+            background: #edf5f9;
 
             cursor: pointer;
-
-            position: relative;
         }
 
         .menu-button span {
@@ -265,8 +205,6 @@
             height: 2px;
 
             background: var(--navy);
-
-            transition: 0.25s;
         }
 
         .menu-button span:nth-child(1) {
@@ -281,9 +219,7 @@
             top: 28px;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             position: relative;
@@ -293,7 +229,7 @@
             display: flex;
             align-items: center;
 
-            padding: 170px 7% 100px;
+            padding: 165px 7% 125px;
 
             color: white;
 
@@ -302,10 +238,10 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(4,26,46,0.98) 0%,
-                    rgba(7,48,79,0.93) 43%,
-                    rgba(7,48,79,0.62) 68%,
-                    rgba(7,48,79,0.20) 100%
+                    rgba(3,22,39,0.99) 0%,
+                    rgba(5,44,73,0.94) 44%,
+                    rgba(5,44,73,0.58) 72%,
+                    rgba(5,44,73,0.13) 100%
                 ),
                 url("gabriel-santos-GBVDilE8yvI-unsplash.jpg");
 
@@ -318,44 +254,43 @@
 
             position: absolute;
 
-            width: 600px;
-            height: 600px;
+            width: 650px;
+            height: 650px;
+
+            left: -260px;
+            bottom: -400px;
+
+            background: rgba(25,169,241,0.18);
 
             border-radius: 50%;
 
-            background: rgba(0,157,231,0.16);
-
             filter: blur(100px);
-
-            left: -200px;
-            bottom: -300px;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
 
-            max-width: 860px;
+            max-width: 850px;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
 
-            padding: 9px 14px;
+            gap: 9px;
 
-            margin-bottom: 24px;
+            margin-bottom: 25px;
 
-            background: rgba(255,255,255,0.10);
+            padding: 9px 15px;
 
-            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 40px;
 
-            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.20);
 
-            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.08);
 
-            color: #93d9ff;
+            color: #75d1ff;
 
             font-size: 12px;
             font-weight: 800;
@@ -363,39 +298,39 @@
             letter-spacing: 2px;
         }
 
-        .hero-badge-dot {
+        .hero-dot {
             width: 8px;
             height: 8px;
 
             border-radius: 50%;
 
-            background: #32c4ff;
+            background: #55c8ff;
 
-            box-shadow: 0 0 15px #32c4ff;
+            box-shadow: 0 0 15px #55c8ff;
         }
 
         .hero h1 {
             max-width: 850px;
 
-            font-size: clamp(52px, 6vw, 82px);
+            font-size: clamp(52px,6vw,82px);
 
             line-height: 1.02;
 
             letter-spacing: -3px;
 
-            margin-bottom: 28px;
+            margin-bottom: 27px;
         }
 
         .hero h1 span {
-            color: var(--blue-light);
+            color: #6acbff;
         }
 
         .hero p {
             max-width: 700px;
 
-            color: #d9e8f2;
+            color: #d7e5ee;
 
-            font-size: 19px;
+            font-size: 18px;
 
             margin-bottom: 38px;
         }
@@ -403,20 +338,22 @@
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+
+            gap: 13px;
         }
 
         .button {
+            min-height: 55px;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
-            min-height: 54px;
 
             padding: 0 27px;
 
             border-radius: 10px;
 
+            font-size: 14px;
             font-weight: 800;
 
             transition: 0.25s;
@@ -424,29 +361,28 @@
 
         .button-primary {
             background:
-                linear-gradient(135deg, #078bd1, #16a9f4);
+                linear-gradient(
+                    135deg,
+                    #078bd1,
+                    #27aff4
+                );
 
             color: white;
 
             box-shadow:
-                0 12px 30px rgba(7,139,209,0.32);
+                0 14px 30px rgba(7,139,209,0.30);
         }
 
         .button-primary:hover {
             transform: translateY(-3px);
-
-            box-shadow:
-                0 18px 40px rgba(7,139,209,0.38);
         }
 
         .button-secondary {
             color: white;
 
-            border: 1px solid rgba(255,255,255,0.38);
+            border: 1px solid rgba(255,255,255,0.35);
 
             background: rgba(255,255,255,0.08);
-
-            backdrop-filter: blur(10px);
         }
 
         .button-secondary:hover {
@@ -454,25 +390,27 @@
             color: var(--navy);
         }
 
-        .hero-trust {
+        .hero-small-info {
             display: flex;
-            align-items: center;
-            gap: 28px;
+            flex-wrap: wrap;
 
-            margin-top: 48px;
+            gap: 24px;
 
-            color: #c8dbe8;
+            margin-top: 42px;
 
-            font-size: 13px;
+            color: #c9dce7;
+
+            font-size: 12px;
         }
 
-        .hero-trust div {
+        .hero-small-info div {
             display: flex;
             align-items: center;
+
             gap: 8px;
         }
 
-        .trust-check {
+        .hero-check {
             width: 22px;
             height: 22px;
 
@@ -482,17 +420,14 @@
 
             border-radius: 50%;
 
-            background: rgba(104,200,255,0.16);
+            background: rgba(88,198,255,0.14);
 
-            color: #68c8ff;
+            color: #72d0ff;
 
-            font-size: 12px;
             font-weight: 900;
         }
 
-        /* =========================
-           STATS
-        ========================= */
+        /* STATS */
 
         .stats-wrapper {
             position: relative;
@@ -500,12 +435,11 @@
 
             padding: 0 7%;
 
-            margin-top: -45px;
+            margin-top: -50px;
         }
 
         .stats {
             max-width: 1200px;
-
             margin: auto;
 
             display: grid;
@@ -513,19 +447,19 @@
 
             background: white;
 
-            border-radius: 18px;
-
-            box-shadow: var(--shadow-strong);
+            border-radius: 17px;
 
             overflow: hidden;
+
+            box-shadow: var(--strong-shadow);
         }
 
         .stat {
-            padding: 34px 28px;
+            position: relative;
+
+            padding: 34px 24px;
 
             text-align: center;
-
-            position: relative;
         }
 
         .stat:not(:last-child)::after {
@@ -533,13 +467,13 @@
 
             position: absolute;
 
-            top: 25%;
             right: 0;
+            top: 25%;
 
             width: 1px;
             height: 50%;
 
-            background: #dfebf2;
+            background: #dbe7ee;
         }
 
         .stat strong {
@@ -547,21 +481,19 @@
 
             color: var(--navy);
 
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
 
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .stat span {
             color: var(--muted);
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* =========================
-           COMMON
-        ========================= */
+        /* COMMON */
 
         .section-header {
             max-width: 820px;
@@ -593,35 +525,34 @@
 
             line-height: 1.12;
 
-            letter-spacing: -1.5px;
+            letter-spacing: -1.4px;
 
-            margin-bottom: 18px;
+            margin-bottom: 17px;
         }
 
         .section-header p {
             color: var(--muted);
 
-            font-size: 17px;
+            font-size: 16px;
         }
 
-        /* =========================
-           ABOUT
-        ========================= */
+        /* ABOUT */
 
         .about {
-            background: var(--bg);
+            margin-top: 80px;
+
+            background: #eef4f8;
+
+            border-top: 1px solid #dbe6ed;
+            border-bottom: 1px solid #dbe6ed;
         }
 
         .about-grid {
             max-width: 1200px;
-
             margin: auto;
 
             display: grid;
-
-            grid-template-columns:
-                minmax(0,1fr)
-                minmax(0,1fr);
+            grid-template-columns: 1fr 1fr;
 
             gap: 75px;
 
@@ -633,16 +564,16 @@
         }
 
         .about-image-main {
-            border-radius: 22px;
-
             overflow: hidden;
+
+            border-radius: 22px;
 
             box-shadow: var(--shadow);
         }
 
         .about-image-main img {
             width: 100%;
-            height: 530px;
+            height: 520px;
 
             object-fit: cover;
         }
@@ -653,32 +584,33 @@
             right: -25px;
             bottom: 35px;
 
-            width: 190px;
+            width: 185px;
 
-            padding: 24px;
+            padding: 22px;
 
-            border-radius: 16px;
+            border-radius: 15px;
 
             background: var(--navy);
 
             color: white;
 
-            box-shadow: var(--shadow-strong);
+            box-shadow: var(--strong-shadow);
         }
 
         .experience-card strong {
             display: block;
 
-            font-size: 37px;
-            color: #62c9ff;
+            color: #66cbff;
 
-            line-height: 1;
-            margin-bottom: 8px;
+            font-size: 34px;
+
+            margin-bottom: 6px;
         }
 
         .experience-card span {
-            font-size: 13px;
-            color: #c9dce8;
+            color: #c7dae6;
+
+            font-size: 12px;
         }
 
         .about-text h2 {
@@ -686,57 +618,46 @@
 
             font-size: clamp(35px,4vw,47px);
 
-            line-height: 1.12;
+            line-height: 1.1;
 
             letter-spacing: -1.5px;
 
-            margin-bottom: 26px;
+            margin-bottom: 24px;
         }
 
         .about-text p {
-            color: #60798c;
+            color: #607a8d;
 
-            font-size: 16px;
+            font-size: 15px;
 
-            margin-bottom: 18px;
+            margin-bottom: 17px;
         }
 
         .checks {
-            display: grid;
+            margin-top: 28px;
 
+            display: grid;
             grid-template-columns: 1fr 1fr;
 
-            gap: 12px;
-
-            margin-top: 30px;
+            gap: 11px;
         }
 
         .check {
-            display: flex;
-            align-items: center;
-
-            min-height: 58px;
-
-            padding: 14px 16px;
+            padding: 14px 15px;
 
             background: white;
 
-            border: 1px solid #dfebf2;
+            border: 1px solid #dce7ee;
 
-            border-radius: 11px;
+            border-radius: 10px;
 
-            color: #1b4a69;
+            color: #174a6a;
 
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
-
-            box-shadow:
-                0 6px 20px rgba(8,52,80,0.04);
         }
 
-        /* =========================
-           SERVICES
-        ========================= */
+        /* SERVICES */
 
         .services {
             background: white;
@@ -748,78 +669,79 @@
             margin: auto;
 
             display: grid;
-
             grid-template-columns: repeat(3,1fr);
 
             gap: 22px;
         }
 
         .service {
-            min-height: 260px;
-
             position: relative;
+
+            min-height: 270px;
+
+            padding: 32px;
+
+            border-radius: 16px;
+
+            border: 1px solid #dae7ef;
+
+            background: white;
 
             overflow: hidden;
 
-            padding: 34px;
-
-            background:
-                linear-gradient(145deg,#fff,#f8fbfd);
-
-            border: 1px solid #e0eaf1;
-
-            border-radius: 17px;
-
             box-shadow:
-                0 10px 35px rgba(6,56,90,0.05);
+                0 8px 28px rgba(5,48,78,0.05);
 
-            transition: 0.35s;
+            transition: 0.3s;
         }
 
-        .service::after {
+        .service::before {
             content: "";
 
             position: absolute;
 
-            width: 120px;
-            height: 120px;
+            top: 0;
+            left: 0;
 
-            border-radius: 50%;
+            width: 100%;
+            height: 4px;
 
-            background: rgba(7,139,209,0.07);
+            background:
+                linear-gradient(
+                    90deg,
+                    #078bd1,
+                    #62caff
+                );
 
-            right: -45px;
-            top: -45px;
+            opacity: 0;
 
-            transition: 0.35s;
+            transition: 0.3s;
         }
 
         .service:hover {
-            transform: translateY(-8px);
-
-            border-color: rgba(7,139,209,0.4);
+            transform: translateY(-7px);
 
             box-shadow:
-                0 22px 45px rgba(6,56,90,0.11);
+                0 18px 45px rgba(5,48,78,0.11);
         }
 
-        .service:hover::after {
-            transform: scale(1.4);
+        .service:hover::before {
+            opacity: 1;
         }
 
         .service-number {
+            width: 45px;
+            height: 45px;
+
             display: flex;
             align-items: center;
             justify-content: center;
 
-            width: 43px;
-            height: 43px;
+            margin-bottom: 22px;
 
-            margin-bottom: 25px;
+            border-radius: 11px;
 
-            border-radius: 10px;
-
-            background: #e8f6fd;
+            background: #e7f5fc;
 
             color: var(--blue);
 
@@ -830,23 +752,21 @@
         .service h3 {
             color: var(--navy);
 
-            font-size: 20px;
+            font-size: 19px;
 
-            margin-bottom: 12px;
+            margin-bottom: 11px;
         }
 
         .service p {
             color: var(--muted);
 
-            font-size: 15px;
+            font-size: 14px;
         }
 
-        /* =========================
-           BIG VISUAL
-        ========================= */
+        /* VISUAL */
 
-        .visual-section {
-            min-height: 590px;
+        .visual {
+            min-height: 570px;
 
             display: flex;
             align-items: center;
@@ -856,9 +776,9 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(4,29,50,0.97) 0%,
-                    rgba(4,42,70,0.84) 52%,
-                    rgba(4,42,70,0.25) 100%
+                    rgba(3,25,44,0.98),
+                    rgba(5,47,76,0.86) 55%,
+                    rgba(5,47,76,0.20)
                 ),
                 url("nagy-szabi-RsjQl8dLnfw-unsplash.jpg");
 
@@ -870,28 +790,36 @@
             max-width: 700px;
         }
 
-        .visual-content h2 {
+        .visual h2 {
             font-size: clamp(38px,4vw,52px);
 
-            line-height: 1.12;
+            line-height: 1.1;
 
-            letter-spacing: -1.7px;
+            letter-spacing: -1.5px;
 
-            margin: 10px 0 24px;
+            margin: 10px 0 22px;
         }
 
-        .visual-content p {
-            color: #d7e7f0;
+        .visual p {
+            color: #d6e6ef;
 
-            font-size: 18px;
+            font-size: 17px;
         }
 
-        /* =========================
-           PROCESS
-        ========================= */
+        /* PROCESS */
 
         .process {
-            background: var(--bg);
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .process .section-header h2 {
+            color: white;
+        }
+
+        .process .section-header p {
+            color: #bdd1de;
         }
 
         .process-grid {
@@ -900,70 +828,62 @@
             margin: auto;
 
             display: grid;
-
             grid-template-columns: repeat(4,1fr);
 
             gap: 18px;
         }
 
         .process-item {
-            position: relative;
+            padding: 30px 24px;
 
-            padding: 34px 26px;
+            border-radius: 15px;
 
-            background: white;
+            border: 1px solid rgba(255,255,255,0.12);
 
-            border-radius: 16px;
+            background: rgba(255,255,255,0.06);
 
-            border: 1px solid #e1ebf1;
+            transition: 0.3s;
+        }
 
-            box-shadow:
-                0 8px 25px rgba(7,57,92,0.05);
+        .process-item:hover {
+            transform: translateY(-5px);
+
+            background: rgba(255,255,255,0.10);
         }
 
         .process-number {
+            width: 49px;
+            height: 49px;
+
             display: flex;
             align-items: center;
             justify-content: center;
 
-            width: 50px;
-            height: 50px;
+            margin-bottom: 21px;
 
-            margin-bottom: 24px;
+            border-radius: 11px;
 
-            border-radius: 12px;
-
-            background:
-                linear-gradient(135deg,#078bd1,#25b0f4);
-
-            color: white;
+            background: var(--blue);
 
             font-weight: 800;
-
-            box-shadow:
-                0 10px 20px rgba(7,139,209,0.25);
         }
 
         .process-item h3 {
-            color: var(--navy);
+            font-size: 18px;
 
-            font-size: 19px;
-
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .process-item p {
-            color: var(--muted);
+            color: #bfd3df;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* =========================
-           WHY
-        ========================= */
+        /* WHY */
 
         .why {
-            background: white;
+            background: #f4f8fb;
         }
 
         .why-grid {
@@ -972,50 +892,38 @@
             margin: auto;
 
             display: grid;
-
             grid-template-columns: repeat(3,1fr);
 
-            gap: 20px;
+            gap: 18px;
         }
 
         .why-item {
-            padding: 28px;
-
-            border-radius: 15px;
-
-            background: #f6fafc;
-
-            border: 1px solid #e3edf3;
-
-            transition: 0.3s;
-        }
-
-        .why-item:hover {
-            transform: translateY(-5px);
+            padding: 27px;
 
             background: white;
 
-            box-shadow: var(--shadow);
+            border: 1px solid #dce7ee;
+
+            border-radius: 15px;
         }
 
         .why-icon {
-            width: 42px;
-            height: 42px;
+            width: 39px;
+            height: 39px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            border-radius: 10px;
+            margin-bottom: 16px;
 
-            background: #e7f5fd;
+            border-radius: 9px;
+
+            background: #e6f5fc;
 
             color: var(--blue);
 
-            margin-bottom: 18px;
-
-            font-size: 18px;
-            font-weight: 800;
+            font-weight: 900;
         }
 
         .why-item h3 {
@@ -1027,50 +935,19 @@
         .why-item p {
             color: var(--muted);
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* =========================
-           UK / EUROPE
-        ========================= */
+        /* EUROPE */
 
         .europe {
-            position: relative;
+            background: #dff2fb;
 
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    140deg,
-                    #061f37 0%,
-                    #073b67 58%,
-                    #07588b 100%
-                );
-
-            color: white;
-        }
-
-        .europe::after {
-            content: "";
-
-            position: absolute;
-
-            width: 600px;
-            height: 600px;
-
-            border-radius: 50%;
-
-            right: -250px;
-            top: -250px;
-
-            background:
-                rgba(55,181,246,0.10);
+            border-top: 1px solid #cce6f1;
+            border-bottom: 1px solid #cce6f1;
         }
 
         .europe-grid {
-            position: relative;
-            z-index: 2;
-
             max-width: 1200px;
 
             margin: auto;
@@ -1078,40 +955,42 @@
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
 
-            gap: 70px;
+            gap: 65px;
 
             align-items: center;
         }
 
         .europe-image {
-            border-radius: 22px;
             overflow: hidden;
 
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.28);
+            border-radius: 21px;
+
+            box-shadow: var(--shadow);
         }
 
         .europe-image img {
             width: 100%;
-            height: 500px;
+            height: 480px;
 
             object-fit: cover;
         }
 
         .europe-text h2 {
-            font-size: clamp(38px,4vw,52px);
+            color: var(--navy);
 
-            line-height: 1.1;
+            font-size: clamp(36px,4vw,50px);
+
+            line-height: 1.08;
 
             letter-spacing: -1.5px;
 
-            margin: 10px 0 22px;
+            margin: 10px 0 21px;
         }
 
         .europe-text > p {
-            color: #d8e8f3;
+            color: #4e7086;
 
-            font-size: 17px;
+            font-size: 16px;
         }
 
         .area-tags {
@@ -1120,68 +999,69 @@
 
             gap: 9px;
 
-            margin-top: 24px;
+            margin-top: 22px;
         }
 
         .area-tag {
-            padding: 9px 15px;
+            padding: 9px 14px;
 
-            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 40px;
 
-            border-radius: 50px;
+            background: white;
 
-            background: rgba(255,255,255,0.08);
+            border: 1px solid #bcddeb;
+
+            color: #174c6d;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .uk-box {
+            margin-top: 28px;
+
+            padding: 27px;
+
+            background: var(--navy);
+
+            color: white;
+
+            border-radius: 16px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .uk-title {
+            display: flex;
+            align-items: center;
+
+            gap: 11px;
+
+            margin-bottom: 10px;
+        }
+
+        .uk-title span {
+            font-size: 28px;
+        }
+
+        .uk-title h3 {
+            font-size: 20px;
+        }
+
+        .uk-box p {
+            color: #c9dae5;
 
             font-size: 14px;
         }
 
-        .uk-box {
-            margin-top: 30px;
+        /* PARTNERS */
 
-            padding: 27px;
-
-            border-radius: 16px;
-
-            background: rgba(255,255,255,0.08);
-
-            border: 1px solid rgba(255,255,255,0.14);
-
-            backdrop-filter: blur(10px);
-        }
-
-        .uk-box-header {
-            display: flex;
-            align-items: center;
-
-            gap: 12px;
-
-            margin-bottom: 12px;
-        }
-
-        .uk-flag {
-            font-size: 28px;
-        }
-
-        .uk-box h3 {
-            font-size: 22px;
-        }
-
-        .uk-box p {
-            color: #d8e8f3;
-
-            font-size: 15px;
-        }
-
-        /* =========================
-           PARTNER
-        ========================= */
-
-        .trust {
-            background: var(--bg);
+        .partners-section {
+            background: white;
         }
 
         .partners {
-            max-width: 1000px;
+            max-width: 900px;
 
             margin: auto;
 
@@ -1192,7 +1072,7 @@
         .partner {
             width: min(430px,100%);
 
-            min-height: 190px;
+            min-height: 180px;
 
             display: flex;
             align-items: center;
@@ -1200,77 +1080,71 @@
 
             padding: 40px;
 
-            background: white;
+            border-radius: 17px;
 
-            border-radius: 18px;
+            border: 1px solid #dce7ee;
 
-            border: 1px solid #dfeaf1;
+            background: #f5f9fb;
 
-            box-shadow: var(--shadow);
-
-            transition: 0.3s;
-        }
-
-        .partner:hover {
-            transform: translateY(-6px);
+            box-shadow:
+                0 10px 30px rgba(5,45,70,0.06);
         }
 
         .partner img {
             width: 100%;
+
             max-width: 300px;
-            max-height: 110px;
+            max-height: 105px;
 
             object-fit: contain;
         }
 
-        /* =========================
-           CERTIFICATES
-        ========================= */
+        /* CERTIFICATES */
 
         .certificates {
-            background: white;
+            background: #eaf0f4;
+
+            border-top: 1px solid #d6e1e8;
+            border-bottom: 1px solid #d6e1e8;
         }
 
-        .cert-image-grid {
-            max-width: 1150px;
+        .cert-grid {
+            max-width: 1120px;
 
             margin: auto;
 
             display: grid;
-
             grid-template-columns: repeat(2,1fr);
 
             gap: 30px;
         }
 
-        .cert-image-card {
-            background: #f7fafc;
-
-            border: 1px solid #dde8ef;
+        .cert-card {
+            overflow: hidden;
 
             border-radius: 18px;
 
-            overflow: hidden;
-
-            box-shadow:
-                0 10px 35px rgba(7,57,92,0.07);
-
-            transition: 0.35s;
-        }
-
-        .cert-image-card:hover {
-            transform: translateY(-7px);
-
-            box-shadow:
-                0 25px 55px rgba(7,57,92,0.13);
-        }
-
-        .cert-image {
-            position: relative;
+            border: 1px solid #d7e3eb;
 
             background: white;
 
+            box-shadow:
+                0 12px 35px rgba(5,45,70,0.08);
+
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 22px 50px rgba(5,45,70,0.13);
+        }
+
+        .cert-image {
             padding: 18px;
+
+            background: #f7fafc;
         }
 
         .cert-image img {
@@ -1281,39 +1155,46 @@
             cursor: zoom-in;
         }
 
-        .cert-image-text {
-            padding: 27px 30px 30px;
+        .cert-text {
+            padding: 26px 28px 30px;
         }
 
-        .cert-image-text h3 {
+        .cert-text h3 {
             color: var(--navy);
 
-            font-size: 21px;
+            font-size: 19px;
 
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
 
-        .cert-image-text p {
+        .cert-text p {
             color: var(--muted);
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* =========================
-           QUOTE
-        ========================= */
+        .cert-click {
+            display: inline-block;
+
+            margin-top: 14px;
+
+            color: var(--blue);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        /* QUOTE */
 
         .quote {
-            position: relative;
+            color: white;
 
             background:
                 linear-gradient(
-                    145deg,
-                    #061e35,
-                    #083b65
+                    135deg,
+                    #072943,
+                    #0a4d7d
                 );
-
-            color: white;
         }
 
         .quote .section-header h2 {
@@ -1321,7 +1202,7 @@
         }
 
         .quote .section-header p {
-            color: #d4e5ef;
+            color: #c9dce8;
         }
 
         .quote-container {
@@ -1333,20 +1214,19 @@
         .quote-form {
             padding: 42px;
 
-            border-radius: 20px;
+            border-radius: 19px;
 
             background: white;
 
             box-shadow:
-                0 30px 80px rgba(0,0,0,0.22);
+                0 28px 70px rgba(0,0,0,0.20);
         }
 
         .form-grid {
             display: grid;
-
             grid-template-columns: repeat(2,1fr);
 
-            gap: 20px;
+            gap: 19px;
         }
 
         .form-group {
@@ -1361,28 +1241,26 @@
         .form-group label {
             color: #27465d;
 
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
 
             margin-bottom: 7px;
         }
 
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
 
             padding: 14px 15px;
 
-            border: 1px solid #d4e2eb;
+            border: 1px solid #d2e0e9;
 
-            border-radius: 9px;
+            border-radius: 8px;
 
             background: #fbfdfe;
 
             color: var(--text);
-
-            transition: 0.2s;
         }
 
         .form-group input:focus,
@@ -1390,12 +1268,12 @@
         .form-group select:focus {
             outline: none;
 
+            border-color: var(--blue);
+
             background: white;
 
-            border-color: #078bd1;
-
             box-shadow:
-                0 0 0 4px rgba(7,139,209,0.09);
+                0 0 0 4px rgba(7,139,209,0.08);
         }
 
         .form-group textarea {
@@ -1412,7 +1290,7 @@
 
             gap: 10px;
 
-            color: #687f91;
+            color: #647b8c;
 
             font-size: 12px;
         }
@@ -1424,45 +1302,37 @@
         .submit-button {
             grid-column: 1 / -1;
 
-            min-height: 57px;
+            min-height: 56px;
 
             border: none;
 
-            border-radius: 10px;
+            border-radius: 9px;
 
             background:
                 linear-gradient(
                     135deg,
                     #078bd1,
-                    #20acf3
+                    #2aaff2
                 );
 
             color: white;
 
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 800;
 
             cursor: pointer;
-
-            box-shadow:
-                0 12px 25px rgba(7,139,209,0.28);
 
             transition: 0.25s;
         }
 
         .submit-button:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 18px 35px rgba(7,139,209,0.36);
+            transform: translateY(-2px);
         }
 
-        /* =========================
-           FAQ
-        ========================= */
+        /* FAQ */
 
         .faq {
-            background: var(--bg);
+            background: white;
         }
 
         .faq-container {
@@ -1472,26 +1342,19 @@
         }
 
         .faq-item {
-            margin-bottom: 12px;
+            margin-bottom: 13px;
 
             overflow: hidden;
 
-            background: white;
+            background: #f5f9fb;
 
-            border: 1px solid #dde8ef;
+            border: 1px solid #dce7ee;
 
-            border-radius: 13px;
-
-            box-shadow:
-                0 6px 18px rgba(7,57,92,0.035);
+            border-radius: 12px;
         }
 
         .faq-question {
             width: 100%;
-
-            border: none;
-
-            background: transparent;
 
             display: flex;
             align-items: center;
@@ -1499,34 +1362,38 @@
 
             gap: 20px;
 
-            padding: 21px 24px;
+            padding: 20px 22px;
 
-            cursor: pointer;
+            border: none;
 
-            text-align: left;
+            background: transparent;
 
             color: var(--navy);
 
-            font-size: 15px;
+            text-align: left;
+
+            font-size: 14px;
             font-weight: 700;
+
+            cursor: pointer;
         }
 
         .faq-plus {
-            min-width: 34px;
-            width: 34px;
-            height: 34px;
+            min-width: 33px;
+            width: 33px;
+            height: 33px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            border-radius: 9px;
+            border-radius: 8px;
 
-            background: #eaf6fc;
+            background: #e5f4fb;
 
             color: var(--blue);
 
-            font-size: 23px;
+            font-size: 21px;
 
             transition: 0.25s;
         }
@@ -1538,12 +1405,13 @@
 
             color: var(--muted);
 
-            transition: max-height 0.35s ease;
+            transition: 0.35s;
         }
 
         .faq-answer p {
-            padding:
-                0 24px 24px;
+            padding: 0 22px 22px;
+
+            font-size: 13px;
         }
 
         .faq-item.open .faq-answer {
@@ -1554,12 +1422,12 @@
             transform: rotate(45deg);
         }
 
-        /* =========================
-           MAP
-        ========================= */
+        /* MAP */
 
         .map-section {
-            background: white;
+            background: #eef3f6;
+
+            border-top: 1px solid #dbe5eb;
         }
 
         .map-container {
@@ -1574,38 +1442,36 @@
 
             border-radius: 20px;
 
-            box-shadow: var(--shadow-strong);
+            box-shadow: var(--strong-shadow);
         }
 
         .map-info {
-            padding: 52px 40px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #061f37,
-                    #074775
-                );
-
-            color: white;
+            padding: 48px 38px;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #061d32,
+                    #074d7d
+                );
+
+            color: white;
         }
 
         .map-info h3 {
-            font-size: 29px;
+            margin: 7px 0 19px;
 
-            margin: 8px 0 20px;
+            font-size: 28px;
         }
 
         .map-address {
+            color: #d2e4ee;
+
             margin-bottom: 28px;
-
-            color: #d5e6f0;
-
-            font-size: 16px;
         }
 
         .route-button {
@@ -1619,30 +1485,27 @@
 
             color: white;
 
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 800;
         }
 
         .map-wrapper {
-            min-height: 480px;
+            min-height: 470px;
         }
 
         .map-wrapper iframe {
             width: 100%;
             height: 100%;
-            min-height: 480px;
+            min-height: 470px;
 
+            border: 0;
             display: block;
-
-            border: none;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
+        /* CONTACT */
 
         .contact {
-            background: #f4f8fb;
+            background: white;
         }
 
         .contact-card {
@@ -1650,20 +1513,20 @@
 
             margin: auto;
 
-            overflow: hidden;
-
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
 
-            border-radius: 22px;
+            overflow: hidden;
 
-            background: white;
+            border: 1px solid #dbe6ed;
+
+            border-radius: 21px;
 
             box-shadow: var(--shadow);
         }
 
         .contact-info {
-            padding: 60px;
+            padding: 58px;
         }
 
         .contact-info h2 {
@@ -1675,28 +1538,28 @@
 
             letter-spacing: -1.4px;
 
-            margin: 10px 0 18px;
+            margin: 9px 0 17px;
         }
 
         .contact-info > p {
             color: var(--muted);
 
-            margin-bottom: 35px;
+            margin-bottom: 32px;
         }
 
         .contact-box {
             display: grid;
             grid-template-columns: 110px 1fr;
 
-            padding: 17px 0;
+            padding: 16px 0;
 
-            border-bottom: 1px solid #e2ebf1;
+            border-bottom: 1px solid #e0e9ef;
         }
 
         .contact-box strong {
             color: var(--blue);
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .contact-box a,
@@ -1707,55 +1570,51 @@
         }
 
         .contact-logo {
-            background:
-                linear-gradient(
-                    145deg,
-                    #eef7fc,
-                    #dff2fc
-                );
-
             display: flex;
             align-items: center;
             justify-content: center;
 
-            padding: 50px;
+            padding: 45px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #e4f3fa,
+                    #caeafa
+                );
         }
 
         .contact-logo img {
             width: 100%;
-            max-width: 390px;
+            max-width: 380px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             padding: 30px 7%;
 
-            background: #031729;
+            background: #031525;
 
-            color: #8fa7b8;
+            color: #8fa5b5;
 
             text-align: center;
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
-        /* =========================
-           WHATSAPP
-        ========================= */
+        /* WHATSAPP */
 
-        .whatsapp-button {
+        .whatsapp {
             position: fixed;
 
-            right: 24px;
-            bottom: 24px;
+            right: 23px;
+            bottom: 23px;
 
-            z-index: 3000;
+            z-index: 4000;
 
-            width: 61px;
-            height: 61px;
+            width: 60px;
+            height: 60px;
 
             display: flex;
             align-items: center;
@@ -1767,26 +1626,23 @@
 
             color: white;
 
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 900;
 
             box-shadow:
-                0 12px 30px rgba(0,0,0,0.23);
+                0 13px 32px rgba(0,0,0,0.23);
 
             transition: 0.25s;
         }
 
-        .whatsapp-button:hover {
+        .whatsapp:hover {
             transform: translateY(-4px) scale(1.05);
         }
 
-        /* =========================
-           CERT MODAL
-        ========================= */
+        /* CERT MODAL */
 
         .image-modal {
             position: fixed;
-
             inset: 0;
 
             z-index: 5000;
@@ -1797,7 +1653,7 @@
 
             padding: 30px;
 
-            background: rgba(1,15,27,0.90);
+            background: rgba(2,15,26,0.92);
 
             backdrop-filter: blur(8px);
         }
@@ -1807,77 +1663,58 @@
         }
 
         .image-modal img {
-            max-width: min(1000px,95vw);
+            max-width: 95vw;
             max-height: 90vh;
 
-            border-radius: 10px;
+            border-radius: 9px;
 
             box-shadow:
-                0 30px 100px rgba(0,0,0,0.55);
+                0 30px 100px rgba(0,0,0,0.6);
         }
 
         .modal-close {
             position: fixed;
 
-            top: 25px;
-            right: 30px;
+            right: 28px;
+            top: 23px;
 
             width: 45px;
             height: 45px;
 
-            border: 1px solid rgba(255,255,255,0.25);
-
             border-radius: 50%;
 
-            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.25);
+
+            background: rgba(255,255,255,0.09);
 
             color: white;
 
-            font-size: 27px;
+            font-size: 26px;
 
             cursor: pointer;
         }
 
-        /* =========================
-           ANIMATIONS
-        ========================= */
+        /* SCROLL ANIMATION */
 
         .reveal {
             opacity: 0;
-            transform: translateY(28px);
+
+            transform: translateY(25px);
 
             transition:
-                opacity 0.75s ease,
-                transform 0.75s ease;
+                opacity 0.7s ease,
+                transform 0.7s ease;
         }
 
         .reveal.visible {
             opacity: 1;
+
             transform: translateY(0);
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+        /* TABLET */
 
-        @media (max-width: 1050px) {
-
-            nav a {
-                margin-left: 14px;
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-        }
-
-        /* =========================
-           MOBILE MENU
-        ========================= */
-
-        @media (max-width: 900px) {
+        @media(max-width: 950px) {
 
             header {
                 padding: 8px 5%;
@@ -1895,7 +1732,7 @@
             .nav-wrapper {
                 position: absolute;
 
-                top: 77px;
+                top: 78px;
                 left: 5%;
                 right: 5%;
 
@@ -1905,14 +1742,14 @@
 
                 padding: 18px;
 
-                background: rgba(255,255,255,0.98);
+                background: rgba(255,255,255,0.99);
 
-                border: 1px solid #dce8ef;
+                border: 1px solid #dce7ee;
 
-                border-radius: 15px;
+                border-radius: 14px;
 
                 box-shadow:
-                    0 20px 60px rgba(5,40,65,0.16);
+                    0 20px 55px rgba(5,40,65,0.16);
             }
 
             .nav-wrapper.open {
@@ -1927,17 +1764,14 @@
             nav a {
                 margin: 0;
 
-                padding: 11px 8px;
+                padding: 10px 7px;
 
                 border-bottom: 1px solid #edf2f5;
             }
 
-            nav a::after {
-                display: none;
-            }
-
             .lang-switch {
-                margin: 16px 0 0;
+                margin: 15px 0 0;
+
                 align-self: flex-start;
             }
 
@@ -1948,7 +1782,6 @@
             .stat:not(:last-child)::after {
                 top: auto;
                 right: 10%;
-                left: 10%;
                 bottom: 0;
 
                 width: 80%;
@@ -1962,10 +1795,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .experience-card {
-                right: 20px;
-            }
-
             .services-grid,
             .why-grid {
                 grid-template-columns: repeat(2,1fr);
@@ -1975,51 +1804,44 @@
                 grid-template-columns: repeat(2,1fr);
             }
 
-            .cert-image-grid {
+            .cert-grid {
                 grid-template-columns: 1fr;
             }
 
-            .contact-logo {
-                min-height: 350px;
+            .experience-card {
+                right: 18px;
             }
 
         }
 
-        /* =========================
-           PHONE
-        ========================= */
+        /* MOBILE */
 
-        @media (max-width: 600px) {
+        @media(max-width: 600px) {
 
             section {
                 padding: 78px 5%;
             }
 
             .hero {
-                min-height: 88vh;
+                min-height: 90vh;
 
-                padding:
-                    125px 5% 95px;
+                padding: 125px 5% 95px;
             }
 
             .hero h1 {
-                font-size: 45px;
+                font-size: 44px;
 
-                letter-spacing: -1.6px;
+                letter-spacing: -1.7px;
             }
 
             .hero p {
                 font-size: 16px;
             }
 
-            .hero-trust {
+            .hero-small-info {
                 flex-direction: column;
 
-                align-items: flex-start;
-
-                gap: 10px;
-
-                margin-top: 35px;
+                gap: 9px;
             }
 
             .stats-wrapper {
@@ -2032,8 +1854,8 @@
                 padding: 25px 18px;
             }
 
-            .stat strong {
-                font-size: 20px;
+            .about {
+                margin-top: 60px;
             }
 
             .about-grid {
@@ -2041,16 +1863,16 @@
             }
 
             .about-image-main img {
-                height: 360px;
+                height: 350px;
             }
 
             .experience-card {
-                width: 165px;
+                width: 160px;
 
-                right: 12px;
-                bottom: 15px;
+                padding: 17px;
 
-                padding: 18px;
+                right: 10px;
+                bottom: 12px;
             }
 
             .checks,
@@ -2065,6 +1887,10 @@
                 min-height: auto;
             }
 
+            .europe-image img {
+                height: 330px;
+            }
+
             .form-group.full,
             .checkbox-group,
             .submit-button {
@@ -2075,12 +1901,17 @@
                 padding: 25px 18px;
             }
 
-            .europe-image img {
-                height: 340px;
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 350px;
+            }
+
+            .map-info {
+                padding: 36px 25px;
             }
 
             .contact-info {
-                padding: 35px 25px;
+                padding: 35px 24px;
             }
 
             .contact-box {
@@ -2095,21 +1926,12 @@
                 padding: 30px;
             }
 
-            .map-wrapper,
-            .map-wrapper iframe {
-                min-height: 360px;
-            }
-
-            .map-info {
-                padding: 38px 26px;
-            }
-
-            .whatsapp-button {
-                right: 16px;
-                bottom: 16px;
-
+            .whatsapp {
                 width: 55px;
                 height: 55px;
+
+                right: 16px;
+                bottom: 16px;
             }
 
         }
@@ -2118,21 +1940,15 @@
 
 </head>
 
-
 <body>
 
-
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header id="header">
 
     <a href="#" class="logo">
-
-        <img src="jupiter.png"
-             alt="Jupiter Trans & Cargo">
-
+        <img src="jupiter.png" alt="Jupiter Trans & Cargo">
     </a>
-
 
     <button class="menu-button"
             id="menuButton"
@@ -2144,9 +1960,7 @@
 
     </button>
 
-
-    <div class="nav-wrapper"
-         id="navWrapper">
+    <div class="nav-wrapper" id="navWrapper">
 
         <nav>
 
@@ -2192,22 +2006,17 @@
 
         </nav>
 
-
         <div class="lang-switch">
 
             <button id="plBtn"
                     class="active"
                     onclick="setLanguage('pl')">
-
                 PL
-
             </button>
 
             <button id="enBtn"
                     onclick="setLanguage('en')">
-
                 EN
-
             </button>
 
         </div>
@@ -2216,17 +2025,15 @@
 
 </header>
 
-
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-
         <div class="hero-badge">
 
-            <span class="hero-badge-dot"></span>
+            <span class="hero-dot"></span>
 
             <span
                 data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA"
@@ -2238,27 +2045,21 @@
 
         </div>
 
-
         <h1>
 
             <span data-pl="Twój ładunek."
                   data-en="Your cargo.">
-
                 Twój ładunek.
-
             </span>
 
             <br>
 
             <span data-pl="Nasza odpowiedzialność."
                   data-en="Our responsibility.">
-
                 Nasza odpowiedzialność.
-
             </span>
 
         </h1>
-
 
         <p
             data-pl="Kompleksowo organizujemy transport od momentu nadania aż do odbioru. Polska, Europa i Wielka Brytania – planowanie, koordynacja i nadzór nad całym procesem."
@@ -2269,7 +2070,6 @@
             koordynacja i nadzór nad całym procesem.
 
         </p>
-
 
         <div class="hero-buttons">
 
@@ -2282,7 +2082,6 @@
 
             </a>
 
-
             <a href="#uslugi"
                class="button button-secondary"
                data-pl="Poznaj nasze usługi"
@@ -2294,27 +2093,25 @@
 
         </div>
 
-
-        <div class="hero-trust">
+        <div class="hero-small-info">
 
             <div>
 
-                <span class="trust-check">✓</span>
+                <span class="hero-check">✓</span>
 
                 <span
-                    data-pl="Doświadczenie od 2015"
+                    data-pl="Doświadczenie od 2015 roku"
                     data-en="Experience since 2015">
 
-                    Doświadczenie od 2015
+                    Doświadczenie od 2015 roku
 
                 </span>
 
             </div>
 
-
             <div>
 
-                <span class="trust-check">✓</span>
+                <span class="hero-check">✓</span>
 
                 <span
                     data-pl="Transport krajowy i międzynarodowy"
@@ -2328,18 +2125,15 @@
 
         </div>
 
-
     </div>
 
 </section>
 
-
-<!-- ================= STATS ================= -->
+<!-- STATS -->
 
 <div class="stats-wrapper">
 
     <div class="stats">
-
 
         <div class="stat">
 
@@ -2361,7 +2155,6 @@
 
         </div>
 
-
         <div class="stat">
 
             <strong
@@ -2381,7 +2174,6 @@
             </span>
 
         </div>
-
 
         <div class="stat">
 
@@ -2403,32 +2195,24 @@
 
         </div>
 
-
     </div>
 
 </div>
 
+<!-- ABOUT -->
 
-<!-- ================= ABOUT ================= -->
-
-<section class="about"
-         id="o-nas">
-
+<section class="about" id="o-nas">
 
     <div class="about-grid">
 
-
         <div class="about-image reveal">
-
 
             <div class="about-image-main">
 
-                <img
-                    src="elevate-dI-aXC7DWpQ-unsplash.jpg"
-                    alt="Jupiter Trans & Cargo transport">
+                <img src="elevate-dI-aXC7DWpQ-unsplash.jpg"
+                     alt="Transport Jupiter Trans & Cargo">
 
             </div>
-
 
             <div class="experience-card">
 
@@ -2444,17 +2228,13 @@
 
             </div>
 
-
         </div>
 
-
         <div class="about-text reveal">
-
 
             <div class="section-label">
                 Jupiter Trans & Cargo
             </div>
-
 
             <h2
                 data-pl="Transport zorganizowany od początku do końca."
@@ -2463,7 +2243,6 @@
                 Transport zorganizowany od początku do końca.
 
             </h2>
-
 
             <p
                 data-pl="Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków."
@@ -2474,91 +2253,72 @@
 
             </p>
 
-
             <p
-                data-pl="Zajmujemy się całym procesem – od przyjęcia zlecenia i zaplanowania trasy, przez dobór pojazdu, aż po nadzór nad załadunkiem, transportem, rozładunkiem i odbiorem."
-                data-en="We manage the entire process – from accepting the order and planning the route to selecting the vehicle and supervising loading, transport, unloading and delivery.">
+                data-pl="Zajmujemy się całym procesem transportowym – od przyjęcia zlecenia i zaplanowania trasy, przez dobór odpowiedniego pojazdu, aż po nadzór nad załadunkiem, przewozem, rozładunkiem i odbiorem."
+                data-en="We manage the entire transport process – from accepting the order and planning the route, through selecting the appropriate vehicle, to supervising loading, transport, unloading and delivery.">
 
-                Zajmujemy się całym procesem – od przyjęcia zlecenia
-                i zaplanowania trasy, przez dobór pojazdu,
-                aż po nadzór nad załadunkiem, transportem,
+                Zajmujemy się całym procesem transportowym – od przyjęcia zlecenia
+                i zaplanowania trasy, przez dobór odpowiedniego pojazdu,
+                aż po nadzór nad załadunkiem, przewozem,
                 rozładunkiem i odbiorem.
 
             </p>
 
-
             <p
-                data-pl="Doświadczenie pomaga nam reagować także w trudnych i nieprzewidzianych sytuacjach oraz szukać rozwiązań uwzględniających bezpieczeństwo, czas i koszty klienta."
-                data-en="Our experience helps us respond to difficult and unexpected situations while seeking solutions that consider safety, time and customer costs.">
+                data-pl="Doświadczenie pozwala nam reagować również w trudnych i nieprzewidzianych sytuacjach oraz dobierać rozwiązania uwzględniające bezpieczeństwo, czas i koszty klienta."
+                data-en="Our experience allows us to respond to difficult and unexpected situations and choose solutions considering safety, time and customer costs.">
 
-                Doświadczenie pomaga nam reagować także w trudnych
-                i nieprzewidzianych sytuacjach oraz szukać rozwiązań
-                uwzględniających bezpieczeństwo, czas i koszty klienta.
+                Doświadczenie pozwala nam reagować również w trudnych
+                i nieprzewidzianych sytuacjach oraz dobierać rozwiązania
+                uwzględniające bezpieczeństwo, czas i koszty klienta.
 
             </p>
-
 
             <div class="checks">
 
                 <div class="check"
                      data-pl="✓ Wieloletnie doświadczenie"
                      data-en="✓ Many years of experience">
-
                     ✓ Wieloletnie doświadczenie
-
                 </div>
 
                 <div class="check"
                      data-pl="✓ Indywidualne podejście"
                      data-en="✓ Individual approach">
-
                     ✓ Indywidualne podejście
-
                 </div>
 
                 <div class="check"
                      data-pl="✓ Nadzór nad transportem"
                      data-en="✓ Transport supervision">
-
                     ✓ Nadzór nad transportem
-
                 </div>
 
                 <div class="check"
                      data-pl="✓ Bezpieczne rozwiązania"
                      data-en="✓ Safe solutions">
-
                     ✓ Bezpieczne rozwiązania
-
                 </div>
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
+<!-- SERVICES -->
 
-<!-- ================= SERVICES ================= -->
-
-<section class="services"
-         id="uslugi">
-
+<section class="services" id="uslugi">
 
     <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Nasze usługi"
              data-en="Our services">
-
             Nasze usługi
-
         </div>
-
 
         <h2
             data-pl="Kompleksowa organizacja transportu"
@@ -2568,80 +2328,66 @@
 
         </h2>
 
-
         <p
-            data-pl="Koordynujemy najważniejsze elementy procesu transportowego i dopasowujemy rozwiązania do konkretnego zlecenia."
-            data-en="We coordinate the key elements of the transport process and tailor solutions to each individual order.">
+            data-pl="Koordynujemy najważniejsze etapy przewozu i dopasowujemy rozwiązania do charakteru konkretnego zlecenia."
+            data-en="We coordinate the key stages of transport and tailor solutions to each individual order.">
 
-            Koordynujemy najważniejsze elementy procesu transportowego
-            i dopasowujemy rozwiązania do konkretnego zlecenia.
+            Koordynujemy najważniejsze etapy przewozu
+            i dopasowujemy rozwiązania do charakteru konkretnego zlecenia.
 
         </p>
 
     </div>
 
-
     <div class="services-grid">
-
 
         <div class="service reveal">
 
             <div class="service-number">01</div>
 
-            <h3
-                data-pl="Planowanie trasy"
+            <h3 data-pl="Planowanie trasy"
                 data-en="Route planning">
-
                 Planowanie trasy
-
             </h3>
 
             <p
-                data-pl="Analizujemy trasę, kierunek przewozu oraz warunki realizacji transportu."
-                data-en="We analyze the route, transport direction and conditions of each shipment.">
+                data-pl="Analizujemy trasę, kierunek przewozu i warunki realizacji transportu."
+                data-en="We analyze the route, transport direction and transport conditions.">
 
                 Analizujemy trasę, kierunek przewozu
-                oraz warunki realizacji transportu.
+                i warunki realizacji transportu.
 
             </p>
 
         </div>
 
-
         <div class="service reveal">
 
             <div class="service-number">02</div>
 
-            <h3
-                data-pl="Dobór pojazdu"
+            <h3 data-pl="Dobór pojazdu"
                 data-en="Vehicle selection">
-
                 Dobór pojazdu
-
             </h3>
 
             <p
-                data-pl="Dobieramy odpowiednie rozwiązanie do charakteru, wymiarów i wymagań ładunku."
-                data-en="We select the appropriate solution according to the cargo type, dimensions and requirements.">
+                data-pl="Dobieramy odpowiedni środek transportu do charakteru, wymiarów i wymagań ładunku."
+                data-en="We select the appropriate vehicle according to the cargo type, dimensions and requirements.">
 
-                Dobieramy odpowiednie rozwiązanie
+                Dobieramy odpowiedni środek transportu
                 do charakteru, wymiarów i wymagań ładunku.
 
             </p>
 
         </div>
 
-
         <div class="service reveal">
 
             <div class="service-number">03</div>
 
-            <h3
-                data-pl="Organizacja przewozu"
+            <h3 data-pl="Organizacja przewozu"
                 data-en="Transport organization">
-
                 Organizacja przewozu
-
             </h3>
 
             <p
@@ -2655,22 +2401,18 @@
 
         </div>
 
-
         <div class="service reveal">
 
             <div class="service-number">04</div>
 
-            <h3
-                data-pl="Nadzór nad dostawą"
+            <h3 data-pl="Nadzór nad dostawą"
                 data-en="Delivery supervision">
-
                 Nadzór nad dostawą
-
             </h3>
 
             <p
                 data-pl="Nadzorujemy transport od załadunku aż do rozładunku i odbioru towaru."
-                data-en="We supervise transport from loading to unloading and final delivery.">
+                data-en="We supervise transport from loading to unloading and delivery.">
 
                 Nadzorujemy transport od załadunku
                 aż do rozładunku i odbioru towaru.
@@ -2679,41 +2421,33 @@
 
         </div>
 
-
         <div class="service reveal">
 
             <div class="service-number">05</div>
 
-            <h3
-                data-pl="Dokumentacja"
+            <h3 data-pl="Dokumentacja"
                 data-en="Documentation">
-
                 Dokumentacja
-
             </h3>
 
             <p
-                data-pl="Pomagamy w przygotowaniu i koordynacji dokumentacji wymaganej do realizacji przewozu."
-                data-en="We assist with the preparation and coordination of documentation required for transport.">
+                data-pl="Pomagamy w przygotowaniu i koordynacji dokumentacji wymaganej przy realizacji przewozu."
+                data-en="We assist with preparation and coordination of transport documentation.">
 
-                Pomagamy w przygotowaniu i koordynacji
-                dokumentacji wymaganej do realizacji przewozu.
+                Pomagamy w przygotowaniu i koordynacji dokumentacji
+                wymaganej przy realizacji przewozu.
 
             </p>
 
         </div>
 
-
         <div class="service reveal">
 
             <div class="service-number">06</div>
 
-            <h3
-                data-pl="Import i eksport UK"
+            <h3 data-pl="Import i eksport UK"
                 data-en="UK import and export">
-
                 Import i eksport UK
-
             </h3>
 
             <p
@@ -2727,27 +2461,24 @@
 
         </div>
 
-
     </div>
 
 </section>
 
+<!-- VISUAL -->
 
-<!-- ================= VISUAL ================= -->
-
-<section class="visual-section">
+<section class="visual">
 
     <div class="visual-content reveal">
 
         <div class="section-label"
-             style="color:#68c8ff;"
+             style="color:#68caff;"
              data-pl="Odpowiedzialna spedycja"
              data-en="Responsible freight forwarding">
 
             Odpowiedzialna spedycja
 
         </div>
-
 
         <h2
             data-pl="Dobra organizacja zaczyna się jeszcze przed wyruszeniem pojazdu w trasę."
@@ -2757,7 +2488,6 @@
             przed wyruszeniem pojazdu w trasę.
 
         </h2>
-
 
         <p
             data-pl="Analizujemy dostępne możliwości, wymagania zlecenia oraz sytuację na rynku, aby ograniczać ryzyko, niepotrzebne koszty i opóźnienia."
@@ -2773,47 +2503,36 @@
 
 </section>
 
+<!-- PROCESS -->
 
-<!-- ================= PROCESS ================= -->
-
-<section class="process"
-         id="proces">
-
+<section class="process" id="proces">
 
     <div class="section-header reveal">
 
         <div class="section-label"
+             style="color:#69cbff;"
              data-pl="Jak działamy"
              data-en="How we work">
-
             Jak działamy
-
         </div>
 
-
-        <h2
-            data-pl="Od zlecenia do dostawy"
+        <h2 data-pl="Od zlecenia do dostawy"
             data-en="From order to delivery">
-
             Od zlecenia do dostawy
-
         </h2>
 
-
         <p
-            data-pl="Każdy etap transportu wymaga odpowiedniego przygotowania i kontroli."
-            data-en="Every stage of transport requires proper preparation and supervision.">
+            data-pl="Każdy etap transportu wymaga odpowiedniego przygotowania, koordynacji i kontroli."
+            data-en="Every stage of transport requires proper preparation, coordination and supervision.">
 
-            Każdy etap transportu wymaga
-            odpowiedniego przygotowania i kontroli.
+            Każdy etap transportu wymaga odpowiedniego przygotowania,
+            koordynacji i kontroli.
 
         </p>
 
     </div>
 
-
     <div class="process-grid">
-
 
         <div class="process-item reveal">
 
@@ -2821,9 +2540,7 @@
 
             <h3 data-pl="Analiza"
                 data-en="Analysis">
-
                 Analiza
-
             </h3>
 
             <p
@@ -2837,29 +2554,25 @@
 
         </div>
 
-
         <div class="process-item reveal">
 
             <div class="process-number">2</div>
 
             <h3 data-pl="Planowanie"
                 data-en="Planning">
-
                 Planowanie
-
             </h3>
 
             <p
                 data-pl="Planujemy trasę i dobieramy odpowiednie rozwiązanie."
                 data-en="We plan the route and select the appropriate solution.">
 
-                Planujemy trasę i dobieramy
-                odpowiednie rozwiązanie.
+                Planujemy trasę
+                i dobieramy odpowiednie rozwiązanie.
 
             </p>
 
         </div>
-
 
         <div class="process-item reveal">
 
@@ -2867,14 +2580,12 @@
 
             <h3 data-pl="Realizacja"
                 data-en="Execution">
-
                 Realizacja
-
             </h3>
 
             <p
                 data-pl="Koordynujemy załadunek i przebieg transportu."
-                data-en="We coordinate loading and the transport process.">
+                data-en="We coordinate loading and transport.">
 
                 Koordynujemy załadunek
                 i przebieg transportu.
@@ -2883,21 +2594,18 @@
 
         </div>
 
-
         <div class="process-item reveal">
 
             <div class="process-number">4</div>
 
             <h3 data-pl="Dostawa"
                 data-en="Delivery">
-
                 Dostawa
-
             </h3>
 
             <p
                 data-pl="Nadzorujemy realizację aż do rozładunku i odbioru."
-                data-en="We supervise the process through unloading and final delivery.">
+                data-en="We supervise transport through unloading and final delivery.">
 
                 Nadzorujemy realizację
                 aż do rozładunku i odbioru.
@@ -2906,27 +2614,21 @@
 
         </div>
 
-
     </div>
 
 </section>
 
-
-<!-- ================= WHY ================= -->
+<!-- WHY -->
 
 <section class="why">
-
 
     <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Dlaczego my"
              data-en="Why us">
-
             Dlaczego my
-
         </div>
-
 
         <h2
             data-pl="Współpraca oparta na zaufaniu"
@@ -2938,9 +2640,7 @@
 
     </div>
 
-
     <div class="why-grid">
-
 
         <div class="why-item reveal">
 
@@ -2948,9 +2648,7 @@
 
             <h3 data-pl="Lojalność"
                 data-en="Loyalty">
-
                 Lojalność
-
             </h3>
 
             <p
@@ -2963,16 +2661,13 @@
 
         </div>
 
-
         <div class="why-item reveal">
 
             <div class="why-icon">✓</div>
 
             <h3 data-pl="Sumienność"
                 data-en="Reliability">
-
                 Sumienność
-
             </h3>
 
             <p
@@ -2985,29 +2680,24 @@
 
         </div>
 
-
         <div class="why-item reveal">
 
             <div class="why-icon">✓</div>
 
             <h3 data-pl="Doradztwo"
                 data-en="Advisory">
-
                 Doradztwo
-
             </h3>
 
             <p
-                data-pl="Pomagamy dobrać rozwiązanie odpowiadające konkretnemu transportowi."
-                data-en="We help select the right solution for each transport requirement.">
+                data-pl="Pomagamy dobrać odpowiednie rozwiązanie transportowe."
+                data-en="We help choose the appropriate transport solution.">
 
-                Pomagamy dobrać rozwiązanie
-                odpowiadające konkretnemu transportowi.
+                Pomagamy dobrać odpowiednie rozwiązanie transportowe.
 
             </p>
 
         </div>
-
 
         <div class="why-item reveal">
 
@@ -3015,9 +2705,7 @@
 
             <h3 data-pl="Doświadczenie"
                 data-en="Experience">
-
                 Doświadczenie
-
             </h3>
 
             <p
@@ -3030,13 +2718,11 @@
 
         </div>
 
-
         <div class="why-item reveal">
 
             <div class="why-icon">✓</div>
 
-            <h3
-                data-pl="Rozwiązywanie problemów"
+            <h3 data-pl="Rozwiązywanie problemów"
                 data-en="Problem solving">
 
                 Rozwiązywanie problemów
@@ -3054,16 +2740,13 @@
 
         </div>
 
-
         <div class="why-item reveal">
 
             <div class="why-icon">✓</div>
 
             <h3 data-pl="Oszczędność"
                 data-en="Efficiency">
-
                 Oszczędność
-
             </h3>
 
             <p
@@ -3077,41 +2760,32 @@
 
         </div>
 
-
     </div>
 
 </section>
 
-
-<!-- ================= EUROPE / UK ================= -->
+<!-- EUROPE -->
 
 <section class="europe">
 
-
     <div class="europe-grid">
-
 
         <div class="europe-image reveal">
 
-            <img
-                src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
-                alt="Transport Polska Europa Wielka Brytania">
+            <img src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
+                 alt="Transport Polska Europa Wielka Brytania">
 
         </div>
 
-
         <div class="europe-text reveal">
 
-
             <div class="section-label"
-                 style="color:#68c8ff;"
                  data-pl="Obszar działania"
                  data-en="Operating area">
 
                 Obszar działania
 
             </div>
-
 
             <h2
                 data-pl="Polska, Europa i Wielka Brytania"
@@ -3121,10 +2795,9 @@
 
             </h2>
 
-
             <p
                 data-pl="Organizujemy przewozy na terenie całej Polski, krajów Unii Europejskiej oraz innych państw znajdujących się na kontynencie europejskim."
-                data-en="We organize transport throughout Poland, the European Union and other countries on the European continent.">
+                data-en="We organize transport throughout Poland, the European Union and other European countries.">
 
                 Organizujemy przewozy na terenie całej Polski,
                 krajów Unii Europejskiej oraz innych państw
@@ -3132,41 +2805,33 @@
 
             </p>
 
-
             <div class="area-tags">
 
                 <div class="area-tag"
                      data-pl="🇵🇱 Polska"
                      data-en="🇵🇱 Poland">
-
                     🇵🇱 Polska
-
                 </div>
 
                 <div class="area-tag"
                      data-pl="🇪🇺 Unia Europejska"
                      data-en="🇪🇺 European Union">
-
                     🇪🇺 Unia Europejska
-
                 </div>
 
                 <div class="area-tag"
                      data-pl="🇬🇧 Wielka Brytania"
                      data-en="🇬🇧 United Kingdom">
-
                     🇬🇧 Wielka Brytania
-
                 </div>
 
             </div>
 
-
             <div class="uk-box">
 
-                <div class="uk-box-header">
+                <div class="uk-title">
 
-                    <span class="uk-flag">🇬🇧</span>
+                    <span>🇬🇧</span>
 
                     <h3
                         data-pl="Import i eksport Wielka Brytania"
@@ -3177,7 +2842,6 @@
                     </h3>
 
                 </div>
-
 
                 <p
                     data-pl="Organizujemy transporty importowe i eksportowe do Wielkiej Brytanii oraz z Wielkiej Brytanii. Zapewniamy również wsparcie przy odprawie celnej i koordynacji wymaganej dokumentacji."
@@ -3192,30 +2856,23 @@
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
+<!-- PARTNERS -->
 
-<!-- ================= PARTNERS ================= -->
-
-<section class="trust">
-
+<section class="partners-section">
 
     <div class="section-header reveal">
 
         <div class="section-label"
              data-pl="Partnerzy"
              data-en="Partners">
-
             Partnerzy
-
         </div>
-
 
         <h2
             data-pl="Zaufali nam"
@@ -3225,40 +2882,34 @@
 
         </h2>
 
-
         <p
-            data-pl="Długoterminowa współpraca i zaufanie są dla nas jednym z najważniejszych potwierdzeń jakości świadczonych usług."
-            data-en="Long-term cooperation and trust are among the strongest confirmations of the quality of our services.">
+            data-pl="Długoterminowa współpraca i zaufanie są dla nas ważnym potwierdzeniem jakości świadczonych usług."
+            data-en="Long-term cooperation and trust are important confirmations of the quality of our services.">
 
-            Długoterminowa współpraca i zaufanie są dla nas
-            jednym z najważniejszych potwierdzeń jakości świadczonych usług.
+            Długoterminowa współpraca i zaufanie
+            są dla nas ważnym potwierdzeniem jakości świadczonych usług.
 
         </p>
 
     </div>
 
-
     <div class="partners reveal">
 
         <div class="partner">
 
-            <img
-                src="eurogate-logistics.png.png"
-                alt="Eurogate Logistics">
+            <img src="eurogate-logistics.png.png"
+                 alt="Eurogate Logistics">
 
         </div>
 
     </div>
 
-
 </section>
 
-
-<!-- ================= CERTIFICATES ================= -->
+<!-- CERTIFICATES -->
 
 <section class="certificates"
          id="certyfikaty">
-
 
     <div class="section-header reveal">
 
@@ -3270,7 +2921,6 @@
 
         </div>
 
-
         <h2
             data-pl="Certyfikaty i licencje"
             data-en="Certificates and licences">
@@ -3279,36 +2929,32 @@
 
         </h2>
 
-
         <p
-            data-pl="Dokumenty potwierdzające kompetencje zawodowe oraz uprawnienia związane z prowadzoną działalnością."
-            data-en="Documents confirming professional competence and authorizations related to our business activity.">
+            data-pl="Dokumenty związane z kompetencjami zawodowymi oraz uprawnieniami dotyczącymi prowadzonej działalności."
+            data-en="Documents related to professional competence and authorizations concerning our business activity.">
 
-            Dokumenty potwierdzające kompetencje zawodowe
-            oraz uprawnienia związane z prowadzoną działalnością.
+            Dokumenty związane z kompetencjami zawodowymi
+            oraz uprawnieniami dotyczącymi prowadzonej działalności.
 
         </p>
 
     </div>
 
+    <div class="cert-grid">
 
-    <div class="cert-image-grid">
+        <!-- NAZWA ZOSTAWIONA -->
 
-
-        <div class="cert-image-card reveal">
-
+        <div class="cert-card reveal">
 
             <div class="cert-image">
 
-                <img
-                    src="certyfikat-kompetencji.png"
-                    alt="Certyfikat kompetencji zawodowych"
-                    onclick="openCertificate(this.src)">
+                <img src="certyfikat_www_poprawiony.jpg"
+                     alt="Certyfikat kompetencji zawodowych"
+                     onclick="openCertificate(this.src)">
 
             </div>
 
-
-            <div class="cert-image-text">
+            <div class="cert-text">
 
                 <h3
                     data-pl="Certyfikat kompetencji zawodowych"
@@ -3327,26 +2973,31 @@
 
                 </p>
 
-            </div>
+                <span class="cert-click"
+                      data-pl="Kliknij dokument, aby powiększyć"
+                      data-en="Click the document to enlarge">
 
+                    Kliknij dokument, aby powiększyć
+
+                </span>
+
+            </div>
 
         </div>
 
+        <!-- NAZWA ZOSTAWIONA -->
 
-        <div class="cert-image-card reveal">
-
+        <div class="cert-card reveal">
 
             <div class="cert-image">
 
-                <img
-                    src="licencja-transportowa.png"
-                    alt="Licencja transportowa"
-                    onclick="openCertificate(this.src)">
+                <img src="licencja_www_poprawiona.jpg"
+                     alt="Licencja na wykonywanie transportu drogowego"
+                     onclick="openCertificate(this.src)">
 
             </div>
 
-
-            <div class="cert-image-text">
+            <div class="cert-text">
 
                 <h3
                     data-pl="Licencja na wykonywanie transportu drogowego"
@@ -3365,34 +3016,36 @@
 
                 </p>
 
+                <span class="cert-click"
+                      data-pl="Kliknij dokument, aby powiększyć"
+                      data-en="Click the document to enlarge">
+
+                    Kliknij dokument, aby powiększyć
+
+                </span>
+
             </div>
 
-
         </div>
-
 
     </div>
 
 </section>
 
+<!-- QUOTE -->
 
-<!-- ================= QUOTE ================= -->
-
-<section class="quote"
-         id="wycena">
-
+<section class="quote" id="wycena">
 
     <div class="section-header reveal">
 
         <div class="section-label"
-             style="color:#68c8ff;"
+             style="color:#70d0ff;"
              data-pl="Szybka wycena"
              data-en="Quick quote">
 
             Szybka wycena
 
         </div>
-
 
         <h2
             data-pl="Potrzebujesz transportu? Wyślij zapytanie."
@@ -3401,7 +3054,6 @@
             Potrzebujesz transportu? Wyślij zapytanie.
 
         </h2>
-
 
         <p
             data-pl="Podaj podstawowe informacje dotyczące trasy i ładunku. Skontaktujemy się w sprawie szczegółów."
@@ -3414,36 +3066,25 @@
 
     </div>
 
-
     <div class="quote-container reveal">
 
+        <form class="quote-form"
+              action="https://formsubmit.co/marta.jupiter@onet.eu"
+              method="POST">
 
-        <form
-            class="quote-form"
-            action="https://formsubmit.co/marta.jupiter@onet.eu"
-            method="POST">
+            <input type="hidden"
+                   name="_subject"
+                   value="Nowe zapytanie transportowe - Jupiter Trans & Cargo">
 
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
 
-            <input
-                type="hidden"
-                name="_subject"
-                value="Nowe zapytanie transportowe - Jupiter Trans & Cargo">
-
-
-            <input
-                type="hidden"
-                name="_captcha"
-                value="false">
-
-
-            <input
-                type="text"
-                name="_honey"
-                style="display:none">
-
+            <input type="text"
+                   name="_honey"
+                   style="display:none">
 
             <div class="form-grid">
-
 
                 <div class="form-group">
 
@@ -3455,44 +3096,34 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        name="Klient"
-                        required>
+                    <input type="text"
+                           name="Klient"
+                           required>
 
                 </div>
-
 
                 <div class="form-group">
 
-                    <label>
-                        E-mail *
-                    </label>
+                    <label>E-mail *</label>
 
-                    <input
-                        type="email"
-                        name="Email"
-                        required>
+                    <input type="email"
+                           name="Email"
+                           required>
 
                 </div>
-
 
                 <div class="form-group">
 
                     <label
                         data-pl="Telefon"
                         data-en="Phone">
-
                         Telefon
-
                     </label>
 
-                    <input
-                        type="tel"
-                        name="Telefon">
+                    <input type="tel"
+                           name="Telefon">
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3504,12 +3135,10 @@
 
                     </label>
 
-                    <input
-                        type="date"
-                        name="Termin">
+                    <input type="date"
+                           name="Termin">
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3521,16 +3150,14 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        name="Miejsce zaladunku"
-                        data-pl-placeholder="np. Kraków, Polska"
-                        data-en-placeholder="e.g. Krakow, Poland"
-                        placeholder="np. Kraków, Polska"
-                        required>
+                    <input type="text"
+                           name="Miejsce zaladunku"
+                           data-pl-placeholder="np. Kraków, Polska"
+                           data-en-placeholder="e.g. Krakow, Poland"
+                           placeholder="np. Kraków, Polska"
+                           required>
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3542,16 +3169,14 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        name="Miejsce rozladunku"
-                        data-pl-placeholder="np. Londyn, Wielka Brytania"
-                        data-en-placeholder="e.g. London, United Kingdom"
-                        placeholder="np. Londyn, Wielka Brytania"
-                        required>
+                    <input type="text"
+                           name="Miejsce rozladunku"
+                           data-pl-placeholder="np. Londyn, Wielka Brytania"
+                           data-en-placeholder="e.g. London, United Kingdom"
+                           placeholder="np. Londyn, Wielka Brytania"
+                           required>
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3563,15 +3188,10 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        name="Rodzaj towaru"
-                        data-pl-placeholder="np. palety, maszyny"
-                        data-en-placeholder="e.g. pallets, machinery"
-                        placeholder="np. palety, maszyny">
+                    <input type="text"
+                           name="Rodzaj towaru">
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3583,13 +3203,11 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        name="Waga"
-                        placeholder="np. 12 000 kg">
+                    <input type="text"
+                           name="Waga"
+                           placeholder="np. 12 000 kg">
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3604,7 +3222,6 @@
                     <select name="Typ transportu">
 
                         <option
-                            value="Transport krajowy"
                             data-pl="Transport krajowy"
                             data-en="Domestic transport">
 
@@ -3613,7 +3230,6 @@
                         </option>
 
                         <option
-                            value="Transport międzynarodowy"
                             data-pl="Transport międzynarodowy"
                             data-en="International transport">
 
@@ -3622,7 +3238,6 @@
                         </option>
 
                         <option
-                            value="Eksport do UK"
                             data-pl="Eksport do UK"
                             data-en="Export to the UK">
 
@@ -3631,7 +3246,6 @@
                         </option>
 
                         <option
-                            value="Import z UK"
                             data-pl="Import z UK"
                             data-en="Import from the UK">
 
@@ -3642,7 +3256,6 @@
                     </select>
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -3657,7 +3270,6 @@
                     <select name="Odprawa celna">
 
                         <option
-                            value="Do ustalenia"
                             data-pl="Do ustalenia"
                             data-en="To be discussed">
 
@@ -3666,27 +3278,20 @@
                         </option>
 
                         <option
-                            value="Tak"
                             data-pl="Tak"
                             data-en="Yes">
-
                             Tak
-
                         </option>
 
                         <option
-                            value="Nie"
                             data-pl="Nie"
                             data-en="No">
-
                             Nie
-
                         </option>
 
                     </select>
 
                 </div>
-
 
                 <div class="form-group full">
 
@@ -3698,20 +3303,14 @@
 
                     </label>
 
-                    <textarea
-                        name="Dodatkowe informacje"
-                        data-pl-placeholder="Wymiary, liczba palet, wymagania dotyczące pojazdu, godziny załadunku itp."
-                        data-en-placeholder="Dimensions, number of pallets, vehicle requirements, loading hours etc."
-                        placeholder="Wymiary, liczba palet, wymagania dotyczące pojazdu, godziny załadunku itp."></textarea>
+                    <textarea name="Dodatkowe informacje"></textarea>
 
                 </div>
 
-
                 <label class="checkbox-group">
 
-                    <input
-                        type="checkbox"
-                        required>
+                    <input type="checkbox"
+                           required>
 
                     <span
                         data-pl="Wyrażam zgodę na wykorzystanie podanych danych w celu odpowiedzi na moje zapytanie."
@@ -3724,34 +3323,26 @@
 
                 </label>
 
-
-                <button
-                    type="submit"
-                    class="submit-button"
-                    data-pl="Wyślij zapytanie o wycenę →"
-                    data-en="Send quote request →">
+                <button type="submit"
+                        class="submit-button"
+                        data-pl="Wyślij zapytanie o wycenę →"
+                        data-en="Send quote request →">
 
                     Wyślij zapytanie o wycenę →
 
                 </button>
 
-
             </div>
 
-
         </form>
-
 
     </div>
 
 </section>
 
+<!-- FAQ -->
 
-<!-- ================= FAQ ================= -->
-
-<section class="faq"
-         id="faq">
-
+<section class="faq" id="faq">
 
     <div class="section-header reveal">
 
@@ -3763,24 +3354,11 @@
 
         </div>
 
-
         <h2>FAQ</h2>
-
-
-        <p
-            data-pl="Najważniejsze informacje dotyczące organizowanych przez nas transportów."
-            data-en="Key information about the transport services we organize.">
-
-            Najważniejsze informacje dotyczące
-            organizowanych przez nas transportów.
-
-        </p>
 
     </div>
 
-
     <div class="faq-container reveal">
-
 
         <div class="faq-item">
 
@@ -3798,15 +3376,14 @@
 
             </button>
 
-
             <div class="faq-answer">
 
                 <p
-                    data-pl="Organizujemy transporty na terenie całej Polski, Unii Europejskiej, pozostałych państw europejskich oraz Wielkiej Brytanii."
+                    data-pl="Organizujemy transporty na terenie całej Polski, krajów Unii Europejskiej, innych państw europejskich oraz Wielkiej Brytanii."
                     data-en="We organize transport throughout Poland, the European Union, other European countries and the United Kingdom.">
 
                     Organizujemy transporty na terenie całej Polski,
-                    Unii Europejskiej, pozostałych państw europejskich
+                    krajów Unii Europejskiej, innych państw europejskich
                     oraz Wielkiej Brytanii.
 
                 </p>
@@ -3814,7 +3391,6 @@
             </div>
 
         </div>
-
 
         <div class="faq-item">
 
@@ -3832,7 +3408,6 @@
 
             </button>
 
-
             <div class="faq-answer">
 
                 <p
@@ -3847,7 +3422,6 @@
             </div>
 
         </div>
-
 
         <div class="faq-item">
 
@@ -3865,7 +3439,6 @@
 
             </button>
 
-
             <div class="faq-answer">
 
                 <p
@@ -3880,7 +3453,6 @@
             </div>
 
         </div>
-
 
         <div class="faq-item">
 
@@ -3898,14 +3470,13 @@
 
             </button>
 
-
             <div class="faq-answer">
 
                 <p
-                    data-pl="Możesz skorzystać z formularza szybkiej wyceny albo skontaktować się z nami telefonicznie, mailowo lub przez WhatsApp."
-                    data-en="You can use the quick quote form or contact us by phone, email or WhatsApp.">
+                    data-pl="Możesz wypełnić formularz na stronie albo skontaktować się z nami telefonicznie, mailowo lub przez WhatsApp."
+                    data-en="You can complete the form on our website or contact us by phone, email or WhatsApp.">
 
-                    Możesz skorzystać z formularza szybkiej wyceny
+                    Możesz wypełnić formularz na stronie
                     albo skontaktować się z nami telefonicznie,
                     mailowo lub przez WhatsApp.
 
@@ -3915,16 +3486,13 @@
 
         </div>
 
-
     </div>
 
 </section>
 
-
-<!-- ================= MAP ================= -->
+<!-- MAP -->
 
 <section class="map-section">
-
 
     <div class="section-header reveal">
 
@@ -3936,7 +3504,6 @@
 
         </div>
 
-
         <h2
             data-pl="Znajdź nas w Brzesku"
             data-en="Find us in Brzesko">
@@ -3947,14 +3514,12 @@
 
     </div>
 
-
     <div class="map-container reveal">
-
 
         <div class="map-info">
 
             <div class="section-label"
-                 style="color:#68c8ff;"
+                 style="color:#6bceff;"
                  data-pl="Siedziba firmy"
                  data-en="Company headquarters">
 
@@ -3962,11 +3527,7 @@
 
             </div>
 
-
-            <h3>
-                Jupiter Trans & Cargo
-            </h3>
-
+            <h3>Jupiter Trans & Cargo</h3>
 
             <div class="map-address">
 
@@ -3983,22 +3544,18 @@
 
             </div>
 
-
-            <a
-                class="route-button"
-                href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-pl="Wyznacz trasę →"
-                data-en="Get directions →">
+            <a class="route-button"
+               href="https://www.google.com/maps/search/?api=1&query=Jacka+Malczewskiego+4,+32-800+Brzesko"
+               target="_blank"
+               rel="noopener noreferrer"
+               data-pl="Wyznacz trasę →"
+               data-en="Get directions →">
 
                 Wyznacz trasę →
 
             </a>
 
-
         </div>
-
 
         <div class="map-wrapper">
 
@@ -4012,32 +3569,23 @@
 
         </div>
 
-
     </div>
 
 </section>
 
+<!-- CONTACT -->
 
-<!-- ================= CONTACT ================= -->
-
-<section class="contact"
-         id="kontakt">
-
+<section class="contact" id="kontakt">
 
     <div class="contact-card reveal">
 
-
         <div class="contact-info">
-
 
             <div class="section-label"
                  data-pl="Kontakt"
                  data-en="Contact">
-
                 Kontakt
-
             </div>
-
 
             <h2
                 data-pl="Porozmawiajmy o Twoim transporcie."
@@ -4046,7 +3594,6 @@
                 Porozmawiajmy o Twoim transporcie.
 
             </h2>
-
 
             <p
                 data-pl="Skontaktuj się z Jupiter Trans & Cargo, aby omówić organizację przewozu i dobrać odpowiednie rozwiązanie."
@@ -4058,47 +3605,36 @@
 
             </p>
 
-
             <div class="contact-box">
 
                 <strong
                     data-pl="Telefon"
                     data-en="Phone">
-
                     Telefon
-
                 </strong>
 
                 <a href="tel:+48734183473">
-
                     0048 734 183 473
-
                 </a>
 
             </div>
-
 
             <div class="contact-box">
 
                 <strong>E-mail</strong>
 
                 <a href="mailto:marta.jupiter@onet.eu">
-
                     marta.jupiter@onet.eu
-
                 </a>
 
             </div>
-
 
             <div class="contact-box">
 
                 <strong
                     data-pl="Siedziba"
                     data-en="Headquarters">
-
                     Siedziba
-
                 </strong>
 
                 <div>
@@ -4118,23 +3654,18 @@
 
             </div>
 
-
         </div>
-
 
         <div class="contact-logo">
 
-            <img
-                src="jupiter.png"
-                alt="Jupiter Trans & Cargo">
+            <img src="jupiter.png"
+                 alt="Jupiter Trans & Cargo">
 
         </div>
-
 
     </div>
 
 </section>
-
 
 <footer
     data-pl="© 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone."
@@ -4144,33 +3675,28 @@
 
 </footer>
 
-
-<!-- ================= WHATSAPP ================= -->
+<!-- WHATSAPP -->
 
 <a
     href="https://wa.me/48734183473?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%20zapyta%C4%87%20o%20wycen%C4%99%20transportu."
     target="_blank"
     rel="noopener noreferrer"
-    class="whatsapp-button"
+    class="whatsapp"
     aria-label="WhatsApp Jupiter Trans & Cargo">
 
     WA
 
 </a>
 
-
-<!-- ================= CERT MODAL ================= -->
+<!-- CERTIFICATE MODAL -->
 
 <div class="image-modal"
      id="imageModal"
      onclick="closeCertificate(event)">
 
-    <button
-        class="modal-close"
-        onclick="closeCertificate()">
-
+    <button class="modal-close"
+            onclick="closeCertificate()">
         ×
-
     </button>
 
     <img id="modalImage"
@@ -4179,12 +3705,9 @@
 
 </div>
 
-
 <script>
 
-    /* =============================
-       LANGUAGE
-    ============================= */
+    /* JĘZYK */
 
     function setLanguage(lang) {
 
@@ -4207,7 +3730,6 @@
 
         });
 
-
         const placeholders =
             document.querySelectorAll(
                 "[data-pl-placeholder][data-en-placeholder]"
@@ -4229,25 +3751,15 @@
 
         });
 
-
         document.documentElement.lang = lang;
-
 
         document
             .getElementById("plBtn")
-            .classList.toggle(
-                "active",
-                lang === "pl"
-            );
-
+            .classList.toggle("active", lang === "pl");
 
         document
             .getElementById("enBtn")
-            .classList.toggle(
-                "active",
-                lang === "en"
-            );
-
+            .classList.toggle("active", lang === "en");
 
         if (lang === "en") {
 
@@ -4261,29 +3773,18 @@
 
         }
 
-
-        localStorage.setItem(
-            "language",
-            lang
-        );
+        localStorage.setItem("language", lang);
 
     }
-
 
     const savedLanguage =
         localStorage.getItem("language");
 
-
     if (savedLanguage === "en") {
-
         setLanguage("en");
-
     }
 
-
-    /* =============================
-       FAQ
-    ============================= */
+    /* FAQ */
 
     document
         .querySelectorAll(".faq-question")
@@ -4293,27 +3794,23 @@
                 "click",
                 function() {
 
-                    const item =
-                        question.parentElement;
-
-                    item.classList.toggle("open");
+                    question
+                        .parentElement
+                        .classList
+                        .toggle("open");
 
                 }
             );
 
         });
 
-
-    /* =============================
-       MOBILE MENU
-    ============================= */
+    /* MENU */
 
     const menuButton =
         document.getElementById("menuButton");
 
     const navWrapper =
         document.getElementById("navWrapper");
-
 
     menuButton.addEventListener(
         "click",
@@ -4323,7 +3820,6 @@
 
         }
     );
-
 
     document
         .querySelectorAll("nav a")
@@ -4340,35 +3836,24 @@
 
         });
 
-
-    /* =============================
-       HEADER SCROLL
-    ============================= */
+    /* HEADER */
 
     window.addEventListener(
         "scroll",
         function() {
 
-            const header =
-                document.getElementById("header");
-
-            if (window.scrollY > 20) {
-
-                header.classList.add("scrolled");
-
-            } else {
-
-                header.classList.remove("scrolled");
-
-            }
+            document
+                .getElementById("header")
+                .classList
+                .toggle(
+                    "scrolled",
+                    window.scrollY > 20
+                );
 
         }
     );
 
-
-    /* =============================
-       SCROLL ANIMATION
-    ============================= */
+    /* ANIMACJE */
 
     const observer =
         new IntersectionObserver(
@@ -4390,35 +3875,28 @@
 
             },
             {
-                threshold: 0.12
+                threshold: 0.10
             }
         );
-
 
     document
         .querySelectorAll(".reveal")
-        .forEach(
-            function(element) {
+        .forEach(function(element) {
 
-                observer.observe(element);
+            observer.observe(element);
 
-            }
-        );
+        });
 
-
-    /* =============================
-       CERTIFICATE MODAL
-    ============================= */
+    /* CERTYFIKATY */
 
     function openCertificate(src) {
 
         const modal =
             document.getElementById("imageModal");
 
-        const image =
-            document.getElementById("modalImage");
-
-        image.src = src;
+        document
+            .getElementById("modalImage")
+            .src = src;
 
         modal.classList.add("open");
 
@@ -4427,38 +3905,31 @@
 
     }
 
-
     function closeCertificate(event) {
 
         if (
             event &&
             event.target.id === "modalImage"
         ) {
-
             return;
-
         }
 
-
-        const modal =
-            document.getElementById("imageModal");
-
-        modal.classList.remove("open");
+        document
+            .getElementById("imageModal")
+            .classList
+            .remove("open");
 
         document.body.style.overflow =
             "";
 
     }
 
-
     document.addEventListener(
         "keydown",
         function(event) {
 
             if (event.key === "Escape") {
-
                 closeCertificate();
-
             }
 
         }
@@ -4466,7 +3937,5 @@
 
 </script>
 
-
 </body>
-
 </html>
