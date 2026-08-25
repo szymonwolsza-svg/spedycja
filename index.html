@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jupiter Trans & Cargo</title>
+    <title>Jupiter Trans & Cargo | Spedycja i transport</title>
+
+    <meta name="description"
+          content="Jupiter Trans & Cargo - kompleksowa organizacja transportu i spedycji w Polsce oraz Europie.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -18,207 +22,453 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0b0d10;
-            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+            background: #ffffff;
+            line-height: 1.6;
         }
+
+        /* ================= HEADER ================= */
 
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(11, 13, 16, 0.95);
-            border-bottom: 1px solid #c9a227;
-            padding: 20px 7%;
+
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid #e5e9ef;
+
+            padding: 18px 7%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #d4af37;
+            font-size: 22px;
+            font-weight: 800;
+            color: #0757a6;
+            letter-spacing: 0.5px;
         }
 
         nav a {
-            color: white;
+            color: #17202a;
             text-decoration: none;
             margin-left: 25px;
+            font-size: 15px;
+            font-weight: 600;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #d4af37;
+            color: #0757a6;
         }
+
+        /* ================= HERO ================= */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
             align-items: center;
-            padding: 120px 7% 60px;
+
+            padding: 130px 7% 80px;
 
             background:
                 linear-gradient(
-                    rgba(0,0,0,0.7),
-                    rgba(0,0,0,0.75)
+                    90deg,
+                    rgba(5, 34, 65, 0.95),
+                    rgba(5, 34, 65, 0.65),
+                    rgba(5, 34, 65, 0.25)
                 ),
-                url("https://images.unsplash.com/photo-1586191582151-f73872dfc6f3?auto=format&fit=crop&w=2000&q=80");
+                linear-gradient(
+                    #0b477d,
+                    #0b477d
+                );
 
-            background-size: cover;
-            background-position: center;
+            color: white;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
+        }
+
+        .hero-label {
+            color: #62b5ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
             font-size: 64px;
-            margin-bottom: 20px;
-            color: white;
+            line-height: 1.1;
+            margin-bottom: 25px;
         }
 
-        .gold {
-            color: #d4af37;
+        .hero h1 span {
+            color: #62b5ff;
         }
 
         .hero p {
-            font-size: 22px;
-            line-height: 1.6;
-            color: #ddd;
+            font-size: 21px;
+            color: #e3edf7;
+            max-width: 700px;
             margin-bottom: 35px;
         }
 
         .button {
             display: inline-block;
+            background: #0b72c9;
+            color: white;
+
             padding: 16px 30px;
-            background: #d4af37;
-            color: #0b0d10;
+
+            border-radius: 5px;
+
             text-decoration: none;
             font-weight: bold;
-            border-radius: 4px;
+
             transition: 0.3s;
         }
 
         .button:hover {
-            background: #f0cf5c;
+            background: #095c9f;
             transform: translateY(-2px);
         }
+
+        /* ================= GENERAL ================= */
 
         section {
             padding: 100px 7%;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            font-size: 40px;
-            margin-bottom: 50px;
+            max-width: 800px;
+            margin: 0 auto 55px;
         }
 
-        .section-title span {
-            color: #d4af37;
+        .section-header small {
+            color: #0b72c9;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin: 12px 0 20px;
+            color: #102a43;
+        }
+
+        .section-header p {
+            color: #607080;
+            font-size: 18px;
+        }
+
+        /* ================= ABOUT ================= */
 
         .about {
-            background: #111419;
-            text-align: center;
+            background: #f6f9fc;
         }
 
-        .about-text {
-            max-width: 850px;
+        .about-container {
+            max-width: 1150px;
             margin: auto;
-            font-size: 19px;
-            line-height: 1.8;
-            color: #ccc;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .image-placeholder {
+            min-height: 380px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dfeaf4,
+                    #b9d1e6
+                );
+
+            border-radius: 12px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #42627d;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            color: #102a43;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #526577;
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: white;
         }
 
         .cards {
+            max-width: 1150px;
+            margin: auto;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .card {
-            background: #15181d;
             padding: 35px;
-            border: 1px solid #292d33;
-            border-radius: 8px;
+
+            background: white;
+
+            border: 1px solid #e2e8ef;
+            border-radius: 10px;
+
+            box-shadow: 0 8px 25px rgba(21, 52, 79, 0.06);
+
             transition: 0.3s;
         }
 
         .card:hover {
-            border-color: #d4af37;
             transform: translateY(-5px);
+            border-color: #0b72c9;
+            box-shadow: 0 15px 35px rgba(21, 52, 79, 0.12);
+        }
+
+        .card-number {
+            color: #0b72c9;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .card h3 {
-            color: #d4af37;
+            color: #102a43;
+            font-size: 22px;
             margin-bottom: 15px;
-            font-size: 23px;
         }
 
         .card p {
-            color: #bbb;
-            line-height: 1.6;
+            color: #637588;
+            font-size: 16px;
         }
 
+        /* ================= PROCESS ================= */
+
+        .process {
+            background: #f6f9fc;
+        }
+
+        .process-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .process-number {
+            width: 55px;
+            height: 55px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #0b72c9;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 10px;
+            color: #102a43;
+        }
+
+        .process-step p {
+            color: #66788a;
+        }
+
+        /* ================= WHY US ================= */
+
+        .why-us {
+            background: #ffffff;
+        }
+
+        .why-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            padding: 30px;
+            background: #f6f9fc;
+            border-radius: 8px;
+        }
+
+        .why-item h3 {
+            color: #0b72c9;
+            margin-bottom: 10px;
+        }
+
+        .why-item p {
+            color: #5d7082;
+        }
+
+        /* ================= AREA ================= */
+
+        .area {
+            background: #082f55;
+            color: white;
+            text-align: center;
+        }
+
+        .area h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .area p {
+            max-width: 850px;
+            margin: auto;
+            color: #d7e6f4;
+            font-size: 18px;
+        }
+
+        .countries {
+            max-width: 900px;
+            margin: 35px auto 0;
+
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .country {
+            padding: 10px 18px;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 30px;
+            color: white;
+        }
+
+        /* ================= TRUST ================= */
+
         .trust {
-            background: #0b0d10;
+            background: #f6f9fc;
             text-align: center;
         }
 
         .trust-box {
             max-width: 900px;
             margin: auto;
-            padding: 50px;
-            border: 1px solid #292d33;
-            background: #111419;
+
+            padding: 55px;
+
+            background: white;
+            border: 1px solid #e0e7ee;
+            border-radius: 10px;
+        }
+
+        .trust-box h3 {
+            color: #102a43;
+            font-size: 27px;
+            margin-bottom: 15px;
         }
 
         .trust-box p {
-            color: #bbb;
-            font-size: 18px;
-            line-height: 1.7;
+            color: #637588;
         }
+
+        /* ================= CERTIFICATES ================= */
 
         .certificates {
-            background: #111419;
+            background: white;
         }
+
+        /* ================= CONTACT ================= */
 
         .contact {
-            background: #0b0d10;
-            text-align: center;
+            background: #082f55;
+            color: white;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
+        .contact-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .contact-item {
-            font-size: 18px;
-            color: #ccc;
+            text-align: center;
+            padding: 30px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
         }
 
-        .contact-item strong {
-            display: block;
-            color: #d4af37;
-            margin-bottom: 8px;
+        .contact-item h3 {
+            color: #62b5ff;
+            margin-bottom: 10px;
         }
+
+        .contact-item p {
+            color: #e0ebf5;
+        }
+
+        /* ================= FOOTER ================= */
 
         footer {
-            padding: 30px;
+            background: #061e35;
+            color: #91a5b8;
+
             text-align: center;
-            background: #070809;
-            color: #777;
-            border-top: 1px solid #222;
+
+            padding: 30px;
         }
 
-        @media (max-width: 800px) {
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
 
             header {
                 position: relative;
@@ -235,30 +485,64 @@
                 margin: 5px 8px;
             }
 
-            .hero {
-                min-height: 80vh;
-            }
-
             .hero h1 {
-                font-size: 42px;
+                font-size: 45px;
             }
 
-            .hero p {
-                font-size: 18px;
+            .about-container {
+                grid-template-columns: 1fr;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            .section-title {
-                font-size: 32px;
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero {
+                padding: 80px 5%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
+
 
 <header>
 
@@ -267,29 +551,39 @@
     </div>
 
     <nav>
+
         <a href="#o-nas">O nas</a>
         <a href="#uslugi">Usługi</a>
-        <a href="#zaufali">Zaufali nam</a>
-        <a href="#certyfikaty">Certyfikaty</a>
+        <a href="#proces">Jak działamy</a>
+        <a href="#dlaczego">Dlaczego my</a>
         <a href="#kontakt">Kontakt</a>
+
     </nav>
 
 </header>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
     <div class="hero-content">
 
+        <div class="hero-label">
+            Spedycja • Transport • Logistyka
+        </div>
+
         <h1>
-            Transport.<br>
-            <span class="gold">Spedycja.</span><br>
-            Pewność.
+            Twój ładunek.<br>
+            <span>Nasza odpowiedzialność.</span>
         </h1>
 
         <p>
-            Jupiter Trans & Cargo — profesjonalna organizacja
-            transportu i spedycji na terenie Polski oraz Europy.
+            Kompleksowa organizacja przewozu ładunków
+            od momentu nadania aż do odbioru.
+            Planujemy, koordynujemy i nadzorujemy cały
+            proces transportowy, dbając o bezpieczeństwo,
+            terminowość i sprawną realizację zlecenia.
         </p>
 
         <a href="#kontakt" class="button">
@@ -301,50 +595,66 @@
 </section>
 
 
-<section id="o-nas" class="about">
+<!-- ================= ABOUT ================= -->
 
-    <h2 class="section-title">
-        O <span>nas</span>
-    </h2>
+<section class="about" id="o-nas">
 
-    <p class="about-text">
-        Jupiter Trans & Cargo to firma specjalizująca się
-        w organizacji transportu i spedycji.
-        Naszym priorytetem jest terminowość, bezpieczeństwo
-        oraz profesjonalna obsługa naszych klientów.
-    </p>
+    <div class="section-header">
 
-</section>
+        <small>Jupiter Trans & Cargo</small>
+
+        <h2>
+            O <span style="color:#0b72c9;">nas</span>
+        </h2>
+
+        <p>
+            Doświadczenie, odpowiedzialność i indywidualne
+            podejście do każdego transportu.
+        </p>
+
+    </div>
 
 
-<section id="uslugi">
+    <div class="about-container">
 
-    <h2 class="section-title">
-        Nasze <span>usługi</span>
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Transport krajowy</h3>
-            <p>
-                Organizacja przewozów na terenie całej Polski.
-            </p>
+        <div class="image-placeholder">
+            MIEJSCE NA ZDJĘCIE<br>
+            np. ciężarówki / transportu / firmy
         </div>
 
-        <div class="card">
-            <h3>Transport międzynarodowy</h3>
-            <p>
-                Sprawna organizacja transportów na terenie Europy.
-            </p>
-        </div>
 
-        <div class="card">
-            <h3>Spedycja</h3>
+        <div class="about-text">
+
+            <h3>
+                Doświadczenie, któremu możesz zaufać
+            </h3>
+
             <p>
-                Kompleksowa organizacja transportu
-                i obsługa logistyczna.
+                Jupiter Trans & Cargo działa na rynku od 2015 roku,
+                specjalizując się w kompleksowej organizacji
+                przewozu ładunków.
             </p>
+
+            <p>
+                Organizujemy transport od momentu nadania ładunku
+                aż do jego odbioru. Odpowiadamy za planowanie
+                i koordynację procesu transportowego,
+                dostosowując rozwiązania do indywidualnych
+                potrzeb naszych klientów.
+            </p>
+
+            <p>
+                Dzięki wieloletniemu doświadczeniu potrafimy
+                reagować na wymagające sytuacje i szukać
+                bezpiecznych oraz efektywnych rozwiązań.
+            </p>
+
+            <p>
+                Naszym celem jest oszczędzanie czasu i pieniędzy
+                klientów poprzez odpowiednie planowanie,
+                analizę rynku i sprawną organizację przewozu.
+            </p>
+
         </div>
 
     </div>
@@ -352,17 +662,349 @@
 </section>
 
 
-<section id="zaufali" class="trust">
+<!-- ================= SERVICES ================= -->
 
-    <h2 class="section-title">
-        Zaufali <span>nam</span>
+<section class="services" id="uslugi">
+
+    <div class="section-header">
+
+        <small>Co oferujemy</small>
+
+        <h2>
+            Kompleksowa <span style="color:#0b72c9;">spedycja</span>
+        </h2>
+
+        <p>
+            Zajmujemy się organizacją całego procesu transportowego,
+            dostosowując rozwiązania do charakteru i wymagań ładunku.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-number">01</div>
+
+            <h3>Planowanie trasy</h3>
+
+            <p>
+                Analizujemy trasę i dobieramy rozwiązania pozwalające
+                na sprawną oraz bezpieczną realizację transportu.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">02</div>
+
+            <h3>Dobór pojazdu</h3>
+
+            <p>
+                Dobieramy odpowiedni środek transportu do rodzaju,
+                wymiarów i charakterystyki przewożonego ładunku.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">03</div>
+
+            <h3>Nadzór nad dostawą</h3>
+
+            <p>
+                Koordynujemy transport od załadunku aż do rozładunku,
+                dbając o prawidłowy przebieg realizacji zlecenia.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">04</div>
+
+            <h3>Dokumentacja</h3>
+
+            <p>
+                Przygotowujemy i koordynujemy dokumentację niezbędną
+                do prawidłowej realizacji transportu.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">05</div>
+
+            <h3>Ubezpieczenie</h3>
+
+            <p>
+                Dbamy o odpowiednie zabezpieczenie procesu transportowego
+                oraz organizację wymaganych rozwiązań ubezpieczeniowych.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">06</div>
+
+            <h3>Organizacja przewozu</h3>
+
+            <p>
+                Kompleksowo organizujemy przewóz ładunków,
+                koordynując wszystkie kluczowe etapy transportu.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section class="process" id="proces">
+
+    <div class="section-header">
+
+        <small>Jak działamy</small>
+
+        <h2>
+            Od nadania do <span style="color:#0b72c9;">odbioru</span>
+        </h2>
+
+        <p>
+            Koordynujemy cały proces, aby transport przebiegał
+            sprawnie i zgodnie z ustaleniami.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <div class="process-step">
+
+            <div class="process-number">1</div>
+
+            <h3>Analiza zlecenia</h3>
+
+            <p>
+                Poznajemy potrzeby klienta oraz charakterystykę ładunku.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">2</div>
+
+            <h3>Planowanie</h3>
+
+            <p>
+                Planujemy trasę i dobieramy odpowiednie rozwiązania transportowe.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">3</div>
+
+            <h3>Realizacja</h3>
+
+            <p>
+                Koordynujemy załadunek i przebieg transportu.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">4</div>
+
+            <h3>Dostawa</h3>
+
+            <p>
+                Nadzorujemy proces aż do rozładunku i odbioru ładunku.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-us" id="dlaczego">
+
+    <div class="section-header">
+
+        <small>Dlaczego my</small>
+
+        <h2>
+            Współpraca oparta na <span style="color:#0b72c9;">zaufaniu</span>
+        </h2>
+
+        <p>
+            W transporcie liczy się nie tylko cena.
+            Liczą się również odpowiedzialność, doświadczenie
+            i właściwe decyzje.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-item">
+
+            <h3>Lojalność</h3>
+
+            <p>
+                Budujemy długoterminowe relacje z naszymi klientami
+                i podchodzimy indywidualnie do każdego zlecenia.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <h3>Sumienność</h3>
+
+            <p>
+                Dbamy o szczegóły i dokładamy starań,
+                aby każdy etap organizowanego transportu
+                przebiegał zgodnie z ustaleniami.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <h3>Doradztwo</h3>
+
+            <p>
+                Pomagamy dobrać rozwiązania odpowiednie
+                do potrzeb konkretnego transportu.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <h3>Wieloletnie doświadczenie</h3>
+
+            <p>
+                Działamy na rynku od 2015 roku,
+                wykorzystując doświadczenie w organizacji
+                transportów i rozwiązywaniu trudnych sytuacji.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <h3>Bezpieczne rozwiązania</h3>
+
+            <p>
+                Analizujemy sytuację i wybieramy rozwiązania,
+                które pozwalają ograniczyć ryzyko podczas realizacji transportu.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <h3>Oszczędność czasu i pieniędzy</h3>
+
+            <p>
+                Analizujemy rynek i odpowiednio planujemy transport,
+                aby optymalizować proces i koszty naszych klientów.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AREA ================= -->
+
+<section class="area">
+
+    <h2>
+        Transport w Polsce i Europie
     </h2>
+
+    <p>
+        Organizujemy przewozy na terenie całej Polski,
+        państw Unii Europejskiej oraz pozostałych kierunków
+        na kontynencie europejskim.
+    </p>
+
+    <div class="countries">
+
+        <div class="country">🇵🇱 Polska</div>
+        <div class="country">🇪🇺 Unia Europejska</div>
+        <div class="country">🌍 Europa</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUST ================= -->
+
+<section class="trust">
+
+    <div class="section-header">
+
+        <small>Partnerzy</small>
+
+        <h2>
+            Zaufali <span style="color:#0b72c9;">nam</span>
+        </h2>
+
+        <p>
+            Wieloletnia współpraca jest dla nas najlepszym potwierdzeniem
+            jakości świadczonych usług.
+        </p>
+
+    </div>
+
 
     <div class="trust-box">
 
+        <h3>
+            Miejsce na logotypy klientów
+        </h3>
+
         <p>
-            Miejsce na logotypy oraz nazwy firm,
-            które współpracują z Jupiter Trans & Cargo.
+            Tutaj umieścimy logotypy firm współpracujących
+            z Jupiter Trans & Cargo.
         </p>
 
     </div>
@@ -370,33 +1012,68 @@
 </section>
 
 
-<section id="certyfikaty" class="certificates">
+<!-- ================= CERTIFICATES ================= -->
 
-    <h2 class="section-title">
-        <span>Certyfikaty</span> i uprawnienia
-    </h2>
+<section class="certificates">
+
+    <div class="section-header">
+
+        <small>Uprawnienia</small>
+
+        <h2>
+            Certyfikaty i <span style="color:#0b72c9;">uprawnienia</span>
+        </h2>
+
+        <p>
+            Posiadane uprawnienia i zabezpieczenia potwierdzają
+            profesjonalne podejście do organizacji transportu.
+        </p>
+
+    </div>
+
 
     <div class="cards">
 
         <div class="card">
-            <h3>Certyfikat</h3>
+
+            <div class="card-number">01</div>
+
+            <h3>Certyfikat kompetencji zawodowych</h3>
+
             <p>
-                Tutaj dodamy pierwszy certyfikat firmy.
+                Potwierdzenie kwalifikacji wymaganych
+                do wykonywania działalności związanej
+                z transportem drogowym.
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>Licencje</h3>
-            <p>
-                Tutaj dodamy informacje o posiadanych licencjach.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>Ubezpieczenie</h3>
+
+            <div class="card-number">02</div>
+
+            <h3>Licencja</h3>
+
             <p>
-                Tutaj dodamy informacje dotyczące ubezpieczenia.
+                Licencja związana z międzynarodowym
+                transportem rzeczy.
             </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-number">03</div>
+
+            <h3>Polisa</h3>
+
+            <p>
+                Informacje dotyczące posiadanego
+                zabezpieczenia ubezpieczeniowego.
+            </p>
+
         </div>
 
     </div>
@@ -404,39 +1081,85 @@
 </section>
 
 
-<section id="kontakt" class="contact">
+<!-- ================= CONTACT ================= -->
 
-    <h2 class="section-title">
-        <span>Kontakt</span>
-    </h2>
+<section class="contact" id="kontakt">
 
-    <div class="contact-info">
+    <div class="section-header">
+
+        <small style="color:#62b5ff;">Kontakt</small>
+
+        <h2 style="color:white;">
+            Porozmawiajmy o <span style="color:#62b5ff;">transporcie</span>
+        </h2>
+
+        <p style="color:#d7e6f4;">
+            Skontaktuj się z nami, aby omówić organizację
+            Twojego transportu.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
 
         <div class="contact-item">
-            <strong>Telefon</strong>
-            TWÓJ TELEFON
+
+            <h3>Telefon</h3>
+
+            <p>
+                DO UZUPEŁNIENIA
+            </p>
+
         </div>
 
-        <div class="contact-item">
-            <strong>E-mail</strong>
-            TWOJ EMAIL
-        </div>
 
         <div class="contact-item">
-            <strong>Adres</strong>
-            TWÓJ ADRES
+
+            <h3>E-mail</h3>
+
+            <p>
+                DO UZUPEŁNIENIA
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <h3>Siedziba</h3>
+
+            <p>
+                ul. Jacka Malczewskiego 4<br>
+                32-800 Brzesko<br>
+                Małopolska, Polska
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    © 2026 Jupiter Trans & Cargo
+    <strong>
+        Jupiter Trans & Cargo
+    </strong>
+
+    <br><br>
+
+    Kompleksowa organizacja transportu w Polsce i Europie.
+
+    <br><br>
+
+    © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
 
 </footer>
+
 
 </body>
 </html>
