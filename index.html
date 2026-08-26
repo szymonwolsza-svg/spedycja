@@ -4452,6 +4452,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="whatsapp"
+    id="whatsappButton"
     aria-label="WhatsApp Jupiter Trans & Cargo">
 
     <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
@@ -4569,6 +4570,29 @@
 
             document.title =
                 "Jupiter Trans & Cargo | Spedycja, transport Polska Europa UK";
+
+        }
+
+        
+        const whatsappButton =
+            document.getElementById("whatsappButton");
+
+        if (whatsappButton) {
+
+            const whatsappTextPl =
+                "Dzień dobry, chciałbym zapytać o wycenę transportu.";
+
+            const whatsappTextEn =
+                "Hello, I would like to ask for a transport quote.";
+
+            const whatsappMessage =
+                lang === "en"
+                    ? whatsappTextEn
+                    : whatsappTextPl;
+
+            whatsappButton.href =
+                "https://wa.me/48734183473?text=" +
+                encodeURIComponent(whatsappMessage);
 
         }
 
