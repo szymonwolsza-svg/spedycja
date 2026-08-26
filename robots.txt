@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://szymonwolsza-svg.github.io/spedycja/sitemap.xml
