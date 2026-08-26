@@ -8,13 +8,16 @@
     <title>Jupiter Trans & Cargo | Spedycja, transport Polska Europa UK</title>
 
     <meta name="description"
-          content="Jupiter Trans & Cargo – kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. Transporty całopojazdowe, drobnicowe, ekspresowe, FIX, ponadgabarytowe i ADR.">
+          content="Jupiter Trans & Cargo – spedycja i organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR, ponadgabaryty oraz obsługa kierunków UE–UK.">
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Jupiter Trans & Cargo">
     <meta name="theme-color" content="#061d32">
 
     <link rel="canonical" href="https://szymonwolsza-svg.github.io/spedycja/">
+    <link rel="alternate" hreflang="pl" href="https://szymonwolsza-svg.github.io/spedycja/">
+    <link rel="alternate" hreflang="en" href="https://szymonwolsza-svg.github.io/spedycja/en/">
+    <link rel="alternate" hreflang="x-default" href="https://szymonwolsza-svg.github.io/spedycja/">
     <link rel="icon" type="image/png" href="https://szymonwolsza-svg.github.io/spedycja/jupiter.png?v=2">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1492,6 +1495,17 @@
             margin-top: 3px;
         }
 
+        .checkbox-group a {
+            color: var(--blue);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .checkbox-group a:hover {
+            color: var(--navy3);
+        }
+
         .submit-button {
             grid-column: 1 / -1;
 
@@ -1825,6 +1839,17 @@
             text-align: center;
 
             font-size: 12px;
+        }
+
+        footer a {
+            color: #66c9ff;
+            font-weight: 700;
+            margin-left: 8px;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
         }
 
         /* ========================================
@@ -2442,6 +2467,224 @@
             .reveal { opacity: 1; transform: none; }
         }
 
+    
+        /* ========================================
+           MARK 3 - TRUST / ROUTES / COMPANY DATA
+        ======================================== */
+
+        .role-section,
+        .proof-section,
+        .routes-section,
+        .company-data-section {
+            position: relative;
+        }
+
+        .role-section {
+            background: #ffffff;
+        }
+
+        .role-box {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: .82fr 1.18fr;
+            gap: 34px;
+            align-items: stretch;
+        }
+
+        .role-highlight,
+        .role-copy {
+            border: 1px solid #dbe7ee;
+            border-radius: 18px;
+            padding: 34px;
+            box-shadow: 0 12px 34px rgba(5,45,70,.06);
+        }
+
+        .role-highlight {
+            background: linear-gradient(145deg, #061d32, #0a4d7d);
+            color: white;
+        }
+
+        .role-highlight strong {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .role-highlight p {
+            color: #d3e4ee;
+            font-size: 14px;
+        }
+
+        .role-copy {
+            background: #f7fafc;
+        }
+
+        .role-copy h2 {
+            color: var(--navy);
+            font-size: clamp(31px,4vw,43px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .role-copy p {
+            color: var(--muted);
+            margin-bottom: 13px;
+        }
+
+        .proof-section {
+            background: #eef4f8;
+            border-top: 1px solid #dbe6ed;
+            border-bottom: 1px solid #dbe6ed;
+        }
+
+        .proof-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .proof-card {
+            background: white;
+            border: 1px solid #dce7ee;
+            border-radius: 15px;
+            padding: 27px 23px;
+            text-align: center;
+        }
+
+        .proof-card strong {
+            display: block;
+            color: var(--navy);
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        .proof-card span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .routes-section {
+            background: white;
+        }
+
+        .routes-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .route-card {
+            border-radius: 16px;
+            padding: 28px 23px;
+            min-height: 180px;
+            background: linear-gradient(180deg,#f8fbfd,#edf6fa);
+            border: 1px solid #d7e7ef;
+            transition: .25s;
+        }
+
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(5,45,70,.09);
+        }
+
+        .route-card .route-flags {
+            font-size: 29px;
+            margin-bottom: 18px;
+        }
+
+        .route-card h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .route-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .quote-benefits {
+            max-width: 1050px;
+            margin: 0 auto 22px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 12px;
+        }
+
+        .quote-benefit {
+            border: 1px solid rgba(255,255,255,.15);
+            background: rgba(255,255,255,.08);
+            color: #e3f1f8;
+            border-radius: 11px;
+            padding: 14px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .company-data-section {
+            background: #f5f8fa;
+            border-top: 1px solid #dce7ee;
+        }
+
+        .company-data-card {
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 17px;
+            border: 1px solid #dbe6ed;
+            background: white;
+            box-shadow: 0 12px 34px rgba(5,45,70,.06);
+        }
+
+        .company-data-row {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 20px;
+            padding: 17px 23px;
+            border-bottom: 1px solid #e5edf2;
+        }
+
+        .company-data-row:last-child {
+            border-bottom: none;
+        }
+
+        .company-data-row strong {
+            color: var(--navy);
+        }
+
+        .company-data-row span {
+            color: var(--muted);
+        }
+
+        .company-data-row .todo {
+            color: #a35c00;
+            font-weight: 700;
+        }
+
+        .company-note {
+            max-width: 1000px;
+            margin: 17px auto 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media(max-width: 950px) {
+            .role-box { grid-template-columns: 1fr; }
+            .proof-grid, .routes-grid { grid-template-columns: repeat(2,1fr); }
+            .quote-benefits { grid-template-columns: repeat(2,1fr); }
+        }
+
+        @media(max-width: 600px) {
+            .proof-grid, .routes-grid, .quote-benefits { grid-template-columns: 1fr; }
+            .company-data-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+
     </style>
     <meta property="og:title" content="Jupiter Trans & Cargo | Spedycja i transport">
     <meta property="og:description" content="Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR i transport ponadgabarytowy.">
@@ -2465,6 +2708,19 @@
       "logo": "https://szymonwolsza-svg.github.io/spedycja/jupiter.png?v=2",
       "description": "Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii.",
       "foundingDate": "2015",
+      "taxID": "8691270455",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "NIP",
+          "value": "8691270455"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "REGON",
+          "value": "852573153"
+        }
+      ],
       "telephone": "+48734183473",
       "email": "marta.jupiter@onet.eu",
       "address": {
@@ -2579,13 +2835,13 @@
             <button
                 id="plBtn"
                 class="active"
-                onclick="setLanguage('pl')">
+                onclick="window.location.href='./'">
                 PL
             </button>
 
             <button
                 id="enBtn"
-                onclick="setLanguage('en')">
+                onclick="window.location.href='en/'">
                 EN
             </button>
 
@@ -2638,12 +2894,10 @@
         </h1>
 
         <p
-            data-pl="Kompleksowo organizujemy transport od momentu nadania aż do odbioru. Polska, Europa i Wielka Brytania – planowanie, koordynacja i nadzór nad całym procesem."
-            data-en="We organize transport comprehensively from pickup to final delivery. Poland, Europe and the United Kingdom – planning, coordination and supervision of the entire process.">
+            data-pl="Ty podajesz trasę i ładunek, a my zajmujemy się resztą. Otrzymujesz jeden kontakt, bieżące informacje o przesyłce i szybką reakcję, gdy w transporcie pojawia się problem."
+            data-en="Tell us what needs moving and where. We handle the rest, keep you updated and react quickly if anything changes on the way.">
 
-            Kompleksowo organizujemy transport od momentu nadania aż do odbioru.
-            Polska, Europa i Wielka Brytania – planowanie,
-            koordynacja i nadzór nad całym procesem.
+            Ty podajesz trasę i ładunek, a my zajmujemy się resztą. Otrzymujesz jeden kontakt, bieżące informacje o przesyłce i szybką reakcję, gdy w transporcie pojawia się problem.
 
         </p>
 
@@ -2716,18 +2970,18 @@
         <div class="stat">
 
             <strong
-                data-pl="Od 2015 roku"
-                data-en="Since 2015">
+                data-pl="11+ lat doświadczenia"
+                data-en="11+ years of experience">
 
-                Od 2015 roku
+                11+ lat doświadczenia
 
             </strong>
 
             <span
-                data-pl="doświadczenie w branży"
-                data-en="industry experience">
+                data-pl="ciągłej działalności od 2015 roku"
+                data-en="operating continuously since 2015">
 
-                doświadczenie w branży
+                ciągłej działalności od 2015 roku
 
             </span>
 
@@ -2756,10 +3010,10 @@
         <div class="stat">
 
             <strong
-                data-pl="Kompleksowa obsługa"
-                data-en="Comprehensive service">
+                data-pl="Transport dopasowany do ładunku"
+                data-en="The right transport for the cargo">
 
-                Kompleksowa obsługa
+                Transport dopasowany do ładunku
 
             </strong>
 
@@ -2817,40 +3071,34 @@
             </div>
 
             <h2
-                data-pl="Transport zorganizowany od początku do końca."
-                data-en="Transport organized from start to finish.">
+                data-pl="Spedycja, która daje Ci kontrolę bez pilnowania wszystkiego samemu."
+                data-en="Freight forwarding that keeps you in control without making you chase every detail.">
 
-                Transport zorganizowany od początku do końca.
+                Spedycja, która daje Ci kontrolę bez pilnowania wszystkiego samemu.
 
             </h2>
 
             <p
-                data-pl="Jupiter Trans & Cargo działa na rynku od 2015 roku i specjalizuje się w kompleksowej organizacji przewozu ładunków."
-                data-en="Jupiter Trans & Cargo has been operating since 2015 and specializes in comprehensive cargo transport organization.">
+                data-pl="Jupiter Trans & Cargo działa od 2015 roku jako firma spedycyjna. Organizujemy przewóz i dobieramy rozwiązanie transportowe do konkretnego ładunku, terminu i kierunku."
+                data-en="Jupiter Trans & Cargo has been working in freight forwarding since 2015. We match each shipment with the right transport solution for the cargo, route and deadline.">
 
-                Jupiter Trans & Cargo działa na rynku od 2015 roku
-                i specjalizuje się w kompleksowej organizacji przewozu ładunków.
-
-            </p>
-
-            <p
-                data-pl="Zajmujemy się całym procesem transportowym – od przyjęcia zlecenia i zaplanowania trasy, przez dobór odpowiedniego pojazdu, aż po nadzór nad załadunkiem, przewozem, rozładunkiem i odbiorem."
-                data-en="We manage the entire transport process – from accepting the order and planning the route, through selecting the appropriate vehicle, to supervising loading, transport, unloading and delivery.">
-
-                Zajmujemy się całym procesem transportowym – od przyjęcia
-                zlecenia i zaplanowania trasy, przez dobór odpowiedniego pojazdu,
-                aż po nadzór nad załadunkiem, przewozem,
-                rozładunkiem i odbiorem.
+                Jupiter Trans & Cargo działa od 2015 roku jako firma spedycyjna. Organizujemy przewóz i dobieramy rozwiązanie transportowe do konkretnego ładunku, terminu i kierunku.
 
             </p>
 
             <p
-                data-pl="Doświadczenie pozwala nam reagować również w trudnych i nieprzewidzianych sytuacjach oraz dobierać rozwiązania uwzględniające bezpieczeństwo, czas i koszty klienta."
-                data-en="Our experience allows us to respond to difficult and unexpected situations and choose solutions considering safety, time and customer costs.">
+                data-pl="Dla klienta oznacza to mniej telefonów i mniej szukania informacji: prowadzimy zlecenie w jednym miejscu, przekazujemy status i reagujemy, kiedy sytuacja wymaga szybkiej decyzji."
+                data-en="For you, that means fewer calls and less chasing for updates. We keep the shipment in one place, share the status and step in quickly when a decision is needed.">
 
-                Doświadczenie pozwala nam reagować również w trudnych
-                i nieprzewidzianych sytuacjach oraz dobierać rozwiązania
-                uwzględniające bezpieczeństwo, czas i koszty klienta.
+                Dla klienta oznacza to mniej telefonów i mniej szukania informacji: prowadzimy zlecenie w jednym miejscu, przekazujemy status i reagujemy, kiedy sytuacja wymaga szybkiej decyzji.
+
+            </p>
+
+            <p
+                data-pl="Najważniejszy jest efekt: ładunek ma dotrzeć zgodnie z ustaleniami, a Ty masz wiedzieć, co dzieje się z transportem i do kogo zadzwonić, jeśli coś się zmieni."
+                data-en="The goal is simple: your cargo arrives as agreed, you know what is happening and you know exactly who to call if anything changes.">
+
+                Najważniejszy jest efekt: ładunek ma dotrzeć zgodnie z ustaleniami, a Ty masz wiedzieć, co dzieje się z transportem i do kogo zadzwonić, jeśli coś się zmieni.
 
             </p>
 
@@ -2900,6 +3148,53 @@
 
 </section>
 
+
+<!-- ROLE / BUSINESS MODEL -->
+
+<section class="role-section" id="jak-dzialamy">
+
+    <div class="role-box">
+
+        <div class="role-highlight reveal">
+            <div class="section-label" style="color:#70d0ff;"
+                 data-pl="Jasny model współpracy"
+                 data-en="A clear way of working">
+                Jasny model współpracy
+            </div>
+            <strong
+                data-pl="Jupiter Trans & Cargo to firma spedycyjna."
+                data-en="Jupiter Trans & Cargo is a freight forwarding company.">
+                Jupiter Trans & Cargo to firma spedycyjna.
+            </strong>
+            <p
+                data-pl="Organizujemy przewóz i koordynujemy realizację z odpowiednio dobranym rozwiązaniem transportowym. Na stronie nie przedstawiamy się jako właściciel własnej floty."
+                data-en="We organise and coordinate each shipment using the transport solution best suited to the cargo. We do not present ourselves as an own-fleet carrier on this website.">
+                Organizujemy przewóz i koordynujemy realizację z odpowiednio dobranym rozwiązaniem transportowym. Na stronie nie przedstawiamy się jako właściciel własnej floty.
+            </p>
+        </div>
+
+        <div class="role-copy reveal">
+            <h2
+                data-pl="Co to oznacza dla Ciebie?"
+                data-en="What does that mean for you?">
+                Co to oznacza dla Ciebie?
+            </h2>
+            <p
+                data-pl="Nie musisz samodzielnie szukać odpowiedniego rozwiązania dla każdego ładunku. Opisujesz potrzebę, a my dobieramy sposób realizacji do trasy, terminu, wymiarów i wymagań."
+                data-en="You do not need to source a different transport solution for every load. Tell us what you need and we match the route, deadline, dimensions and requirements with the right option.">
+                Nie musisz samodzielnie szukać odpowiedniego rozwiązania dla każdego ładunku. Opisujesz potrzebę, a my dobieramy sposób realizacji do trasy, terminu, wymiarów i wymagań.
+            </p>
+            <p
+                data-pl="Masz jeden punkt kontaktu, status transportu i wsparcie, gdy pojawia się zmiana po drodze."
+                data-en="You get one point of contact, clear shipment updates and support when something changes in transit.">
+                Masz jeden punkt kontaktu, status transportu i wsparcie, gdy pojawia się zmiana po drodze.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- SERVICES -->
 
 <section class="services" id="uslugi">
@@ -2916,10 +3211,10 @@
         </div>
 
         <h2
-            data-pl="Kompleksowa organizacja transportu"
-            data-en="Comprehensive transport organization">
+            data-pl="Dobierzemy rodzaj transportu do Twojego zlecenia"
+            data-en="A transport option matched to your shipment">
 
-            Kompleksowa organizacja transportu
+            Dobierzemy rodzaj transportu do Twojego zlecenia
 
         </h2>
 
@@ -2941,16 +3236,16 @@
             <div class="service-number">01</div>
 
             <h3
-                data-pl="Planowanie trasy"
-                data-en="Route planning">
+                data-pl="Transport całopojazdowy (FTL)"
+                data-en="Full truckload (FTL)">
 
                 Planowanie trasy
 
             </h3>
 
             <p
-                data-pl="Analizujemy trasę, kierunek przewozu i warunki realizacji transportu."
-                data-en="We analyze the route, transport direction and transport conditions.">
+                data-pl="Cały pojazd dla jednego ładunku — dobre rozwiązanie przy większych partiach, regularnych dostawach i wymagających terminach."
+                data-en="A dedicated vehicle for one shipment — ideal for larger loads, regular flows and time-sensitive deliveries.">
 
                 Analizujemy trasę, kierunek przewozu
                 i warunki realizacji transportu.
@@ -2964,8 +3259,8 @@
             <div class="service-number">02</div>
 
             <h3
-                data-pl="Dobór pojazdu"
-                data-en="Vehicle selection">
+                data-pl="Transport drobnicowy"
+                data-en="Groupage transport">
 
                 Dobór pojazdu
 
@@ -3033,8 +3328,8 @@
             <div class="service-number">05</div>
 
             <h3
-                data-pl="Dokumentacja"
-                data-en="Documentation">
+                data-pl="Transport ponadgabarytowy"
+                data-en="Oversized transport">
 
                 Dokumentacja
 
@@ -3441,6 +3736,50 @@
 
 </section>
 
+
+<!-- PROOF -->
+
+<section class="proof-section">
+
+    <div class="section-header reveal">
+        <div class="section-label"
+             data-pl="Dowody doświadczenia"
+             data-en="Proof of experience">
+            Dowody doświadczenia
+        </div>
+        <h2
+            data-pl="Konkrety zamiast pustych deklaracji"
+            data-en="Facts rather than empty claims">
+            Konkrety zamiast pustych deklaracji
+        </h2>
+        <p
+            data-pl="Pokazujemy tylko informacje, które możemy potwierdzić na podstawie obecnych danych firmy."
+            data-en="We only publish claims we can support with the information currently available.">
+            Pokazujemy tylko informacje, które możemy potwierdzić na podstawie obecnych danych firmy.
+        </p>
+    </div>
+
+    <div class="proof-grid">
+        <div class="proof-card reveal">
+            <strong>11+</strong>
+            <span data-pl="lat działalności od 2015 r." data-en="years in business since 2015">lat działalności od 2015 r.</span>
+        </div>
+        <div class="proof-card reveal">
+            <strong>PL • EU • UK</strong>
+            <span data-pl="obsługiwane kierunki" data-en="core markets served">obsługiwane kierunki</span>
+        </div>
+        <div class="proof-card reveal">
+            <strong>FTL • ADR • FIX</strong>
+            <span data-pl="różne typy zleceń" data-en="multiple shipment types">różne typy zleceń</span>
+        </div>
+        <div class="proof-card reveal">
+            <strong>2</strong>
+            <span data-pl="dokumenty kompetencyjne i licencyjne pokazane na stronie" data-en="professional and licensing documents shown on the website">dokumenty kompetencyjne i licencyjne pokazane na stronie</span>
+        </div>
+    </div>
+
+</section>
+
 <!-- EUROPE -->
 
 <section class="europe">
@@ -3552,6 +3891,69 @@
 
 </section>
 
+
+<!-- ROUTES -->
+
+<section class="routes-section" id="trasy">
+
+    <div class="section-header reveal">
+        <div class="section-label"
+             data-pl="Popularne kierunki"
+             data-en="Popular lanes">
+            Popularne kierunki
+        </div>
+        <h2
+            data-pl="Przykładowe popularne kierunki"
+            data-en="Representative European and UK transport lanes">
+            Przykładowe popularne kierunki
+        </h2>
+        <p
+            data-pl="Obsługujemy również inne kierunki — poniżej pokazujemy przykładowe relacje, które dobrze oddają zakres naszej działalności."
+            data-en="These are representative lanes within our wider Poland, Europe and UK coverage. Other routes are available on request.">
+            Obsługujemy również inne kierunki — poniżej pokazujemy przykładowe relacje, które dobrze oddają zakres naszej działalności.
+        </p>
+    </div>
+
+    <div class="routes-grid">
+        <div class="route-card reveal">
+            <div class="route-flags">🇵🇱 ↔ 🇬🇧</div>
+            <h3>Polska – Wielka Brytania</h3>
+            <p data-pl="Import, eksport oraz wsparcie przy dokumentacji i odprawach."
+               data-en="Import and export movements with support around customs documentation.">
+               Import, eksport oraz wsparcie przy dokumentacji i odprawach.
+            </p>
+        </div>
+
+        <div class="route-card reveal">
+            <div class="route-flags">🇵🇱 ↔ 🇩🇪</div>
+            <h3 data-pl="Polska – Niemcy" data-en="Poland – Germany">Polska – Niemcy</h3>
+            <p data-pl="Regularne kierunki europejskie dla FTL, drobnicy i dostaw terminowych."
+               data-en="A core European lane for FTL, groupage and time-critical deliveries.">
+               Regularne kierunki europejskie dla FTL, drobnicy i dostaw terminowych.
+            </p>
+        </div>
+
+        <div class="route-card reveal">
+            <div class="route-flags">🇵🇱 ↔ 🇳🇱</div>
+            <h3 data-pl="Polska – Holandia" data-en="Poland – Netherlands">Polska – Holandia</h3>
+            <p data-pl="Transport dla zleceń standardowych, ekspresowych i FIX."
+               data-en="Standard, express and fixed-time transport options.">
+               Transport dla zleceń standardowych, ekspresowych i FIX.
+            </p>
+        </div>
+
+        <div class="route-card reveal">
+            <div class="route-flags">🇪🇺 ↔ 🇬🇧</div>
+            <h3>UE – Wielka Brytania</h3>
+            <p data-pl="Przewozy pomiędzy krajami UE a UK z koordynacją formalności."
+               data-en="EU–UK movements with coordination around the required formalities.">
+               Przewozy pomiędzy krajami UE a UK z koordynacją formalności.
+            </p>
+        </div>
+    </div>
+
+</section>
+
 <!-- PARTNERS -->
 
 <section class="partners-section">
@@ -3592,33 +3994,33 @@
                  alt="Eurogate Logistics">
             <div class="partner-name">Eurogate Logistics</div>
             <div class="partner-note"
-                 data-pl="Partner biznesowy i zaufany kontrahent."
-                 data-en="Business partner and trusted contractor.">
-                Partner biznesowy i zaufany kontrahent.
+                 data-pl="Współpraca w obszarze transportu i logistyki."
+                 data-en="Transport and logistics cooperation.">
+                Współpraca w obszarze transportu i logistyki.
             </div>
         </div>
 
         <div class="partner">
             <img class="partner-logo"
-                 src="logo_ziegler_na_transparentnym_tle.png"
+                 src="https://szymonwolsza-svg.github.io/spedycja/logo_ziegler_na_transparentnym_tle.png?v=1"
                  alt="Ziegler">
             <div class="partner-name">Ziegler</div>
             <div class="partner-note"
-                 data-pl="Międzynarodowy partner logistyczny, który obdarzył nas zaufaniem."
-                 data-en="International logistics partner who has placed trust in us.">
-                Międzynarodowy partner logistyczny, który obdarzył nas zaufaniem.
+                 data-pl="Współpraca w obszarze transportu i logistyki."
+                 data-en="Transport and logistics cooperation.">
+                Współpraca w obszarze transportu i logistyki.
             </div>
         </div>
 
         <div class="partner">
             <img class="partner-logo"
-                 src="logo_controlo_cargo_services_ltd.png"
+                 src="https://szymonwolsza-svg.github.io/spedycja/logo_controlo_cargo_services_ltd.png?v=1"
                  alt="Controlo Cargo Services Ltd">
             <div class="partner-name">Controlo Cargo Services Ltd</div>
             <div class="partner-note"
-                 data-pl="Zaufany partner w zakresie współpracy transportowej i logistycznej."
-                 data-en="Trusted partner in transport and logistics cooperation.">
-                Zaufany partner w zakresie współpracy transportowej i logistycznej.
+                 data-pl="Współpraca w obszarze transportu i logistyki."
+                 data-en="Transport and logistics cooperation.">
+                Współpraca w obszarze transportu i logistyki.
             </div>
         </div>
 </div>
@@ -3779,15 +4181,37 @@
         </h2>
 
         <p
-            data-pl="Podaj podstawowe informacje dotyczące trasy i ładunku. Skontaktujemy się w sprawie szczegółów."
-            data-en="Provide the basic details of the route and cargo. We will contact you to discuss the details.">
+            data-pl="Opisz trasę i ładunek raz. Wrócimy do Ciebie z pytaniami lub propozycją rozwiązania — bez zobowiązań."
+            data-en="Send the route and cargo details once. We will come back with any questions or a proposed transport solution — with no obligation.">
 
-            Podaj podstawowe informacje dotyczące
-            trasy i ładunku.
-            Skontaktujemy się w sprawie szczegółów.
+            Opisz trasę i ładunek raz. Wrócimy do Ciebie z pytaniami lub propozycją rozwiązania — bez zobowiązań.
 
         </p>
 
+    </div>
+
+
+    <div class="quote-benefits reveal">
+        <div class="quote-benefit"
+             data-pl="✓ Wycena bez zobowiązań"
+             data-en="✓ No-obligation quote">
+             ✓ Wycena bez zobowiązań
+        </div>
+        <div class="quote-benefit"
+             data-pl="✓ Jeden kontakt do sprawy"
+             data-en="✓ One point of contact">
+             ✓ Jeden kontakt do sprawy
+        </div>
+        <div class="quote-benefit"
+             data-pl="✓ Polska • Europa • UK"
+             data-en="✓ Poland • Europe • UK">
+             ✓ Polska • Europa • UK
+        </div>
+        <div class="quote-benefit"
+             data-pl="✓ Odpowiedź w godzinach pracy"
+             data-en="✓ Response during business hours">
+             ✓ Odpowiedź w godzinach pracy
+        </div>
     </div>
 
     <div class="quote-container reveal">
@@ -4060,14 +4484,21 @@
                         type="checkbox"
                         required>
 
-                    <span
-                        data-pl="Wyrażam zgodę na wykorzystanie podanych danych w celu odpowiedzi na moje zapytanie."
-                        data-en="I agree to the use of the provided data for the purpose of responding to my enquiry.">
+                    <span>
+                        <span
+                            data-pl="Zapoznałem(-am) się z"
+                            data-en="I have read the">
+                            Zapoznałem(-am) się z
+                        </span>
 
-                        Wyrażam zgodę na wykorzystanie
-                        podanych danych w celu odpowiedzi
-                        na moje zapytanie.
-
+                        <a
+                            href="polityka-prywatnosci.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-pl="Polityką prywatności"
+                            data-en="Privacy Policy">
+                            Polityką prywatności
+                        </a>.
                     </span>
 
                 </label>
@@ -4461,12 +4892,83 @@
 
 </section>
 
-<footer
-    data-pl="© 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone."
-    data-en="© 2026 Jupiter Trans & Cargo. All rights reserved.">
 
-    © 2026 Jupiter Trans & Cargo.
-    Wszelkie prawa zastrzeżone.
+<!-- COMPANY DATA -->
+
+<section class="company-data-section" id="dane-firmy">
+
+    <div class="section-header reveal">
+        <div class="section-label"
+             data-pl="Dane firmy"
+             data-en="Company details">
+            Dane firmy
+        </div>
+        <h2
+            data-pl="Dane rejestrowe i kontaktowe"
+            data-en="Registered and contact details">
+            Dane rejestrowe i kontaktowe
+        </h2>
+        <p
+            data-pl="Pełne dane ułatwiają weryfikację firmy przed powierzeniem ładunku."
+            data-en="Clear company details make it easier to verify who you are working with before entrusting a shipment.">
+            Pełne dane ułatwiają weryfikację firmy przed powierzeniem ładunku.
+        </p>
+    </div>
+
+    <div class="company-data-card reveal">
+        <div class="company-data-row">
+            <strong data-pl="Nazwa handlowa" data-en="Trading name">Nazwa handlowa</strong>
+            <span>Jupiter Trans & Cargo</span>
+        </div>
+        <div class="company-data-row">
+            <strong data-pl="Pełna nazwa prawna" data-en="Full legal name">Pełna nazwa prawna</strong>
+            <span>Jupiter Trans & Cargo</span>
+        </div>
+        <div class="company-data-row">
+            <strong>NIP / VAT</strong>
+            <span>869-127-04-55</span>
+        </div>
+        <div class="company-data-row">
+            <strong>REGON</strong>
+            <span>852573153</span>
+        </div>
+        <div class="company-data-row">
+            <strong>KRS</strong>
+            <span data-pl="Nie dotyczy" data-en="Not applicable">Nie dotyczy</span>
+        </div>
+        <div class="company-data-row">
+            <strong data-pl="Adres kontaktowy" data-en="Contact address">Adres kontaktowy</strong>
+            <span>ul. Jacka Malczewskiego 4, 32-800 Brzesko, Małopolska, Polska</span>
+        </div>
+        <div class="company-data-row">
+            <strong data-pl="Adres rejestrowy" data-en="Registered address">Adres rejestrowy</strong>
+            <span>ul. Jacka Malczewskiego 4, 32-800 Brzesko, Małopolska, Polska</span>
+        </div>
+        <div class="company-data-row">
+            <strong data-pl="Telefon" data-en="Phone">Telefon</strong>
+            <span><a href="tel:+48734183473">+48 734 183 473</a></span>
+        </div>
+        <div class="company-data-row">
+            <strong>E-mail</strong>
+            <span><a href="mailto:marta.jupiter@onet.eu">marta.jupiter@onet.eu</a></span>
+        </div>
+    </div>
+</section>
+
+<footer>
+
+    <span
+        data-pl="© 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone."
+        data-en="© 2026 Jupiter Trans & Cargo. All rights reserved.">
+        © 2026 Jupiter Trans & Cargo. Wszelkie prawa zastrzeżone.
+    </span>
+
+    <a
+        href="polityka-prywatnosci.html"
+        data-pl="Polityka prywatności"
+        data-en="Privacy Policy">
+        Polityka prywatności
+    </a>
 
 </footer>
 
