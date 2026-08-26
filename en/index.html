@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head><script id="autoLanguageRedirect">
+(function() {
+    var lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    var isPolish = lang === "pl" || lang.indexOf("pl-") === 0;
+    var path = window.location.pathname;
+
+    if (false && !isPolish && path.indexOf("/en/") === -1) {
+        window.location.replace("https://szymonwolsza-svg.github.io/spedycja/en/");
+    }
+
+    if (true && isPolish && path.indexOf("/en/") !== -1) {
+        window.location.replace("https://szymonwolsza-svg.github.io/spedycja/");
+    }
+})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jupiter Trans &amp; Cargo | Freight Forwarding Poland Europe UK</title>
@@ -2983,7 +2997,7 @@
 <div class="role-copy reveal">
 <h2 data-en="What does that mean for you?" data-pl="Co to oznacza dla Ciebie?">What does that mean for you?</h2>
 <p data-en="You do not need to source a different transport solution for every load. Tell us what you need and we match the route, deadline, dimensions and requirements with the right option." data-pl="Nie musisz samodzielnie szukać odpowiedniego rozwiązania dla każdego ładunku. Opisujesz potrzebę, a my dobieramy sposób realizacji do trasy, terminu, wymiarów i wymagań.">You do not need to source a different transport solution for every load. Tell us what you need and we match the route, deadline, dimensions and requirements with the right option.</p>
-<p data-en="You get one point of contact, clear shipment updates and support when something changes in transit." data-pl="Masz jeden punkt kontaktu, status transportu i wsparcie, gdy pojawia się zmiana po drodze.">You get one point of contact, clear shipment updates and support when something changes in transit.</p>
+<p data-en="You always know what is happening with your cargo. If a problem appears, we start working on the solution immediately — before it develops into a bigger disruption." data-pl="Zawsze wiesz, co dzieje się z Twoim ładunkiem. Jeśli pojawi się problem, pracujemy nad jego rozwiązaniem od razu — zanim przerodzi się w większe komplikacje.">You always know what is happening with your cargo. If a problem appears, we start working on the solution immediately — before it develops into a bigger disruption.</p>
 </div>
 </div>
 </section>
@@ -3013,7 +3027,7 @@
 <div class="service reveal">
 <div class="service-number">04</div>
 <h3 data-en="Delivery supervision" data-pl="Nadzór nad dostawą">Delivery supervision</h3>
-<p data-en="We supervise transport from loading to unloading and delivery." data-pl="Nadzorujemy transport od załadunku aż do rozładunku i odbioru towaru.">We supervise transport from loading to unloading and delivery.</p>
+<p data-en="You always know what is happening with your cargo. When a problem appears, we act immediately before it develops into a bigger disruption." data-pl="Zawsze wiesz, co dzieje się z Twoim ładunkiem. Gdy pojawia się problem, działamy od razu, zanim przerodzi się w większe komplikacje.">You always know what is happening with your cargo. When a problem appears, we act immediately before it develops into a bigger disruption.</p>
 </div>
 <div class="service reveal">
 <div class="service-number">05</div>
@@ -3148,7 +3162,7 @@
 <strong>2</strong>
 <span data-en="professional and licensing documents shown on the website" data-pl="dokumenty kompetencyjne i licencyjne pokazane na stronie">professional and licensing documents shown on the website</span>
 </div>
-</div>
+<div class="proof-card reveal"><strong>✓</strong><span data-en="Freight forwarding business insurance" data-pl="Ubezpieczenie działalności spedycyjnej">Freight forwarding business insurance</span></div></div>
 </section>
 <!-- EUROPE -->
 <section class="europe">
@@ -3272,9 +3286,7 @@
 <div class="partner">
 <img alt="HERMAN Logistics" class="partner-logo" src="https://szymonwolsza-svg.github.io/spedycja/herman-logistics-ORIGINAL-8x.png?v=1"/>
 <div class="partner-name">HERMAN Logistics</div>
-<div class="partner-note" data-en="Transport and logistics cooperation." data-pl="Współpraca w obszarze transportu i logistyki.">
-                Współpraca w obszarze transportu i logistyki.
-            </div>
+<div class="partner-note" data-en="Transport and logistics cooperation." data-pl="Współpraca w obszarze transportu i logistyki.">Transport and logistics cooperation.</div>
 </div>
 </div>
 </section>
@@ -3288,8 +3300,8 @@
 <div class="cert-grid">
 <div class="cert-card reveal">
 <div class="cert-image">
-<img alt="Certyfikat kompetencji zawodowych" decoding="async" onclick="openCertificate(this.src)" src="https://szymonwolsza-svg.github.io/spedycja/certyfikat-kompetencji.png?v=3">
-</img></div>
+<img alt="Certyfikat kompetencji zawodowych" decoding="async" onclick="openCertificate(this.src)" src="https://szymonwolsza-svg.github.io/spedycja/certyfikat-kompetencji.png?v=3"/>
+</div>
 <div class="cert-text">
 <h3 data-en="Certificate of professional competence" data-pl="Certyfikat kompetencji zawodowych">Certificate of professional competence</h3>
 <p data-en="A document confirming professional qualifications in road transport." data-pl="Dokument potwierdzający kwalifikacje zawodowe w zakresie transportu drogowego.">A document confirming professional qualifications in road transport.</p>
@@ -3315,12 +3327,7 @@
 <h2 data-en="Need transport? Send us an enquiry." data-pl="Potrzebujesz transportu? Wyślij zapytanie.">Need transport? Send us an enquiry.</h2>
 <p data-en="Send the route and cargo details once. We will come back with any questions or a proposed transport solution — with no obligation." data-pl="Opisz trasę i ładunek raz. Wrócimy do Ciebie z pytaniami lub propozycją rozwiązania — bez zobowiązań.">Send the route and cargo details once. We will come back with any questions or a proposed transport solution — with no obligation.</p>
 </div>
-<div class="quote-benefits reveal">
-<div class="quote-benefit" data-en="✓ No-obligation quote" data-pl="✓ Wycena bez zobowiązań">✓ No-obligation quote</div>
-<div class="quote-benefit" data-en="✓ One point of contact" data-pl="✓ Jeden kontakt do sprawy">✓ One point of contact</div>
-<div class="quote-benefit" data-en="✓ Poland • Europe • UK" data-pl="✓ Polska • Europa • UK">✓ Poland • Europe • UK</div>
-<div class="quote-benefit" data-en="✓ Response during business hours" data-pl="✓ Odpowiedź w godzinach pracy">✓ Response during business hours</div>
-</div>
+<div class="quote-benefits reveal"><div class="quote-benefit" data-en="✓ Free quotation" data-pl="✓ Bezpłatna wycena">✓ Free quotation</div><div class="quote-benefit" data-en="✓ Fast response" data-pl="✓ Szybka odpowiedź">✓ Fast response</div><div class="quote-benefit" data-en="✓ Immediate quotation" data-pl="✓ Natychmiastowa wycena">✓ Immediate quotation</div><div class="quote-benefit" data-en="✓ One dedicated contact person" data-pl="✓ Jedna dedykowana osoba do kontaktu">✓ One dedicated contact person</div><div class="quote-benefit" data-en="✓ Poland • European Union • United Kingdom" data-pl="✓ Polska • Unia Europejska • Wielka Brytania">✓ Poland • European Union • United Kingdom</div></div>
 <div class="quote-container reveal">
 <form action="https://formsubmit.co/marta.jupiter@onet.eu" class="quote-form" method="POST">
 <input name="_subject" type="hidden" value="New transport enquiry - Jupiter Trans &amp; Cargo"/>
