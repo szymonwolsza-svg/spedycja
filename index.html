@@ -87,6 +87,7 @@
 
         section {
             padding: 110px 7%;
+            scroll-margin-top: 105px;
         }
 
         /* ========================================
@@ -127,6 +128,16 @@
                 0 10px 35px rgba(6,40,65,0.11);
         }
 
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), #57c8ff 55%, var(--navy3));
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -135,8 +146,9 @@
         }
 
         .logo img {
-            width: 220px;
-            height: 80px;
+            height: 72px;
+            width: auto;
+            max-width: 260px;
 
             object-fit: contain;
 
@@ -272,7 +284,7 @@
                     rgba(5,44,73,0.58) 72%,
                     rgba(5,44,73,0.13) 100%
                 ),
-                url("gabriel-santos-GBVDilE8yvI-unsplash.jpg");
+                url("https://szymonwolsza-svg.github.io/spedycja/gabriel-santos-GBVDilE8yvI-unsplash.jpg?v=3");
 
             background-size: cover;
             background-position: center;
@@ -356,7 +368,11 @@
             margin-bottom: 27px;
         }
 
-        .hero h1 span {
+        .hero h1 span:first-child {
+            color: #ffffff;
+        }
+
+        .hero h1 span:last-child {
             color: #6acbff;
         }
 
@@ -489,7 +505,7 @@
             display: grid;
 
             grid-template-columns:
-                repeat(3,1fr);
+                0.9fr 1.15fr 1.35fr;
 
             background: white;
 
@@ -600,6 +616,7 @@
         ======================================== */
 
         .about {
+            position: relative;
             margin-top: 80px;
 
             background: #eef4f8;
@@ -735,6 +752,7 @@
         ======================================== */
 
         .services {
+            position: relative;
             background: white;
         }
 
@@ -863,7 +881,7 @@
                     rgba(5,47,76,0.86) 55%,
                     rgba(5,47,76,0.20)
                 ),
-                url("nagy-szabi-RsjQl8dLnfw-unsplash.jpg");
+                url("https://szymonwolsza-svg.github.io/spedycja/nagy-szabi-RsjQl8dLnfw-unsplash.jpg?v=3");
 
             background-size: cover;
             background-position: center;
@@ -896,6 +914,7 @@
         ======================================== */
 
         .process {
+            position: relative;
             background: var(--navy);
 
             color: white;
@@ -978,7 +997,10 @@
         ======================================== */
 
         .why {
+            position: relative;
             background: #f4f8fb;
+            border-top: 1px solid #dce7ee;
+            border-bottom: 1px solid #dce7ee;
         }
 
         .why-grid {
@@ -1041,6 +1063,7 @@
         ======================================== */
 
         .europe {
+            position: relative;
             background: #dff2fb;
 
             border-top:
@@ -1173,44 +1196,68 @@
         }
 
         .partners {
-            max-width: 900px;
-
+            max-width: 1180px;
             margin: auto;
-
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
         }
 
         .partner {
-            width: min(430px,100%);
-
-            min-height: 180px;
-
+            min-height: 205px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding: 30px 25px;
+            border-radius: 18px;
+            border: 1px solid #dce7ee;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f9fb 100%);
+            box-shadow: 0 10px 30px rgba(5,45,70,0.06);
+            text-align: center;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+        }
 
-            padding: 40px;
-
-            border-radius: 17px;
-
-            border:
-                1px solid #dce7ee;
-
-            background: #f5f9fb;
-
-            box-shadow:
-                0 10px 30px
-                rgba(5,45,70,0.06);
+        .partner:hover {
+            transform: translateY(-6px);
+            border-color: rgba(7,139,209,.35);
+            box-shadow: 0 20px 45px rgba(5,45,70,0.11);
         }
 
         .partner img {
             width: 100%;
-
-            max-width: 300px;
-            max-height: 105px;
-
+            max-width: 265px;
+            max-height: 100px;
             object-fit: contain;
+            margin-bottom: 16px;
+        }
+
+        .partner-brand {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            color: var(--navy);
+            font-size: clamp(24px, 2.4vw, 34px);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .partner-brand.ziegler {
+            color: #0c6f62;
+        }
+
+        .partner-brand.controlo {
+            color: #252d68;
+            font-size: clamp(22px, 2vw, 29px);
+        }
+
+        .partner-note {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.55;
         }
 
         /* ========================================
@@ -1218,6 +1265,7 @@
         ======================================== */
 
         .certificates {
+            position: relative;
             background: #eaf0f4;
 
             border-top:
@@ -1314,6 +1362,7 @@
         ======================================== */
 
         .quote {
+            position: relative;
             color: white;
 
             background:
@@ -1567,6 +1616,7 @@
         ======================================== */
 
         .map-section {
+            position: relative;
             background: #eef3f6;
 
             border-top:
@@ -1638,16 +1688,15 @@
 
         .map-wrapper {
             min-height: 470px;
+            background: #dfe8ee;
+            position: relative;
         }
 
         .map-wrapper iframe {
             width: 100%;
-            height: 100%;
-
+            height: 470px;
             min-height: 470px;
-
             border: 0;
-
             display: block;
         }
 
@@ -1893,6 +1942,25 @@
                 translateY(0);
         }
 
+        .about::before,
+        .services::before,
+        .process::before,
+        .why::before,
+        .europe::before,
+        .certificates::before,
+        .quote::before,
+        .map-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(86%, 1200px);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(7,139,209,.28), transparent);
+            pointer-events: none;
+        }
+
         /* ========================================
            TABLET
         ======================================== */
@@ -1900,8 +1968,9 @@
         @media(max-width: 1050px) {
 
             .logo img {
-                width: 195px;
-                height: 74px;
+                height: 68px;
+                width: auto;
+                max-width: 225px;
             }
 
             nav a {
@@ -1924,8 +1993,9 @@
             }
 
             .logo img {
-                width: 180px;
-                height: 68px;
+                height: 62px;
+                width: auto;
+                max-width: 205px;
             }
 
             .menu-button {
@@ -2014,6 +2084,10 @@
                     repeat(2,1fr);
             }
 
+            .partners {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .cert-grid {
                 grid-template-columns: 1fr;
             }
@@ -2039,8 +2113,9 @@
             }
 
             .logo img {
-                width: 175px;
-                height: 64px;
+                height: 58px;
+                width: auto;
+                max-width: 190px;
             }
 
             .nav-wrapper {
@@ -2114,6 +2189,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .partners {
+                grid-template-columns: 1fr;
+            }
+
             .service {
                 min-height: auto;
             }
@@ -2170,7 +2249,205 @@
 
         }
 
+    
+
+        /* ========================================
+           FINAL POLISH
+        ======================================== */
+
+        :target {
+            scroll-margin-top: 115px;
+        }
+
+        .services,
+        .partners-section,
+        .faq,
+        .contact {
+            position: relative;
+        }
+
+        .services::before,
+        .partners-section::before,
+        .faq::before,
+        .contact::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 7%;
+            right: 7%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d7e5ee 18%, #d7e5ee 82%, transparent);
+        }
+
+        .section-header {
+            position: relative;
+        }
+
+        .section-header::after {
+            content: "";
+            display: block;
+            width: 54px;
+            height: 3px;
+            margin: 22px auto 0;
+            border-radius: 20px;
+            background: linear-gradient(90deg, var(--blue), #64c9ff);
+        }
+
+        .process .section-header::after,
+        .quote .section-header::after {
+            background: linear-gradient(90deg, #4fc5ff, #9fe1ff);
+        }
+
+        .stat {
+            transition: background .25s ease, transform .25s ease;
+        }
+
+        .stat:hover {
+            background: #f8fbfd;
+        }
+
+        .service, .why-item, .process-item, .cert-card, .partner {
+            will-change: transform;
+        }
+
+        .service h3, .why-item h3, .process-item h3 {
+            letter-spacing: -.2px;
+        }
+
+        .cert-image {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cert-image img {
+            max-height: 600px;
+            object-fit: contain;
+            background: white;
+            box-shadow: 0 8px 28px rgba(5,45,70,.08);
+        }
+
+        .quote-form {
+            border: 1px solid rgba(216,229,237,.85);
+        }
+
+        .form-group label {
+            letter-spacing: .1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(7,139,209,.035);
+        }
+
+        .faq-item.open {
+            background: white;
+            box-shadow: 0 10px 28px rgba(6,47,75,.07);
+            border-color: #cbdde8;
+        }
+
+        .route-button, .submit-button {
+            box-shadow: 0 10px 24px rgba(7,139,209,.2);
+        }
+
+        .route-button:hover {
+            transform: translateY(-2px);
+            background: #0a98df;
+        }
+
+        .contact-box:last-child {
+            border-bottom: none;
+        }
+
+        .whatsapp {
+            border: 3px solid rgba(255,255,255,.92);
+        }
+
+        @media(max-width: 950px) {
+            :target { scroll-margin-top: 95px; }
+            .cert-image { min-height: 0; }
+            .nav-wrapper {
+                max-height: calc(100vh - 110px);
+                overflow-y: auto;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .section-header { margin-bottom: 44px; }
+            .section-header::after { margin-top: 17px; }
+            .hero-buttons { width: 100%; }
+            .hero-buttons .button {
+                width: 100%;
+            }
+            .stats { border-radius: 14px; }
+            .stat span { max-width: 290px; }
+            .service, .why-item, .process-item {
+                padding: 24px 21px;
+            }
+            .cert-text { padding: 22px 21px 25px; }
+            .quote-form { border-radius: 15px; }
+            .faq-question { padding: 18px 17px; }
+            .faq-answer p { padding: 0 17px 19px; }
+            .map-container, .contact-card { border-radius: 16px; }
+        }
+
+        @media(max-width: 420px) {
+            .hero h1 {
+                font-size: 38px;
+                line-height: 1.04;
+            }
+            .hero-badge {
+                font-size: 10px;
+                letter-spacing: 1.4px;
+                padding: 8px 11px;
+            }
+            .logo img {
+                height: 56px;
+                max-width: 210px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+
     </style>
+
+
+    <meta property="og:title" content="Jupiter Trans & Cargo | Spedycja i transport">
+    <meta property="og:description" content="Transport krajowy i międzynarodowy. Polska, Europa, Wielka Brytania, ADR, ponadgabaryty, FIX i transporty ekspresowe.">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jupiter Trans & Cargo",
+      "telephone": "+48734183473",
+      "email": "marta.jupiter@onet.eu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Jacka Malczewskiego 4",
+        "postalCode": "32-800",
+        "addressLocality": "Brzesko",
+        "addressRegion": "Małopolskie",
+        "addressCountry": "PL"
+      },
+      "areaServed": ["Polska", "Europa", "Wielka Brytania"]
+    }
+    </script>
 
 </head>
 
@@ -2181,15 +2458,20 @@
     <a href="#" class="logo">
 
         <img
-            src="jupiter.png"
+            src="https://szymonwolsza-svg.github.io/spedycja/jupiter.png?v=2"
             alt="Jupiter Trans & Cargo">
 
     </a>
 
     <button
+        type="button"
         class="menu-button"
         id="menuButton"
-        aria-label="Menu">
+        aria-label="Menu"
+        aria-expanded="false"
+        aria-controls="navWrapper"
+        aria-expanded="false"
+        aria-controls="navWrapper">
 
         <span></span>
         <span></span>
@@ -2466,7 +2748,7 @@
             <div class="about-image-main">
 
                 <img
-                    src="elevate-dI-aXC7DWpQ-unsplash.jpg"
+                    src="https://szymonwolsza-svg.github.io/spedycja/elevate-dI-aXC7DWpQ-unsplash.jpg?v=3"
                     alt="Transport Jupiter Trans & Cargo">
 
             </div>
@@ -3127,7 +3409,7 @@
         <div class="europe-image reveal">
 
             <img
-                src="christian-lue-8Yw6tsB8tnc-unsplash.jpg"
+                src="https://szymonwolsza-svg.github.io/spedycja/christian-lue-8Yw6tsB8tnc-unsplash.jpg?v=3"
                 alt="Transport Polska Europa Wielka Brytania">
 
         </div>
@@ -3253,12 +3535,10 @@
         </h2>
 
         <p
-            data-pl="Długoterminowa współpraca i zaufanie są dla nas ważnym potwierdzeniem jakości świadczonych usług."
-            data-en="Long-term cooperation and trust are important confirmations of the quality of our services.">
+            data-pl="Zaufanie i długoterminowa współpraca są dla nas ważnym potwierdzeniem jakości świadczonych usług."
+            data-en="Trust and long-term cooperation are an important confirmation of the quality of our services.">
 
-            Długoterminowa współpraca
-            i zaufanie są dla nas ważnym
-            potwierdzeniem jakości świadczonych usług.
+            Zaufanie i długoterminowa współpraca są dla nas ważnym potwierdzeniem jakości świadczonych usług.
 
         </p>
 
@@ -3269,8 +3549,41 @@
         <div class="partner">
 
             <img
-                src="eurogate-logistics.png.png"
+                src="https://szymonwolsza-svg.github.io/spedycja/eurogate-logistics.png.png?v=3"
                 alt="Eurogate Logistics">
+
+            <div
+                class="partner-note"
+                data-pl="Zaufanie budowane przez współpracę."
+                data-en="Trust built through cooperation.">
+                Zaufanie budowane przez współpracę.
+            </div>
+
+        </div>
+
+        <div class="partner">
+
+            <div class="partner-brand ziegler">ZIEGLER</div>
+
+            <div
+                class="partner-note"
+                data-pl="Zaufanie budowane przez współpracę."
+                data-en="Trust built through cooperation.">
+                Zaufanie budowane przez współpracę.
+            </div>
+
+        </div>
+
+        <div class="partner">
+
+            <div class="partner-brand controlo">Controlo<br>Cargo Services Ltd</div>
+
+            <div
+                class="partner-note"
+                data-pl="Zaufanie budowane przez współpracę."
+                data-en="Trust built through cooperation.">
+                Zaufanie budowane przez współpracę.
+            </div>
 
         </div>
 
@@ -3321,7 +3634,7 @@
             <div class="cert-image">
 
                 <img
-                    src="certyfikat-kompetencji.png"
+                    src="https://szymonwolsza-svg.github.io/spedycja/certyfikat-kompetencji.png?v=3"
                     alt="Certyfikat kompetencji zawodowych"
                     onclick="openCertificate(this.src)">
 
@@ -3364,7 +3677,7 @@
             <div class="cert-image">
 
                 <img
-                    src="licencja-transportowa.png"
+                    src="https://szymonwolsza-svg.github.io/spedycja/licencja-transportowa.png?v=3"
                     alt="Licencja na wykonywanie transportu drogowego"
                     onclick="openCertificate(this.src)">
 
@@ -3480,6 +3793,7 @@
                     <input
                         type="text"
                         name="Klient"
+                        autocomplete="name"
                         required>
 
                 </div>
@@ -3493,6 +3807,7 @@
                     <input
                         type="email"
                         name="Email"
+                        autocomplete="email"
                         required>
 
                 </div>
@@ -3509,7 +3824,8 @@
 
                     <input
                         type="tel"
-                        name="Telefon">
+                        name="Telefon"
+                        autocomplete="tel">
 
                 </div>
 
@@ -3700,9 +4016,7 @@
 
                     </label>
 
-                    <textarea
-                        name="Dodatkowe informacje">
-                    </textarea>
+                    <textarea name="Dodatkowe informacje"></textarea>
 
                 </div>
 
@@ -3767,7 +4081,7 @@
 
         <div class="faq-item">
 
-            <button class="faq-question">
+            <button type="button" class="faq-question" aria-expanded="false">
 
                 <span
                     data-pl="Na jakim obszarze działacie?"
@@ -3802,7 +4116,7 @@
 
         <div class="faq-item">
 
-            <button class="faq-question">
+            <button type="button" class="faq-question" aria-expanded="false">
 
                 <span
                     data-pl="Czy organizujecie transport do i z Wielkiej Brytanii?"
@@ -3837,7 +4151,7 @@
 
         <div class="faq-item">
 
-            <button class="faq-question">
+            <button type="button" class="faq-question" aria-expanded="false">
 
                 <span
                     data-pl="Czy zapewniacie wsparcie przy odprawie celnej?"
@@ -3872,7 +4186,7 @@
 
         <div class="faq-item">
 
-            <button class="faq-question">
+            <button type="button" class="faq-question" aria-expanded="false">
 
                 <span
                     data-pl="Jak otrzymać wycenę transportu?"
@@ -3934,7 +4248,7 @@
 
     </div>
 
-    <div class="map-container reveal">
+    <div class="map-container">
 
         <div class="map-info">
 
@@ -3988,9 +4302,10 @@
 
             <iframe
                 src="https://www.google.com/maps?q=Jacka+Malczewskiego+4,+32-800+Brzesko,+Polska&output=embed"
-                loading="lazy"
-                allowfullscreen=""
+                loading="eager"
+                allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
+                style="width:100%;height:100%;min-height:470px;border:0;display:block;"
                 title="Jupiter Trans & Cargo Brzesko">
             </iframe>
 
@@ -4103,7 +4418,7 @@
         <div class="contact-logo">
 
             <img
-                src="jupiter.png"
+                src="https://szymonwolsza-svg.github.io/spedycja/jupiter.png?v=2"
                 alt="Jupiter Trans & Cargo">
 
         </div>
@@ -4142,6 +4457,7 @@
     onclick="closeCertificate(event)">
 
     <button
+        type="button"
         class="modal-close"
         onclick="closeCertificate()">
 
@@ -4270,14 +4586,25 @@
         .forEach(
             function(question) {
 
+                question.setAttribute("aria-expanded", "false");
+
                 question.addEventListener(
                     "click",
                     function() {
 
-                        question
-                            .parentElement
-                            .classList
-                            .toggle("open");
+                        const item = question.parentElement;
+                        const willOpen = !item.classList.contains("open");
+
+                        document.querySelectorAll(".faq-item.open").forEach(function(openItem) {
+                            if (openItem !== item) {
+                                openItem.classList.remove("open");
+                                const openButton = openItem.querySelector(".faq-question");
+                                if (openButton) openButton.setAttribute("aria-expanded", "false");
+                            }
+                        });
+
+                        item.classList.toggle("open", willOpen);
+                        question.setAttribute("aria-expanded", String(willOpen));
 
                     }
                 );
@@ -4299,9 +4626,8 @@
         "click",
         function() {
 
-            navWrapper
-                .classList
-                .toggle("open");
+            const isOpen = navWrapper.classList.toggle("open");
+            menuButton.setAttribute("aria-expanded", String(isOpen));
 
         }
     );
@@ -4315,9 +4641,8 @@
                     "click",
                     function() {
 
-                        navWrapper
-                            .classList
-                            .remove("open");
+                        navWrapper.classList.remove("open");
+                        menuButton.setAttribute("aria-expanded", "false");
 
                     }
                 );
