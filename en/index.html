@@ -2685,6 +2685,135 @@
             .company-data-row { grid-template-columns: 1fr; gap: 4px; }
         }
 
+    
+        /* ========================================
+           MARK 7 - CASE STUDY
+        ======================================== */
+
+        .case-study {
+            position: relative;
+            background: #071f35;
+            color: white;
+            overflow: hidden;
+        }
+
+        .case-study::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            right: -180px;
+            top: -180px;
+            border-radius: 50%;
+            background: rgba(35,175,245,.14);
+            filter: blur(70px);
+            pointer-events: none;
+        }
+
+        .case-grid {
+            position: relative;
+            z-index: 2;
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .case-summary,
+        .case-story {
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 18px;
+            padding: 34px;
+        }
+
+        .case-summary {
+            background: linear-gradient(145deg,#0a4c7c,#082943);
+        }
+
+        .case-story {
+            background: rgba(255,255,255,.06);
+        }
+
+        .case-kicker {
+            color: #70d1ff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .case-summary h2 {
+            font-size: clamp(31px,4vw,45px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .case-facts {
+            display: grid;
+            gap: 11px;
+        }
+
+        .case-fact {
+            padding: 14px 15px;
+            border-radius: 11px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.09);
+        }
+
+        .case-fact strong {
+            display: block;
+            color: #7bd5ff;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            margin-bottom: 3px;
+        }
+
+        .case-fact span {
+            color: #eef7fb;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .case-story h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .case-story p {
+            color: #c9dae5;
+            font-size: 14px;
+            margin-bottom: 21px;
+        }
+
+        .case-result {
+            margin-top: 26px;
+            padding: 20px;
+            border-radius: 13px;
+            background: rgba(55,196,127,.10);
+            border: 1px solid rgba(88,224,155,.25);
+        }
+
+        .case-result strong {
+            display: block;
+            color: #76e0aa;
+            margin-bottom: 6px;
+        }
+
+        .case-result p {
+            margin: 0;
+            color: #e3f6ec;
+        }
+
+        @media(max-width:950px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
     <meta property="og:title" content="Jupiter Trans & Cargo | Spedycja i transport">
     <meta property="og:description" content="Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR i transport ponadgabarytowy.">
@@ -3953,6 +4082,112 @@
     </div>
 
 </section>
+
+
+<!-- CASE STUDY -->
+
+<section class="case-study" id="realizacja">
+
+    <div class="case-grid">
+
+        <div class="case-summary reveal">
+
+            <div class="case-kicker"
+                 data-pl="Prawdziwa realizacja"
+                 data-en="Real shipment case">
+                Prawdziwa realizacja
+            </div>
+
+            <h2
+                data-pl="Birmingham → Halle. Transport krytyczny czasowo."
+                data-en="Birmingham → Halle. A time-critical shipment.">
+                Birmingham → Halle. Transport krytyczny czasowo.
+            </h2>
+
+            <div class="case-facts">
+
+                <div class="case-fact">
+                    <strong data-pl="Trasa" data-en="Route">Trasa</strong>
+                    <span>Birmingham, UK → Halle, Germany</span>
+                </div>
+
+                <div class="case-fact">
+                    <strong data-pl="Ładunek" data-en="Cargo">Ładunek</strong>
+                    <span>800 kg</span>
+                </div>
+
+                <div class="case-fact">
+                    <strong data-pl="Pojazd" data-en="Vehicle">Pojazd</strong>
+                    <span data-pl="Van 3,5 t" data-en="3.5 t van">Van 3,5 t</span>
+                </div>
+
+                <div class="case-fact">
+                    <strong data-pl="Priorytet" data-en="Priority">Priorytet</strong>
+                    <span data-pl="Transport krytyczny czasowo" data-en="Time-critical delivery">Transport krytyczny czasowo</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="case-story reveal">
+
+            <h3
+                data-pl="Co się wydarzyło?"
+                data-en="What happened?">
+                Co się wydarzyło?
+            </h3>
+
+            <p
+                data-pl="W porcie w Dover van realizujący transport uległ awarii. Przy zleceniu krytycznym czasowo oznaczało to ryzyko opóźnienia i konieczność szybkiej zmiany planu."
+                data-en="At the Port of Dover, the van carrying the shipment broke down. With a time-critical load, that created an immediate risk of delay and required a fast recovery plan.">
+                W porcie w Dover van realizujący transport uległ awarii. Przy zleceniu krytycznym czasowo oznaczało to ryzyko opóźnienia i konieczność szybkiej zmiany planu.
+            </p>
+
+            <h3
+                data-pl="Jak zareagowaliśmy?"
+                data-en="How did we respond?">
+                Jak zareagowaliśmy?
+            </h3>
+
+            <p
+                data-pl="Podstawiliśmy drugi samochód o identycznych parametrach i na bieżąco informowaliśmy klienta o sytuacji. Po uzyskaniu zgody zorganizowaliśmy przeładunek z jednego vana do drugiego, wykorzystując wózek widłowy i windę samochodową."
+                data-en="We arranged a replacement vehicle with matching parameters and kept the customer updated throughout. Once approval was received, we organised the transfer from the failed van to the replacement using a forklift and tail lift.">
+                Podstawiliśmy drugi samochód o identycznych parametrach i na bieżąco informowaliśmy klienta o sytuacji. Po uzyskaniu zgody zorganizowaliśmy przeładunek z jednego vana do drugiego, wykorzystując wózek widłowy i windę samochodową.
+            </p>
+
+            <h3
+                data-pl="Co z dokumentami?"
+                data-en="What about the paperwork?">
+                Co z dokumentami?
+            </h3>
+
+            <p
+                data-pl="Po zmianie pojazdu dokumenty celne zostały zaktualizowane o nowy numer samochodu, dzięki czemu transport mógł być dalej realizowany."
+                data-en="After the vehicle change, the customs documents were updated with the replacement vehicle details so the shipment could continue.">
+                Po zmianie pojazdu dokumenty celne zostały zaktualizowane o nowy numer samochodu, dzięki czemu transport mógł być dalej realizowany.
+            </p>
+
+            <div class="case-result">
+                <strong
+                    data-pl="Efekt"
+                    data-en="Outcome">
+                    Efekt
+                </strong>
+
+                <p
+                    data-pl="Towar został dostarczony bez zbędnej zwłoki, a klient nie poniósł dodatkowych kosztów związanych z awarią i zmianą pojazdu."
+                    data-en="The cargo was delivered without unnecessary delay, and the customer did not incur additional costs as a result of the breakdown and vehicle replacement.">
+                    Towar został dostarczony bez zbędnej zwłoki, a klient nie poniósł dodatkowych kosztów związanych z awarią i zmianą pojazdu.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- PARTNERS -->
 
