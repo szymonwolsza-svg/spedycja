@@ -3040,6 +3040,200 @@
                 bottom: 86px !important;
             }
         }
+
+
+        /* ========================================
+           MARK 16 - CENTER HERO AND QUOTE
+        ======================================== */
+
+        /* HERO - pełne wycentrowanie treści */
+        .hero-inner,
+        .hero-content {
+            max-width: 1120px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero .section-label,
+        .hero .hero-label,
+        .hero .eyebrow,
+        .hero h1,
+        .hero p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            max-width: 1000px;
+        }
+
+        .hero p {
+            max-width: 860px;
+        }
+
+        .hero-conversion-points {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-actions,
+        .hero-buttons,
+        .hero-cta,
+        .hero .buttons,
+        .hero .cta-row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-proof,
+        .hero-badges,
+        .hero-features,
+        .hero-stats {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* WYCENA - nagłówek i tekst dokładnie na środku */
+        .quote .section-header {
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .quote .section-header .section-label,
+        .quote .section-header h2,
+        .quote .section-header p,
+        .quote-trust-line {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .quote .section-header h2 {
+            max-width: 800px;
+        }
+
+        .quote .section-header p {
+            max-width: 900px;
+        }
+
+        /* Kafelki nad formularzem - 5. kafelek idealnie na środku */
+        .quote-benefits {
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .quote-benefit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            text-align: center;
+        }
+
+        .quote-benefits .quote-benefit:nth-child(5):last-child {
+            grid-column: 2 / span 2;
+            width: 100%;
+            max-width: 420px;
+            justify-self: center;
+        }
+
+        /* Formularz pozostaje szeroki i centralny */
+        .quote-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* TABLET */
+        @media(max-width: 950px) {
+            .quote-benefits {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .quote-benefits .quote-benefit:nth-child(5):last-child {
+                grid-column: 1 / -1;
+                max-width: 420px;
+            }
+        }
+
+        /* MOBILE */
+        @media(max-width: 700px) {
+            .hero-inner,
+            .hero-content {
+                text-align: center;
+                align-items: center;
+            }
+
+            .hero h1,
+            .hero p {
+                text-align: center;
+            }
+
+            .hero-conversion-points {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hero-actions,
+            .hero-buttons,
+            .hero-cta,
+            .hero .buttons,
+            .hero .cta-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions a,
+            .hero-buttons a,
+            .hero-cta a,
+            .hero .buttons a,
+            .hero .cta-row a {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .quote .section-header {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .quote-benefits {
+                grid-template-columns: 1fr;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .quote-benefits .quote-benefit:nth-child(5):last-child {
+                grid-column: auto;
+                max-width: none;
+                width: 100%;
+            }
+        }
 </style>
 <meta content="Jupiter Trans &amp; Cargo | Freight Forwarding Poland Europe UK" property="og:title"/>
 <meta content="Freight forwarding across Poland, Europe and the UK. FTL, groupage, express, FIX, ADR, oversized loads and EU–UK transport support." property="og:description"/>
