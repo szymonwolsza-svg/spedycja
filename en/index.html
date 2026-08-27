@@ -2887,6 +2887,31 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* ========================================
+           MARK 14 - CENTER LAST PROOF CARD
+        ======================================== */
+
+        .proof-grid .proof-card:last-child:nth-child(5) {
+            grid-column: 2 / span 2;
+            justify-self: center;
+            width: 100%;
+            max-width: 360px;
+        }
+
+        @media(max-width: 950px) {
+            .proof-grid .proof-card:last-child:nth-child(5) {
+                grid-column: 1 / -1;
+                max-width: 360px;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .proof-grid .proof-card:last-child:nth-child(5) {
+                grid-column: auto;
+                max-width: none;
+            }
+        }
 </style>
 <meta content="Jupiter Trans &amp; Cargo | Freight Forwarding Poland Europe UK" property="og:title"/>
 <meta content="Freight forwarding across Poland, Europe and the UK. FTL, groupage, express, FIX, ADR, oversized loads and EU–UK transport support." property="og:description"/>
