@@ -3,15 +3,9 @@
 <html lang="en">
 <head><script id="autoLanguageRedirect">
 (function() {
-    var saved = localStorage.getItem("preferredLanguage");
-    var browserLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-    var detected = browserLang === "pl" || browserLang.indexOf("pl-") === 0 ? "pl" : "en";
-    var wanted = saved || detected;
-    var current = "en";
-
-    if (wanted !== current) {
-        window.location.replace(wanted === "pl" ? "https://szymonwolsza-svg.github.io/spedycja/" : "https://szymonwolsza-svg.github.io/spedycja/en/");
-    }
+    // We are already on the English page.
+    // Never redirect automatically from here, because that can create
+    // a PL <-> EN redirect loop. Manual language buttons control switching.
 })();
 </script>
 <meta charset="utf-8"/>
