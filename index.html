@@ -2912,6 +2912,134 @@
                 max-width: none;
             }
         }
+
+        /* ========================================
+           MARK 15 - CONVERSION
+        ======================================== */
+
+        .hero-conversion-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255,255,255,.94);
+        }
+
+        .hero-conversion-points span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .case-cta {
+            position: relative;
+            z-index: 2;
+            max-width: 1180px;
+            margin: 30px auto 0;
+            padding: 22px 24px;
+            border: 1px solid rgba(255,255,255,.14);
+            background: rgba(255,255,255,.07);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .case-cta p {
+            margin: 0;
+            color: rgba(255,255,255,.9);
+            font-weight: 600;
+        }
+
+        .case-cta-button {
+            flex: 0 0 auto;
+            text-decoration: none;
+            background: #ffffff;
+            color: #061d32;
+            padding: 12px 18px;
+            border-radius: 9px;
+            font-weight: 800;
+            font-size: 13px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .case-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(0,0,0,.18);
+        }
+
+        .mobile-quote-bar {
+            display: none;
+        }
+
+        @media(max-width: 700px) {
+            body {
+                padding-bottom: 74px;
+            }
+
+            .hero-conversion-points {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .case-cta {
+                margin-left: 5%;
+                margin-right: 5%;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .case-cta-button {
+                text-align: center;
+            }
+
+            .mobile-quote-bar {
+                position: fixed;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                z-index: 9998;
+                display: grid;
+                grid-template-columns: 1.6fr 1fr;
+                gap: 8px;
+                padding: 8px;
+                background: rgba(6,29,50,.96);
+                border: 1px solid rgba(255,255,255,.12);
+                border-radius: 14px;
+                box-shadow: 0 14px 38px rgba(0,0,0,.24);
+                backdrop-filter: blur(12px);
+            }
+
+            .mobile-quote-bar a {
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 9px;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 800;
+            }
+
+            .mobile-quote-primary {
+                background: #078bd1;
+                color: #fff;
+            }
+
+            .mobile-quote-phone {
+                background: #fff;
+                color: #061d32;
+            }
+
+            .whatsapp {
+                bottom: 86px !important;
+            }
+        }
 </style>
 <meta content="Jupiter Trans &amp; Cargo | Spedycja i transport" property="og:title"/>
 <meta content="Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR i transport ponadgabarytowy." property="og:description"/>
@@ -2988,7 +3116,7 @@
 <a data-en="Services" data-pl="Usługi" href="#uslugi">Usługi</a>
 <a data-en="How we work" data-pl="Jak działamy" href="#proces">Jak działamy</a>
 <a data-en="Certificates" data-pl="Certyfikaty" href="#certyfikaty">Certyfikaty</a>
-<a data-en="Quote" data-pl="Wycena" href="#wycena">Wycena</a>
+<a data-en="Free quote" data-pl="Darmowa wycena" href="#wycena">Darmowa wycena</a>
 <a href="#faq">
                 FAQ
             </a>
@@ -3011,14 +3139,14 @@
 <span class="hero-dot"></span>
 <span data-en="FREIGHT FORWARDING • TRANSPORT • LOGISTICS" data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA">SPEDYCJA • TRANSPORT • LOGISTYKA</span>
 </div>
-<h1>
+<h1 data-en="Freight forwarding across Poland, Europe and the UK — from quote to delivery" data-pl="Spedycja Polska, Europa i UK — od wyceny do dostawy">
 <span data-en="Your cargo." data-pl="Twój ładunek.">Twój ładunek.</span>
 <br/>
 <span data-en="Our responsibility." data-pl="Nasza odpowiedzialność.">Nasza odpowiedzialność.</span>
 </h1>
-<p data-en="Tell us what needs moving and where. We handle the rest, keep you updated and react quickly if anything changes on the way." data-pl="Ty podajesz trasę i ładunek, a my zajmujemy się resztą. Otrzymujesz jeden kontakt, bieżące informacje o przesyłce i szybką reakcję, gdy w transporcie pojawia się problem.">Ty podajesz trasę i ładunek, a my zajmujemy się resztą. Otrzymujesz jeden kontakt, bieżące informacje o przesyłce i szybką reakcję, gdy w transporcie pojawia się problem.</p>
+<p data-en="We organise FTL, groupage, express, FIX, ADR and oversized transport. You receive a fast, free quotation and one dedicated contact person." data-pl="Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Dostajesz szybką, bezpłatną wycenę oraz jedną dedykowaną osobę do kontaktu.">Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Dostajesz szybką, bezpłatną wycenę oraz jedną dedykowaną osobę do kontaktu.</p><div class="hero-conversion-points"><span data-en="✓ Free quotation" data-pl="✓ Bezpłatna wycena">✓ Bezpłatna wycena</span><span data-en="✓ Fast response" data-pl="✓ Szybka odpowiedź">✓ Szybka odpowiedź</span><span data-en="✓ One dedicated contact person" data-pl="✓ Jedna dedykowana osoba">✓ Jedna dedykowana osoba</span></div>
 <div class="hero-buttons">
-<a class="button button-primary" data-en="Request a quote →" data-pl="Poproś o wycenę →" href="#wycena">Poproś o wycenę →</a>
+<a class="button button-primary" data-en="Free quote" data-pl="Darmowa wycena" href="#wycena">Darmowa wycena</a>
 <a class="button button-secondary" data-en="Explore our services" data-pl="Poznaj nasze usługi" href="#uslugi">Poznaj nasze usługi</a>
 </div>
 <div class="hero-small-info">
@@ -3352,7 +3480,7 @@
 </div>
 </div>
 </div>
-</section>
+<div class="case-cta reveal"><p data-en="Do you have a shipment where timing and fast problem-solving matter?" data-pl="Masz transport, w którym liczy się czas lub pewna reakcja na problemy?">Masz transport, w którym liczy się czas lub pewna reakcja na problemy?</p><a class="case-cta-button" data-en="Request a free quote →" data-pl="Poproś o darmową wycenę →" href="#wycena">Poproś o darmową wycenę →</a></div></section>
 <!-- PARTNERS -->
 <section class="partners-section">
 <div class="section-header reveal">
@@ -3417,8 +3545,8 @@
 <section class="quote" id="wycena">
 <div class="section-header reveal">
 <div class="section-label" data-en="Quick quote" data-pl="Szybka wycena" style="color:#70d0ff;">Szybka wycena</div>
-<h2 data-en="Need transport? Send us an enquiry." data-pl="Potrzebujesz transportu? Wyślij zapytanie.">Potrzebujesz transportu? Wyślij zapytanie.</h2>
-<p data-en="Send the route and cargo details once. We will come back with any questions or a proposed transport solution — with no obligation." data-pl="Opisz trasę i ładunek raz. Wrócimy do Ciebie z pytaniami lub propozycją rozwiązania — bez zobowiązań.">Opisz trasę i ładunek raz. Wrócimy do Ciebie z pytaniami lub propozycją rozwiązania — bez zobowiązań.</p>
+<h2 data-en="Get a free transport quotation" data-pl="Otrzymaj darmową wycenę transportu">Otrzymaj darmową wycenę transportu</h2>
+<p data-en="Send us the key shipment and route details. We will respond as quickly as possible and one dedicated person will handle your enquiry." data-pl="Podaj najważniejsze informacje o ładunku i trasie. Odpowiemy możliwie szybko, a Twoją sprawą zajmie się jedna dedykowana osoba.">Podaj najważniejsze informacje o ładunku i trasie. Odpowiemy możliwie szybko, a Twoją sprawą zajmie się jedna dedykowana osoba.</p>
 <p class="quote-trust-line" data-en="Free quotation • fast response • one dedicated contact person" data-pl="Darmowa wycena • szybka odpowiedź • jedna dedykowana osoba do kontaktu">Darmowa wycena • szybka odpowiedź • jedna dedykowana osoba do kontaktu</p></div>
 <div class="quote-benefits reveal"><div class="quote-benefit" data-en="✓ Free quotation" data-pl="✓ Bezpłatna wycena">✓ Bezpłatna wycena</div><div class="quote-benefit" data-en="✓ Fast response" data-pl="✓ Szybka odpowiedź">✓ Szybka odpowiedź</div><div class="quote-benefit" data-en="✓ Immediate quotation" data-pl="✓ Natychmiastowa wycena">✓ Natychmiastowa wycena</div><div class="quote-benefit" data-en="✓ One dedicated contact person" data-pl="✓ Jedna dedykowana osoba do kontaktu">✓ Jedna dedykowana osoba do kontaktu</div><div class="quote-benefit" data-en="✓ Poland • European Union • United Kingdom" data-pl="✓ Polska • Unia Europejska • Wielka Brytania">✓ Polska • Unia Europejska • Wielka Brytania</div></div>
 <div class="quote-container reveal">
@@ -4009,5 +4137,5 @@
     );
 
 </script>
-</body>
+<div class="mobile-quote-bar"><a class="mobile-quote-primary" data-en="Free quote" data-pl="Darmowa wycena" href="#wycena">Darmowa wycena</a><a aria-label="Telefon Jupiter Trans &amp; Cargo" class="mobile-quote-phone" data-en="Call" data-pl="Zadzwoń" href="tel:+48734183473">Zadzwoń</a></div></body>
 </html>
