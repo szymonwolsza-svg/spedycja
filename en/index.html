@@ -3226,6 +3226,294 @@
                 width: 100%;
             }
         }
+
+
+        /* ========================================
+           MARK 19 - MOBILE POLISH / FINAL DETAILS
+        ======================================== */
+
+        /* Slightly tighter and cleaner global section rhythm */
+        section {
+            scroll-margin-top: 92px;
+        }
+
+        .section-header {
+            margin-bottom: 34px;
+        }
+
+        .section-header h2 {
+            text-wrap: balance;
+        }
+
+        .section-header p {
+            text-wrap: pretty;
+        }
+
+        /* Cards feel more consistent */
+        .service,
+        .proof-card,
+        .route-card,
+        .partner,
+        .company-data-card,
+        .faq-item,
+        .case-summary,
+        .case-story {
+            border-radius: 16px;
+        }
+
+        .service,
+        .proof-card,
+        .route-card,
+        .partner {
+            transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+        }
+
+        @media(hover:hover) {
+            .service:hover,
+            .proof-card:hover,
+            .route-card:hover,
+            .partner:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* Partner logos: consistent visual box */
+        .partner {
+            min-height: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo {
+            max-height: 82px;
+            width: auto;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .partner-name,
+        .partner-note {
+            text-align: center;
+        }
+
+        /* Company data easier to scan */
+        .company-data-row {
+            align-items: start;
+        }
+
+        .company-data-row a {
+            word-break: break-word;
+        }
+
+        /* Quote form polish */
+        .quote-form input,
+        .quote-form select,
+        .quote-form textarea {
+            min-height: 52px;
+        }
+
+        .quote-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            min-height: 56px;
+        }
+
+        /* Better tap targets */
+        .language-switch button,
+        .menu-toggle,
+        .faq-question,
+        .map-button,
+        .case-cta-button,
+        .submit-button {
+            min-height: 44px;
+        }
+
+        /* MOBILE */
+        @media(max-width: 700px) {
+
+            header {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo-img {
+                max-width: 190px;
+                height: auto;
+            }
+
+            section {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero h1 {
+                font-size: clamp(34px, 10vw, 50px);
+                line-height: 1.05;
+                letter-spacing: -0.035em;
+            }
+
+            .hero p {
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .hero-conversion-points {
+                width: 100%;
+                gap: 9px;
+            }
+
+            .hero-conversion-points span {
+                width: 100%;
+                justify-content: center;
+                padding: 9px 12px;
+                border-radius: 10px;
+                background: rgba(255,255,255,.07);
+                border: 1px solid rgba(255,255,255,.10);
+            }
+
+            .section-header {
+                margin-bottom: 26px;
+            }
+
+            .section-header h2 {
+                font-size: clamp(28px, 8vw, 38px);
+                line-height: 1.12;
+            }
+
+            .section-header p {
+                font-size: 14px;
+            }
+
+            .services-grid,
+            .proof-grid,
+            .routes-grid,
+            .partners,
+            .case-grid {
+                gap: 14px;
+            }
+
+            .service,
+            .proof-card,
+            .route-card,
+            .partner {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .partner {
+                min-height: 190px;
+            }
+
+            .partner-logo {
+                max-height: 70px;
+            }
+
+            .case-summary,
+            .case-story {
+                padding: 24px 20px;
+            }
+
+            .case-facts {
+                grid-template-columns: 1fr;
+            }
+
+            .case-cta {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 20px;
+            }
+
+            .quote {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .quote .section-header,
+            .quote-benefits,
+            .quote-container {
+                margin-left: 18px;
+                margin-right: 18px;
+            }
+
+            .quote-benefits {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .quote-form {
+                padding: 22px 18px;
+                border-radius: 16px;
+            }
+
+            .form-grid {
+                gap: 14px;
+            }
+
+            .checkbox-group {
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 320px !important;
+            }
+
+            .contact-card {
+                border-radius: 16px;
+                overflow: hidden;
+            }
+
+            .company-data-card {
+                padding: 20px;
+            }
+
+            .company-data-row {
+                padding: 14px 0;
+            }
+
+            .faq-question {
+                padding: 18px 16px;
+                font-size: 15px;
+            }
+
+            .faq-answer {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            footer {
+                padding-bottom: 94px;
+            }
+        }
+
+        /* Very small phones */
+        @media(max-width: 380px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .mobile-quote-bar {
+                left: 6px;
+                right: 6px;
+                bottom: 6px;
+            }
+
+            .mobile-quote-bar a {
+                font-size: 12px;
+            }
+        }
 </style>
 <meta content="Jupiter Trans &amp; Cargo | Freight Forwarding Poland Europe UK" property="og:title"/>
 <meta content="Freight forwarding across Poland, Europe and the UK. FTL, groupage, express, FIX, ADR, oversized loads and EU–UK transport support." property="og:description"/>
