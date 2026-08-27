@@ -3,16 +3,14 @@
 <html lang="pl">
 <head><script id="autoLanguageRedirect">
 (function() {
-    var lang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-    var isPolish = lang === "pl" || lang.indexOf("pl-") === 0;
-    var path = window.location.pathname;
+    var saved = localStorage.getItem("preferredLanguage");
+    var browserLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    var detected = browserLang === "pl" || browserLang.indexOf("pl-") === 0 ? "pl" : "en";
+    var wanted = saved || detected;
+    var current = "pl";
 
-    if (true && !isPolish && path.indexOf("/en/") === -1) {
-        window.location.replace("https://szymonwolsza-svg.github.io/spedycja/en/");
-    }
-
-    if (false && isPolish && path.indexOf("/en/") !== -1) {
-        window.location.replace("https://szymonwolsza-svg.github.io/spedycja/");
+    if (wanted !== current) {
+        window.location.replace(wanted === "pl" ? "https://szymonwolsza-svg.github.io/spedycja/" : "https://szymonwolsza-svg.github.io/spedycja/en/");
     }
 })();
 </script>
@@ -3317,10 +3315,10 @@
 <a data-en="Contact" data-pl="Kontakt" href="#kontakt">Kontakt</a>
 </nav>
 <div class="lang-switch">
-<button class="active" id="plBtn" onclick="window.location.href='https://szymonwolsza-svg.github.io/spedycja/'">
+<button class="active" id="plBtn" onclick="localStorage.setItem('preferredLanguage','pl');window.location.href='https://szymonwolsza-svg.github.io/spedycja/';">
                 PL
             </button>
-<button id="enBtn" onclick="window.location.href='https://szymonwolsza-svg.github.io/spedycja/en/'">
+<button class="" id="enBtn" onclick="localStorage.setItem('preferredLanguage','en');window.location.href='https://szymonwolsza-svg.github.io/spedycja/en/';">
                 EN
             </button>
 </div>
