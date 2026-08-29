@@ -4,8 +4,8 @@
 <head><script id="autoLanguageRedirect">(function(){var s=localStorage.getItem("preferredLanguage");if(s==="en"){window.location.replace("https://jupitertranscargo.com/en/");return;}if(s==="pl")return;var l=(navigator.language||navigator.userLanguage||"").toLowerCase();var p=l==="pl"||l.indexOf("pl-")===0;if(!p)window.location.replace("https://jupitertranscargo.com/en/");})();</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jupiter Trans &amp; Cargo | Spedycja, transport Polska Europa UK</title>
-<meta content="Jupiter Trans &amp; Cargo – spedycja i organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR, ponadgabaryty oraz obsługa kierunków UE–UK." name="description"/>
+<title>Spedycja Brzesko | Transport Polska, Europa i UK | Jupiter Trans &amp; Cargo</title>
+<meta content="Jupiter Trans &amp; Cargo – spedycja w Brzesku i organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR, ponadgabaryty i obsługa kierunków UE–UK." name="description"/>
 <meta content="index, follow" name="robots"/>
 <meta content="Jupiter Trans &amp; Cargo" name="author"/>
 <meta content="#061d32" name="theme-color"/>
@@ -3508,9 +3508,30 @@
                 font-size: 12px;
             }
         }
+
+        /* ========================================
+           MARK 21 - SEO / LOCAL CONTEXT
+        ======================================== */
+
+        .local-seo-note {
+            max-width: 980px;
+            margin: -10px auto 30px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        @media(max-width: 700px) {
+            .local-seo-note {
+                margin-left: 18px;
+                margin-right: 18px;
+                font-size: 13px;
+            }
+        }
 </style>
-<meta content="Jupiter Trans &amp; Cargo | Spedycja i transport" property="og:title"/>
-<meta content="Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR i transport ponadgabarytowy." property="og:description"/>
+<meta content="Jupiter Trans &amp; Cargo | Spedycja Brzesko, Polska, Europa i UK" property="og:title"/>
+<meta content="Spedycja i organizacja transportu z Brzeska na terenie Polski, Europy i Wielkiej Brytanii. FTL, drobnica, ekspres, FIX, ADR i ponadgabaryty." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://jupitertranscargo.com/" property="og:url"/>
 <meta content="Jupiter Trans &amp; Cargo" property="og:site_name"/>
@@ -3518,57 +3539,75 @@
 <meta content="https://jupitertranscargo.com/gabriel-santos-GBVDilE8yvI-unsplash.jpg?v=3" property="og:image"/>
 <meta content="Jupiter Trans &amp; Cargo – transport i spedycja" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Jupiter Trans &amp; Cargo | Spedycja i transport" name="twitter:title"/>
-<meta content="Transport krajowy i międzynarodowy: Polska, Europa i Wielka Brytania." name="twitter:description"/>
+<meta content="Jupiter Trans &amp; Cargo | Spedycja Brzesko" name="twitter:title"/>
+<meta content="Spedycja z Brzeska: Polska, Europa i Wielka Brytania." name="twitter:description"/>
 <meta content="https://jupitertranscargo.com/gabriel-santos-GBVDilE8yvI-unsplash.jpg?v=3" name="twitter:image"/>
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Jupiter Trans & Cargo",
-  "url": "https://jupitertranscargo.com/",
-  "logo": "https://jupitertranscargo.com/jupiter.png?v=2",
-  "description": "Kompleksowa organizacja transportu w Polsce, Europie i Wielkiej Brytanii.",
-  "foundingDate": "2015",
-  "taxID": "8691270455",
-  "identifier": [
+  "@graph": [
     {
-      "@type": "PropertyValue",
-      "propertyID": "NIP",
-      "value": "8691270455"
+      "@type": "Organization",
+      "@id": "https://jupitertranscargo.com/#organization",
+      "name": "Jupiter Trans & Cargo",
+      "legalName": "JUPITER – TRANS and CARGO Grzegorz Wolsza",
+      "url": "https://jupitertranscargo.com/",
+      "logo": "https://jupitertranscargo.com/jupiter.png?v=2",
+      "foundingDate": "2015",
+      "taxID": "8691270455",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "NIP",
+          "value": "8691270455"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "REGON",
+          "value": "852573153"
+        }
+      ],
+      "email": "marta.jupiter@onet.eu",
+      "telephone": "+48734183473",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Jacka Malczewskiego 4",
+        "postalCode": "32-800",
+        "addressLocality": "Brzesko",
+        "addressRegion": "Małopolskie",
+        "addressCountry": "PL"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Poland"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
+      ],
+      "description": "Spedycja i organizacja transportu w Polsce, Europie i Wielkiej Brytanii."
     },
     {
-      "@type": "PropertyValue",
-      "propertyID": "REGON",
-      "value": "852573153"
+      "@type": "WebSite",
+      "@id": "https://jupitertranscargo.com/#website",
+      "url": "https://jupitertranscargo.com/",
+      "name": "Jupiter Trans & Cargo",
+      "publisher": {
+        "@id": "https://jupitertranscargo.com/#organization"
+      },
+      "inLanguage": [
+        "pl-PL",
+        "en-GB"
+      ]
     }
-  ],
-  "telephone": "+48734183473",
-  "email": "marta.jupiter@onet.eu",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ul. Jacka Malczewskiego 4",
-    "postalCode": "32-800",
-    "addressLocality": "Brzesko",
-    "addressRegion": "Małopolskie",
-    "addressCountry": "PL"
-  },
-  "areaServed": [
-    "Polska",
-    "Europa",
-    "Wielka Brytania"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+48734183473",
-    "email": "marta.jupiter@onet.eu",
-    "contactType": "customer service",
-    "availableLanguage": [
-      "Polish",
-      "English"
-    ]
-  }
-}</script>
-</head>
+  ]
+}</script></head>
 <body>
 <header id="header">
 <a class="logo" href="#">
@@ -3608,12 +3647,12 @@
 <span class="hero-dot"></span>
 <span data-en="FREIGHT FORWARDING • TRANSPORT • LOGISTICS" data-pl="SPEDYCJA • TRANSPORT • LOGISTYKA">SPEDYCJA • TRANSPORT • LOGISTYKA</span>
 </div>
-<h1 data-en="Freight forwarding across Poland, Europe and the UK — from quote to delivery" data-pl="Spedycja Polska, Europa i UK — od wyceny do dostawy">
+<h1 data-en="Freight forwarding from Poland across Europe and the UK" data-pl="Spedycja z Brzeska — Polska, Europa i Wielka Brytania">
 <span data-en="Your cargo." data-pl="Twój ładunek.">Twój ładunek.</span>
 <br/>
 <span data-en="Our responsibility." data-pl="Nasza odpowiedzialność.">Nasza odpowiedzialność.</span>
 </h1>
-<p data-en="We organise FTL, groupage, express, FIX, ADR and oversized transport. You receive a fast, free quotation and one dedicated contact person." data-pl="Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Dostajesz szybką, bezpłatną wycenę oraz jedną dedykowaną osobę do kontaktu.">Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Dostajesz szybką, bezpłatną wycenę oraz jedną dedykowaną osobę do kontaktu.</p><div class="hero-conversion-points"><span data-en="✓ Free quotation" data-pl="✓ Bezpłatna wycena">✓ Bezpłatna wycena</span><span data-en="✓ Fast response" data-pl="✓ Szybka odpowiedź">✓ Szybka odpowiedź</span><span data-en="✓ One dedicated contact person" data-pl="✓ Jedna dedykowana osoba">✓ Jedna dedykowana osoba</span></div>
+<p data-en="We organise FTL, groupage, express, FIX, ADR and oversized transport. Based in southern Poland, we arrange domestic, European and UK shipments." data-pl="Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Obsługujemy klientów z Brzeska, Małopolski i całej Polski, realizując przewozy w kraju, Europie i Wielkiej Brytanii.">Organizujemy transport FTL, drobnicowy, ekspresowy, FIX, ADR i ponadgabarytowy. Obsługujemy klientów z Brzeska, Małopolski i całej Polski, realizując przewozy w kraju, Europie i Wielkiej Brytanii.</p><div class="hero-conversion-points"><span data-en="✓ Free quotation" data-pl="✓ Bezpłatna wycena">✓ Bezpłatna wycena</span><span data-en="✓ Fast response" data-pl="✓ Szybka odpowiedź">✓ Szybka odpowiedź</span><span data-en="✓ One dedicated contact person" data-pl="✓ Jedna dedykowana osoba">✓ Jedna dedykowana osoba</span></div>
 <div class="hero-buttons">
 <a class="button button-primary" data-en="Free quote" data-pl="Darmowa wycena" href="#wycena">Darmowa wycena</a>
 <a class="button button-secondary" data-en="Explore our services" data-pl="Poznaj nasze usługi" href="#uslugi">Poznaj nasze usługi</a>
@@ -4224,7 +4263,7 @@
 <div class="section-label" data-en="Company details" data-pl="Dane firmy">Dane firmy</div>
 <h2 data-en="Registered and contact details" data-pl="Dane rejestrowe i kontaktowe">Dane rejestrowe i kontaktowe</h2>
 <p data-en="Clear company details make it easier to verify who you are working with before entrusting a shipment." data-pl="Pełne dane ułatwiają weryfikację firmy przed powierzeniem ładunku.">Pełne dane ułatwiają weryfikację firmy przed powierzeniem ładunku.</p>
-</div>
+</div><p class="local-seo-note" data-en="Jupiter Trans &amp; Cargo is based in Brzesko, southern Poland. We organise transport for local and nationwide customers as well as international shipments across Europe and the United Kingdom." data-pl="Siedziba Jupiter Trans &amp; Cargo znajduje się w Brzesku w Małopolsce. Organizujemy transport dla klientów lokalnych i ogólnopolskich oraz przewozy międzynarodowe na terenie Europy i Wielkiej Brytanii.">Siedziba Jupiter Trans &amp; Cargo znajduje się w Brzesku w Małopolsce. Organizujemy transport dla klientów lokalnych i ogólnopolskich oraz przewozy międzynarodowe na terenie Europy i Wielkiej Brytanii.</p>
 <div class="company-data-card reveal">
 <div class="company-data-row">
 <strong data-en="Trading name" data-pl="Nazwa handlowa">Nazwa handlowa</strong>
